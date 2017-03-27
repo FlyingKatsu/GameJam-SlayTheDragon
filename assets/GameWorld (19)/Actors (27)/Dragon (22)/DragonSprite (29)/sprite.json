@@ -1,0 +1,65 @@
+{
+  "formatVersion": 3,
+  "maps": [
+    "map"
+  ],
+  "filtering": "pixelated",
+  "wrapping": "clampToEdge",
+  "pixelsPerUnit": 32,
+  "framesPerSecond": 4,
+  "opacity": null,
+  "alphaTest": 0.1,
+  "frameOrder": "rows",
+  "grid": {
+    "width": 126,
+    "height": 113
+  },
+  "origin": {
+    "x": 0.5,
+    "y": 0.5
+  },
+  "animations": [
+    {
+      "id": "0",
+      "name": "Fly",
+      "startFrameIndex": 0,
+      "endFrameIndex": 4,
+      "speed": 2
+    },
+    {
+      "id": "1",
+      "name": "Attack",
+      "startFrameIndex": 5,
+      "endFrameIndex": 8,
+      "speed": 2
+    },
+    {
+      "id": "2",
+      "name": "Hurt",
+      "startFrameIndex": 9,
+      "endFrameIndex": 10,
+      "speed": 1
+    },
+    {
+      "id": "3",
+      "name": "Dead",
+      "startFrameIndex": 11,
+      "endFrameIndex": 15,
+      "speed": 2
+    },
+    {
+      "id": "4",
+      "name": "Fire",
+      "startFrameIndex": 5,
+      "endFrameIndex": 6,
+      "speed": 2
+    }
+  ],
+  "mapSlots": {
+    "map": "map",
+    "light": null,
+    "specular": null,
+    "alpha": null,
+    "normal": null
+  }
+}

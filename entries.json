@@ -1,48 +1,261 @@
 {
-  "nextEntryId": 12,
+  "nextEntryId": 68,
   "nodes": [
     {
-      "id": "0",
-      "name": "Scene",
+      "id": "60",
+      "name": "TestPlaceholder",
       "type": "scene"
     },
     {
-      "id": "4",
-      "name": "Tile Set",
-      "type": "tileSet"
+      "id": "64",
+      "name": "TestQun",
+      "type": "scene"
     },
     {
-      "id": "6",
-      "name": "Map",
-      "type": "tileMap"
-    },
-    {
-      "id": "1",
-      "name": "Player",
+      "id": "19",
+      "name": "GameWorld",
       "type": null,
       "children": [
         {
-          "id": "2",
-          "name": "Sprite",
-          "type": "sprite"
+          "id": "12",
+          "name": "Items",
+          "type": null,
+          "children": [
+            {
+              "id": "13",
+              "name": "Weapons",
+              "type": null,
+              "children": [
+                {
+                  "id": "31",
+                  "name": "SwordSprite",
+                  "type": "sprite"
+                },
+                {
+                  "id": "32",
+                  "name": "SwordBehavior",
+                  "type": "script"
+                },
+                {
+                  "id": "45",
+                  "name": "SquirtGunSprite",
+                  "type": "sprite"
+                },
+                {
+                  "id": "34",
+                  "name": "SquirtGunBehavior",
+                  "type": "script"
+                }
+              ]
+            },
+            {
+              "id": "14",
+              "name": "Other",
+              "type": null,
+              "children": [
+                {
+                  "id": "46",
+                  "name": "GoldSprite",
+                  "type": "sprite"
+                },
+                {
+                  "id": "47",
+                  "name": "GoldBehavior",
+                  "type": "script"
+                },
+                {
+                  "id": "35",
+                  "name": "MeatSprite",
+                  "type": "sprite"
+                },
+                {
+                  "id": "36",
+                  "name": "MeatBehavior",
+                  "type": "script"
+                },
+                {
+                  "id": "48",
+                  "name": "FruitSprite",
+                  "type": "sprite"
+                },
+                {
+                  "id": "38",
+                  "name": "FruitBehavior",
+                  "type": "script"
+                }
+              ]
+            },
+            {
+              "id": "15",
+              "name": "Interest",
+              "type": null,
+              "children": [
+                {
+                  "id": "41",
+                  "name": "Treasure",
+                  "type": null,
+                  "children": [
+                    {
+                      "id": "39",
+                      "name": "TreasureBehavior",
+                      "type": "script"
+                    },
+                    {
+                      "id": "44",
+                      "name": "TreasureSprite",
+                      "type": "sprite"
+                    }
+                  ]
+                },
+                {
+                  "id": "42",
+                  "name": "Tree",
+                  "type": null,
+                  "children": [
+                    {
+                      "id": "40",
+                      "name": "TreeBehavior",
+                      "type": "script"
+                    },
+                    {
+                      "id": "43",
+                      "name": "TreeSprite",
+                      "type": "sprite"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
-          "id": "3",
-          "name": "Behavior",
-          "type": "script"
+          "id": "27",
+          "name": "Actors",
+          "type": null,
+          "children": [
+            {
+              "id": "20",
+              "name": "Hero",
+              "type": null,
+              "children": [
+                {
+                  "id": "23",
+                  "name": "HeroBehavior",
+                  "type": "script"
+                },
+                {
+                  "id": "26",
+                  "name": "HeroSprite",
+                  "type": "sprite"
+                }
+              ]
+            },
+            {
+              "id": "21",
+              "name": "Character",
+              "type": null,
+              "children": [
+                {
+                  "id": "24",
+                  "name": "CharacterBehavior",
+                  "type": "script"
+                },
+                {
+                  "id": "61",
+                  "name": "CameraBehavior",
+                  "type": "script"
+                },
+                {
+                  "id": "28",
+                  "name": "PlayerSprite",
+                  "type": "sprite"
+                },
+                {
+                  "id": "65",
+                  "name": "PlayerSprite2",
+                  "type": "sprite"
+                }
+              ]
+            },
+            {
+              "id": "22",
+              "name": "Dragon",
+              "type": null,
+              "children": [
+                {
+                  "id": "25",
+                  "name": "DragonBehavior",
+                  "type": "script"
+                },
+                {
+                  "id": "29",
+                  "name": "DragonSprite",
+                  "type": "sprite"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "49",
+          "name": "LevelBlocks",
+          "type": null,
+          "children": [
+            {
+              "id": "51",
+              "name": "Spawn",
+              "type": "tileMap"
+            },
+            {
+              "id": "54",
+              "name": "SpawnUnder",
+              "type": "tileMap"
+            },
+            {
+              "id": "52",
+              "name": "Lair",
+              "type": "tileMap"
+            },
+            {
+              "id": "55",
+              "name": "LairUnder",
+              "type": "tileMap"
+            },
+            {
+              "id": "50",
+              "name": "HeroPath",
+              "type": "tileMap"
+            },
+            {
+              "id": "56",
+              "name": "HeroPathUnder",
+              "type": "tileMap"
+            },
+            {
+              "id": "57",
+              "name": "Tiles",
+              "type": null,
+              "children": [
+                {
+                  "id": "58",
+                  "name": "HeroPath",
+                  "type": "tileSet"
+                },
+                {
+                  "id": "59",
+                  "name": "Lair",
+                  "type": "tileSet"
+                }
+              ]
+            },
+            {
+              "id": "62",
+              "name": "WorldOne",
+              "type": "tileMap"
+            }
+          ]
         }
       ]
-    },
-    {
-      "id": "9",
-      "name": "Leonard",
-      "type": "sprite"
-    },
-    {
-      "id": "11",
-      "name": "MainMenu",
-      "type": null,
-      "children": []
     }
   ]
 }

@@ -1,7 +1,14 @@
 {
   "behaviors": {
-    "PlayerBehavior": {
-      "scriptId": "3",
+    "HeroBehavior": {
+      "scriptId": "23",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
+    },
+    "CharacterBehavior": {
+      "scriptId": "24",
+      "line": 2,
       "parentBehavior": null,
       "properties": [
         {
@@ -13,6 +20,60 @@
           "type": "number"
         }
       ]
+    },
+    "DragonBehavior": {
+      "scriptId": "25",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
+    },
+    "SwordBehavior": {
+      "scriptId": "32",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
+    },
+    "SquirtGunBehavior": {
+      "scriptId": "34",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
+    },
+    "MeatBehavior": {
+      "scriptId": "36",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
+    },
+    "FruitBehavior": {
+      "scriptId": "38",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
+    },
+    "TreasureBehavior": {
+      "scriptId": "39",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
+    },
+    "TreeBehavior": {
+      "scriptId": "40",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
+    },
+    "GoldBehavior": {
+      "scriptId": "47",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
+    },
+    "CameraBehavior": {
+      "scriptId": "61",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
     }
   }
 }
