@@ -1,0 +1,79 @@
+{
+  "formatVersion": 3,
+  "maps": [
+    "map"
+  ],
+  "filtering": "pixelated",
+  "wrapping": "clampToEdge",
+  "pixelsPerUnit": 32,
+  "framesPerSecond": 8,
+  "opacity": null,
+  "alphaTest": 0.1,
+  "frameOrder": "rows",
+  "grid": {
+    "width": 120,
+    "height": 83
+  },
+  "origin": {
+    "x": 0.48,
+    "y": 0.5
+  },
+  "animations": [
+    {
+      "id": "0",
+      "name": "Idle",
+      "startFrameIndex": 0,
+      "endFrameIndex": 5,
+      "speed": 1
+    },
+    {
+      "id": "2",
+      "name": "Run",
+      "startFrameIndex": 6,
+      "endFrameIndex": 10,
+      "speed": 1
+    },
+    {
+      "id": "3",
+      "name": "Jump",
+      "startFrameIndex": 11,
+      "endFrameIndex": 16,
+      "speed": 1
+    },
+    {
+      "id": "4",
+      "name": "Roll",
+      "startFrameIndex": 17,
+      "endFrameIndex": 21,
+      "speed": 1
+    },
+    {
+      "id": "7",
+      "name": "Attack",
+      "startFrameIndex": 22,
+      "endFrameIndex": 25,
+      "speed": 1
+    },
+    {
+      "id": "5",
+      "name": "Hurt",
+      "startFrameIndex": 26,
+      "endFrameIndex": 27,
+      "speed": 1
+    },
+    {
+      "id": "6",
+      "name": "Dead",
+      "startFrameIndex": 28,
+      "endFrameIndex": 32,
+      "speed": 1
+    }
+  ],
+  "mapSlots": {
+    "map": "map",
+    "light": null,
+    "specular": null,
+    "alpha": null,
+    "normal": null
+  }
+}
