@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 68,
+  "nextEntryId": 77,
   "nodes": [
     {
       "id": "60",
@@ -202,33 +202,8 @@
           "type": null,
           "children": [
             {
-              "id": "51",
-              "name": "Spawn",
-              "type": "tileMap"
-            },
-            {
-              "id": "54",
-              "name": "SpawnUnder",
-              "type": "tileMap"
-            },
-            {
-              "id": "52",
-              "name": "Lair",
-              "type": "tileMap"
-            },
-            {
-              "id": "55",
-              "name": "LairUnder",
-              "type": "tileMap"
-            },
-            {
               "id": "50",
               "name": "HeroPath",
-              "type": "tileMap"
-            },
-            {
-              "id": "56",
-              "name": "HeroPathUnder",
               "type": "tileMap"
             },
             {
@@ -245,6 +220,11 @@
                   "id": "59",
                   "name": "Lair",
                   "type": "tileSet"
+                },
+                {
+                  "id": "70",
+                  "name": "Placeholder",
+                  "type": "tileSet"
                 }
               ]
             },
@@ -252,8 +232,45 @@
               "id": "62",
               "name": "WorldOne",
               "type": "tileMap"
+            },
+            {
+              "id": "69",
+              "name": "WorldOnePlaceholder",
+              "type": "tileMap"
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "75",
+      "name": "HUD",
+      "type": null,
+      "children": [
+        {
+          "id": "68",
+          "name": "SceneManagerBehavior",
+          "type": "script"
+        },
+        {
+          "id": "72",
+          "name": "Btn_TogglePlaceholder",
+          "type": "sprite"
+        },
+        {
+          "id": "73",
+          "name": "ButtonBehavior",
+          "type": "script"
+        },
+        {
+          "id": "74",
+          "name": "HUDBehavior",
+          "type": "script"
+        },
+        {
+          "id": "76",
+          "name": "ControlsBar",
+          "type": "sprite"
         }
       ]
     }

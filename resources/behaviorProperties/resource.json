@@ -74,6 +74,38 @@
       "line": 0,
       "parentBehavior": null,
       "properties": []
+    },
+    "SceneManagerBehavior": {
+      "scriptId": "68",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "targetScene",
+          "type": "string"
+        }
+      ]
+    },
+    "ButtonBehavior": {
+      "scriptId": "73",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "targetScene",
+          "type": "string"
+        },
+        {
+          "name": "hovered",
+          "type": "boolean"
+        }
+      ]
+    },
+    "HUDBehavior": {
+      "scriptId": "74",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
     }
   }
 }
