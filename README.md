@@ -53,5 +53,5 @@ Falling into a cavern, you are joined by similarly equipped heroes on a quest to
 Licensed under Creative Commons: By Attribution 3.0 License
 [http://creativecommons.org/licenses/by/3.0/](http://creativecommons.org/licenses/by/3.0/)
 
-
+---
 Made with [Superpowers](http://superpowers-html5.com/) collaborative game editor, from [Sparklin Labs](https://sparklinlabs.itch.io/)
