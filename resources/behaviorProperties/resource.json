@@ -36,12 +36,6 @@
       "parentBehavior": null,
       "properties": []
     },
-    "TreasureBehavior": {
-      "scriptId": "39",
-      "line": 0,
-      "parentBehavior": null,
-      "properties": []
-    },
     "TreeBehavior": {
       "scriptId": "40",
       "line": 0,
@@ -133,6 +127,42 @@
           "type": "number"
         }
       ]
+    },
+    "HeroSpawnBehavior": {
+      "scriptId": "148",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
+    },
+    "TunnelWarpBehavior": {
+      "scriptId": "149",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
+    },
+    "PlatformBehavior": {
+      "scriptId": "151",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
+    },
+    "ChestBehavior": {
+      "scriptId": "39",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
+    },
+    "DirtBehavior": {
+      "scriptId": "170",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
+    },
+    "FruitSpawnerBehavior": {
+      "scriptId": "173",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
     }
   }
 }

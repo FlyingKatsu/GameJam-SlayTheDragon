@@ -1,0 +1,24 @@
+{
+  "formatVersion": 1,
+  "grid": {
+    "width": 16,
+    "height": 16
+  },
+  "tileProperties": {
+    "0_0": {
+      "solid": ""
+    },
+    "3_0": {
+      "fruitspawner": ""
+    },
+    "1_0": {
+      "treasure": ""
+    },
+    "2_0": {
+      "treetrunk": ""
+    },
+    "4_0": {
+      "dirt": ""
+    }
+  }
+}

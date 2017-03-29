@@ -1,4 +1,846 @@
 {
   "formatVersion": 1,
-  "nodes": []
+  "nodes": [
+    {
+      "id": "0",
+      "name": "Root",
+      "children": [
+        {
+          "id": "1",
+          "name": "BG",
+          "children": [],
+          "components": [],
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "20",
+          "name": "Map",
+          "children": [],
+          "components": [],
+          "position": {
+            "x": -4,
+            "y": -32,
+            "z": 1
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": {
+            "sceneAssetId": "145"
+          }
+        },
+        {
+          "id": "3",
+          "name": "Markers",
+          "children": [
+            {
+              "id": "5",
+              "name": "HeroSpawner",
+              "children": [],
+              "components": [
+                {
+                  "type": "Behavior",
+                  "config": {
+                    "behaviorName": "HeroSpawnBehavior",
+                    "propertyValues": {}
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 5,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "6",
+              "name": "TunnelWarper",
+              "children": [],
+              "components": [
+                {
+                  "type": "Behavior",
+                  "config": {
+                    "behaviorName": "TunnelWarpBehavior",
+                    "propertyValues": {}
+                  },
+                  "id": "0"
+                },
+                {
+                  "type": "ArcadeBody2D",
+                  "config": {
+                    "formatVersion": 2,
+                    "type": "box",
+                    "movable": false,
+                    "width": 5,
+                    "height": 1,
+                    "offset": {
+                      "x": 0,
+                      "y": 0
+                    },
+                    "bounce": {
+                      "x": 0,
+                      "y": 0
+                    },
+                    "tileMapAssetId": null,
+                    "tileSetPropertyName": null,
+                    "layersIndex": null
+                  },
+                  "id": "1"
+                }
+              ],
+              "position": {
+                "x": 52,
+                "y": -32,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [],
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "4",
+          "name": "Platforms",
+          "children": [
+            {
+              "id": "25",
+              "name": "BranchA",
+              "children": [],
+              "components": [],
+              "position": {
+                "x": 23,
+                "y": -18,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": {
+                "sceneAssetId": "150"
+              }
+            },
+            {
+              "id": "26",
+              "name": "BranchB",
+              "children": [],
+              "components": [],
+              "position": {
+                "x": 21,
+                "y": -17,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": {
+                "sceneAssetId": "177"
+              }
+            },
+            {
+              "id": "27",
+              "name": "BranchC",
+              "children": [],
+              "components": [],
+              "position": {
+                "x": 35,
+                "y": -16,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": {
+                "sceneAssetId": "150"
+              }
+            },
+            {
+              "id": "29",
+              "name": "BranchD",
+              "children": [],
+              "components": [],
+              "position": {
+                "x": 23,
+                "y": -9,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": {
+                "sceneAssetId": "150"
+              }
+            },
+            {
+              "id": "30",
+              "name": "BranchE",
+              "children": [],
+              "components": [],
+              "position": {
+                "x": 24,
+                "y": -10,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": {
+                "sceneAssetId": "177"
+              }
+            },
+            {
+              "id": "31",
+              "name": "BranchF",
+              "children": [],
+              "components": [],
+              "position": {
+                "x": 33,
+                "y": -10,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": {
+                "sceneAssetId": "177"
+              }
+            }
+          ],
+          "components": [],
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 4
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "7",
+          "name": "Items",
+          "children": [
+            {
+              "id": "8",
+              "name": "Weapons",
+              "children": [],
+              "components": [],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "9",
+              "name": "Food",
+              "children": [],
+              "components": [],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "10",
+              "name": "Gold",
+              "children": [],
+              "components": [],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "19",
+              "name": "Interactive",
+              "children": [
+                {
+                  "id": "35",
+                  "name": "Dirt",
+                  "children": [],
+                  "components": [],
+                  "position": {
+                    "x": 21.636064529418945,
+                    "y": -6.065430641174316,
+                    "z": 26.763858795166016
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": null
+                },
+                {
+                  "id": "32",
+                  "name": "Chest",
+                  "children": [],
+                  "components": [],
+                  "position": {
+                    "x": 21.636064529418945,
+                    "y": -6.065430641174316,
+                    "z": 26.763858795166016
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": null
+                },
+                {
+                  "id": "33",
+                  "name": "FruitSpawner",
+                  "children": [],
+                  "components": [],
+                  "position": {
+                    "x": 21.636064529418945,
+                    "y": -6.065430641174316,
+                    "z": 26.763858795166016
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": null
+                },
+                {
+                  "id": "34",
+                  "name": "Trunk",
+                  "children": [],
+                  "components": [],
+                  "position": {
+                    "x": 21.636064529418945,
+                    "y": -6.065430641174316,
+                    "z": 26.763858795166016
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": null
+                }
+              ],
+              "components": [],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [],
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "14",
+          "name": "Characters",
+          "children": [
+            {
+              "id": "12",
+              "name": "Dragon",
+              "children": [],
+              "components": [],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "11",
+              "name": "Heroes",
+              "children": [],
+              "components": [],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "24",
+              "name": "Player",
+              "children": [],
+              "components": [],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 2
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": {
+                "sceneAssetId": "163"
+              }
+            }
+          ],
+          "components": [],
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 6
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "15",
+          "name": "Camera",
+          "children": [
+            {
+              "id": "16",
+              "name": "FixedBG",
+              "children": [],
+              "components": [],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": -11
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "17",
+              "name": "FixedFG",
+              "children": [],
+              "components": [],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": -1
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "18",
+              "name": "HUDFromPrefab",
+              "children": [],
+              "components": [],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "Camera",
+              "config": {
+                "formatVersion": 1,
+                "mode": "orthographic",
+                "fov": 45,
+                "orthographicScale": 16,
+                "viewport": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1,
+                  "height": 1
+                },
+                "depth": 0,
+                "nearClippingPlane": 0.1,
+                "farClippingPlane": 1000
+              },
+              "id": "1"
+            },
+            {
+              "type": "Behavior",
+              "config": {
+                "behaviorName": "CameraBehavior",
+                "propertyValues": {}
+              },
+              "id": "2"
+            }
+          ],
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 10
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        }
+      ],
+      "components": [],
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    }
+  ]
 }

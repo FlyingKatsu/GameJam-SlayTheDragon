@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 142,
+  "nextEntryId": 178,
   "nodes": [
     {
       "id": "128",
@@ -130,208 +130,14 @@
           "type": "script"
         },
         {
+          "id": "61",
+          "name": "CameraBehavior",
+          "type": "script"
+        },
+        {
           "id": "125",
           "name": "Debug",
           "type": "tileSet"
-        },
-        {
-          "id": "134",
-          "name": "Entities",
-          "type": null,
-          "children": [
-            {
-              "id": "12",
-              "name": "Items",
-              "type": null,
-              "children": [
-                {
-                  "id": "13",
-                  "name": "Weapons",
-                  "type": null,
-                  "children": [
-                    {
-                      "id": "31",
-                      "name": "SwordSprite",
-                      "type": "sprite"
-                    },
-                    {
-                      "id": "32",
-                      "name": "SwordBehavior",
-                      "type": "script"
-                    },
-                    {
-                      "id": "45",
-                      "name": "SquirtGunSprite",
-                      "type": "sprite"
-                    },
-                    {
-                      "id": "34",
-                      "name": "SquirtGunBehavior",
-                      "type": "script"
-                    }
-                  ]
-                },
-                {
-                  "id": "14",
-                  "name": "Other",
-                  "type": null,
-                  "children": [
-                    {
-                      "id": "46",
-                      "name": "GoldSprite",
-                      "type": "sprite"
-                    },
-                    {
-                      "id": "47",
-                      "name": "GoldBehavior",
-                      "type": "script"
-                    },
-                    {
-                      "id": "35",
-                      "name": "MeatSprite",
-                      "type": "sprite"
-                    },
-                    {
-                      "id": "36",
-                      "name": "MeatBehavior",
-                      "type": "script"
-                    },
-                    {
-                      "id": "48",
-                      "name": "FruitSprite",
-                      "type": "sprite"
-                    },
-                    {
-                      "id": "38",
-                      "name": "FruitBehavior",
-                      "type": "script"
-                    }
-                  ]
-                },
-                {
-                  "id": "15",
-                  "name": "Interest",
-                  "type": null,
-                  "children": [
-                    {
-                      "id": "41",
-                      "name": "Treasure",
-                      "type": null,
-                      "children": [
-                        {
-                          "id": "39",
-                          "name": "TreasureBehavior",
-                          "type": "script"
-                        },
-                        {
-                          "id": "44",
-                          "name": "TreasureSprite",
-                          "type": "sprite"
-                        }
-                      ]
-                    },
-                    {
-                      "id": "42",
-                      "name": "Tree",
-                      "type": null,
-                      "children": [
-                        {
-                          "id": "40",
-                          "name": "TreeBehavior",
-                          "type": "script"
-                        },
-                        {
-                          "id": "43",
-                          "name": "TreeSprite",
-                          "type": "sprite"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "27",
-              "name": "Actors",
-              "type": null,
-              "children": [
-                {
-                  "id": "20",
-                  "name": "Hero",
-                  "type": null,
-                  "children": [
-                    {
-                      "id": "23",
-                      "name": "HeroBehavior",
-                      "type": "script"
-                    },
-                    {
-                      "id": "26",
-                      "name": "Placeholder",
-                      "type": "sprite"
-                    }
-                  ]
-                },
-                {
-                  "id": "21",
-                  "name": "Player",
-                  "type": null,
-                  "children": [
-                    {
-                      "id": "24",
-                      "name": "PlayerBehavior",
-                      "type": "script"
-                    },
-                    {
-                      "id": "61",
-                      "name": "CameraBehavior",
-                      "type": "script"
-                    },
-                    {
-                      "id": "28",
-                      "name": "Placeholder",
-                      "type": "sprite"
-                    },
-                    {
-                      "id": "65",
-                      "name": "Sprite",
-                      "type": "sprite"
-                    }
-                  ]
-                },
-                {
-                  "id": "22",
-                  "name": "Dragon",
-                  "type": null,
-                  "children": [
-                    {
-                      "id": "25",
-                      "name": "DragonBehavior",
-                      "type": "script"
-                    },
-                    {
-                      "id": "29",
-                      "name": "Placeholder",
-                      "type": "sprite"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "132",
-          "name": "Menu",
-          "type": null,
-          "children": [
-            {
-              "id": "133",
-              "name": "Prefab",
-              "type": "scene"
-            }
-          ]
         },
         {
           "id": "120",
@@ -352,6 +158,395 @@
               "id": "123",
               "name": "Trees",
               "type": "sprite"
+            }
+          ]
+        },
+        {
+          "id": "144",
+          "name": "Map",
+          "type": null,
+          "children": [
+            {
+              "id": "145",
+              "name": "Prefab",
+              "type": "scene"
+            },
+            {
+              "id": "147",
+              "name": "Tile Map",
+              "type": "tileMap"
+            },
+            {
+              "id": "146",
+              "name": "Tile Set",
+              "type": "tileSet"
+            }
+          ]
+        },
+        {
+          "id": "142",
+          "name": "Markers",
+          "type": null,
+          "children": [
+            {
+              "id": "148",
+              "name": "HeroSpawnBehavior",
+              "type": "script"
+            },
+            {
+              "id": "149",
+              "name": "TunnelWarpBehavior",
+              "type": "script"
+            }
+          ]
+        },
+        {
+          "id": "143",
+          "name": "Platforms",
+          "type": null,
+          "children": [
+            {
+              "id": "150",
+              "name": "PrefabLeft",
+              "type": "scene"
+            },
+            {
+              "id": "177",
+              "name": "PrefabRight",
+              "type": "scene"
+            },
+            {
+              "id": "151",
+              "name": "PlatformBehavior",
+              "type": "script"
+            },
+            {
+              "id": "176",
+              "name": "PlatformSprite",
+              "type": "sprite"
+            }
+          ]
+        },
+        {
+          "id": "134",
+          "name": "Entities",
+          "type": null,
+          "children": [
+            {
+              "id": "12",
+              "name": "Items",
+              "type": null,
+              "children": [
+                {
+                  "id": "13",
+                  "name": "Weapons",
+                  "type": null,
+                  "children": [
+                    {
+                      "id": "154",
+                      "name": "SquirtGun",
+                      "type": null,
+                      "children": [
+                        {
+                          "id": "155",
+                          "name": "Prefab",
+                          "type": "scene"
+                        },
+                        {
+                          "id": "45",
+                          "name": "SquirtGunSprite",
+                          "type": "sprite"
+                        },
+                        {
+                          "id": "34",
+                          "name": "SquirtGunBehavior",
+                          "type": "script"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "152",
+                      "name": "Sword",
+                      "type": null,
+                      "children": [
+                        {
+                          "id": "153",
+                          "name": "Prefab",
+                          "type": "scene"
+                        },
+                        {
+                          "id": "31",
+                          "name": "SwordSprite",
+                          "type": "sprite"
+                        },
+                        {
+                          "id": "32",
+                          "name": "SwordBehavior",
+                          "type": "script"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "14",
+                  "name": "Food",
+                  "type": null,
+                  "children": [
+                    {
+                      "id": "157",
+                      "name": "Fruit",
+                      "type": null,
+                      "children": [
+                        {
+                          "id": "160",
+                          "name": "Prefab",
+                          "type": "scene"
+                        },
+                        {
+                          "id": "48",
+                          "name": "FruitSprite",
+                          "type": "sprite"
+                        },
+                        {
+                          "id": "38",
+                          "name": "FruitBehavior",
+                          "type": "script"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "158",
+                      "name": "Meat",
+                      "type": null,
+                      "children": [
+                        {
+                          "id": "159",
+                          "name": "Prefab",
+                          "type": "scene"
+                        },
+                        {
+                          "id": "35",
+                          "name": "MeatSprite",
+                          "type": "sprite"
+                        },
+                        {
+                          "id": "36",
+                          "name": "MeatBehavior",
+                          "type": "script"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "156",
+                  "name": "Gold",
+                  "type": null,
+                  "children": [
+                    {
+                      "id": "161",
+                      "name": "Prefab",
+                      "type": "scene"
+                    },
+                    {
+                      "id": "46",
+                      "name": "GoldSprite",
+                      "type": "sprite"
+                    },
+                    {
+                      "id": "47",
+                      "name": "GoldBehavior",
+                      "type": "script"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "27",
+              "name": "Actors",
+              "type": null,
+              "children": [
+                {
+                  "id": "20",
+                  "name": "Hero",
+                  "type": null,
+                  "children": [
+                    {
+                      "id": "162",
+                      "name": "Prefab",
+                      "type": "scene"
+                    },
+                    {
+                      "id": "23",
+                      "name": "HeroBehavior",
+                      "type": "script"
+                    },
+                    {
+                      "id": "26",
+                      "name": "Placeholder",
+                      "type": "sprite"
+                    }
+                  ]
+                },
+                {
+                  "id": "21",
+                  "name": "Player",
+                  "type": null,
+                  "children": [
+                    {
+                      "id": "163",
+                      "name": "Prefab",
+                      "type": "scene"
+                    },
+                    {
+                      "id": "24",
+                      "name": "PlayerBehavior",
+                      "type": "script"
+                    },
+                    {
+                      "id": "28",
+                      "name": "Placeholder",
+                      "type": "sprite"
+                    },
+                    {
+                      "id": "65",
+                      "name": "Sprite",
+                      "type": "sprite"
+                    }
+                  ]
+                },
+                {
+                  "id": "22",
+                  "name": "Dragon",
+                  "type": null,
+                  "children": [
+                    {
+                      "id": "164",
+                      "name": "Prefab",
+                      "type": "scene"
+                    },
+                    {
+                      "id": "25",
+                      "name": "DragonBehavior",
+                      "type": "script"
+                    },
+                    {
+                      "id": "29",
+                      "name": "Placeholder",
+                      "type": "sprite"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "15",
+              "name": "Interactive",
+              "type": null,
+              "children": [
+                {
+                  "id": "42",
+                  "name": "Tree",
+                  "type": null,
+                  "children": [
+                    {
+                      "id": "40",
+                      "name": "TreeBehavior",
+                      "type": "script"
+                    },
+                    {
+                      "id": "43",
+                      "name": "TreeSprite",
+                      "type": "sprite"
+                    },
+                    {
+                      "id": "166",
+                      "name": "Prefab",
+                      "type": "scene"
+                    }
+                  ]
+                },
+                {
+                  "id": "171",
+                  "name": "FruitSpawner",
+                  "type": null,
+                  "children": [
+                    {
+                      "id": "172",
+                      "name": "Prefab",
+                      "type": "scene"
+                    },
+                    {
+                      "id": "173",
+                      "name": "FruitSpawnerBehavior",
+                      "type": "script"
+                    },
+                    {
+                      "id": "174",
+                      "name": "FruitSpawnerSprite",
+                      "type": "sprite"
+                    }
+                  ]
+                },
+                {
+                  "id": "41",
+                  "name": "Chest",
+                  "type": null,
+                  "children": [
+                    {
+                      "id": "165",
+                      "name": "Prefab",
+                      "type": "scene"
+                    },
+                    {
+                      "id": "39",
+                      "name": "ChestBehavior",
+                      "type": "script"
+                    },
+                    {
+                      "id": "44",
+                      "name": "ChestSprite",
+                      "type": "sprite"
+                    }
+                  ]
+                },
+                {
+                  "id": "167",
+                  "name": "Dirt",
+                  "type": null,
+                  "children": [
+                    {
+                      "id": "168",
+                      "name": "Prefab",
+                      "type": "scene"
+                    },
+                    {
+                      "id": "169",
+                      "name": "DirtSprite",
+                      "type": "sprite"
+                    },
+                    {
+                      "id": "170",
+                      "name": "DirtBehavior",
+                      "type": "script"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "132",
+          "name": "Menu",
+          "type": null,
+          "children": [
+            {
+              "id": "133",
+              "name": "Prefab",
+              "type": "scene"
             }
           ]
         },
@@ -500,6 +695,11 @@
               "type": "sound"
             }
           ]
+        },
+        {
+          "id": "175",
+          "name": "TestScene",
+          "type": "scene"
         }
       ]
     }
