@@ -6,21 +6,6 @@
       "parentBehavior": null,
       "properties": []
     },
-    "CharacterBehavior": {
-      "scriptId": "24",
-      "line": 2,
-      "parentBehavior": null,
-      "properties": [
-        {
-          "name": "speed",
-          "type": "number"
-        },
-        {
-          "name": "jumpSpeed",
-          "type": "number"
-        }
-      ]
-    },
     "DragonBehavior": {
       "scriptId": "25",
       "line": 0,
@@ -106,6 +91,48 @@
       "line": 0,
       "parentBehavior": null,
       "properties": []
+    },
+    "GameBehavior": {
+      "scriptId": "131",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
+    },
+    "PlayerBehavior": {
+      "scriptId": "24",
+      "line": 2,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "speed",
+          "type": "number"
+        },
+        {
+          "name": "jumpSpeed",
+          "type": "number"
+        }
+      ]
+    },
+    "CameraBehaviorTest": {
+      "scriptId": "138",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
+    },
+    "CharacterBehavior": {
+      "scriptId": "141",
+      "line": 2,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "speed",
+          "type": "number"
+        },
+        {
+          "name": "jumpSpeed",
+          "type": "number"
+        }
+      ]
     }
   }
 }
