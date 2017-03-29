@@ -15,17 +15,17 @@ Falling into a cavern, you are joined by similarly equipped heroes on a quest to
 
 ### Art
 * [Qun](https://qunariariqun.itch.io/)'s pixel art
- * Player
- * Hero
- * Dragon
- * Sword
- * Axe
- * Spade
- * SquirtGun
- * Fruit
- * Meat
- * Gold
- * TreasureChest
+  * Player
+  * Hero
+  * Dragon
+  * Sword
+  * Axe
+  * Spade
+  * SquirtGun
+  * Fruit
+  * Meat
+  * Gold
+  * TreasureChest
 * [Pixel-boy](https://pixel-boy.itch.io/)'s asset packs for [Superpowers](http://superpowers-html5.com/) supporters
  * [Backgrounds Asset Pack](https://github.com/sparklinlabs/superpowers-asset-packs/tree/master/backgrounds)
  * [Prehistoric Platformer Asset Pack](https://github.com/sparklinlabs/superpowers-asset-packs/tree/master/prehistoric-platformer)
