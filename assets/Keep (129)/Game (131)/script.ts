@@ -52,4 +52,4 @@ module Game {
   
 }
 
-Game.init();
+//Game.init();

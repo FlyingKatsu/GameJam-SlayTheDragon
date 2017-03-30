@@ -172,6 +172,27 @@
       "line": 0,
       "parentBehavior": null,
       "properties": []
+    },
+    "FakePlayerBehavior": {
+      "scriptId": "180",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "speed",
+          "type": "number"
+        },
+        {
+          "name": "jumpSpeed",
+          "type": "number"
+        }
+      ]
+    },
+    "FakeHeroBehavior": {
+      "scriptId": "181",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
     }
   }
 }

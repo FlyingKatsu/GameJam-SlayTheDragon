@@ -59,11 +59,12 @@ module Collision2D {
     //Sup.log( A0 ); Sup.log( A1 ); Sup.log( B0 ); Sup.log( B1 );
     
     let denom = -segB.length.x * segA.length.y  +  segA.length.x * segB.length.y;
-    
+    Sup.log("Denom: " + denom);
     if (denom != 0) {
       let s = ( -segA.length.y * (A0.x - B0.x) + segA.length.x * (A0.y - B0.y) ) / denom;
       let t = ( -segB.length.x * (A0.y - B0.y) + segB.length.y * (A0.x - B0.x) ) / denom;
-      
+      Sup.log("S: " + s);
+      Sup.log("T: " + t);
       if ( s >= 0 && s <= 1 && t >= 0 && t <= 1 ) return true;
     }
     
