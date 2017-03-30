@@ -26,7 +26,9 @@ Falling into a cavern, you are joined by similarly equipped heroes on a quest to
   * Meat
   * Gold
   * TreasureChest
-* [Pixel-boy](https://pixel-boy.itch.io/)'s asset packs for [Superpowers](http://superpowers-html5.com/) supporters
+* Placeholder: [Kiira](https://thechayed.itch.io/kiiras-resources-pixel-art)'s free asset pack
+  * [Gameboy Platformer Tileset](http://kiiragames.weebly.com/pixel-art---animations.html)
+* Placeholder: [Pixel-boy](https://pixel-boy.itch.io/)'s asset packs for [Superpowers](http://superpowers-html5.com/) supporters
   * [Backgrounds Asset Pack](https://github.com/sparklinlabs/superpowers-asset-packs/tree/master/backgrounds)
   * [Prehistoric Platformer Asset Pack](https://github.com/sparklinlabs/superpowers-asset-packs/tree/master/prehistoric-platformer)
   * [Medieval Fantasy Asset Pack](https://github.com/sparklinlabs/superpowers-asset-packs/tree/master/medieval-fantasy)
