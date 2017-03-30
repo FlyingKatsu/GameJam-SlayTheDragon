@@ -140,11 +140,6 @@
           "type": "script"
         },
         {
-          "id": "125",
-          "name": "Debug",
-          "type": "tileSet"
-        },
-        {
           "id": "120",
           "name": "BG",
           "type": null,
@@ -184,6 +179,11 @@
             {
               "id": "146",
               "name": "Tile Set",
+              "type": "tileSet"
+            },
+            {
+              "id": "125",
+              "name": "Debug",
               "type": "tileSet"
             }
           ]

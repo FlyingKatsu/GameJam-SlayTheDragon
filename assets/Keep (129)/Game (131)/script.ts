@@ -3,6 +3,8 @@ module Game {
   export let map: Sup.TileMap;
   export let playerActor: Sup.Actor;
         
+  export let musicPlayer: Sup.Audio.SoundPlayer;
+        
   export let allSolidBodies: Sup.ArcadePhysics2D.Body[] = [];
   export let allPlatformBodies: Sup.ArcadePhysics2D.Body[] = [];
         
@@ -26,6 +28,10 @@ module Game {
     
     // Set Gravity
     Sup.ArcadePhysics2D.setGravity(0, -0.02);
+    
+    // Play Music
+    Game.musicPlayer = new Sup.Audio.SoundPlayer("Keep/Music/Pyre", 0.25, { loop: true });
+    musicPlayer.play();
     
   }
   
