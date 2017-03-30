@@ -129,6 +129,14 @@
                     "propertyValues": {}
                   },
                   "id": "2"
+                },
+                {
+                  "type": "Behavior",
+                  "config": {
+                    "behaviorName": "CollisionBehavior",
+                    "propertyValues": {}
+                  },
+                  "id": "3"
                 }
               ],
               "position": {
