@@ -4,9 +4,9 @@ An HTML5 game made with [Superpowers](http://superpowers-html5.com/index.en.html
 * [Read the Dev Blog](https://itch.io/t/69699/slay-the-dragon)
 * Play [Slay the Dragon](https://flyingkatsu.itch.io/slay-the-dragon) on Itch.io
 
-## Overview
+## Description
 
-Falling into a cavern, you are joined by similarly equipped heroes on a quest to slay the dragon waiting at the end.  Each of you can hold only one item: a weapon, food, or gold.  The items you choose to carry, use, or drop will determine your success at escaping the cavern.
+Falling into a cavern, you are joined by similarly equipped heroes on a quest to slay the dragon waiting at the end.  Each of you can hold only one item: a weapon, food, or gold.  The items you choose to carry, use, or drop will determine your success at slaying the dragon and escaping the cavern.
 
 ## Credits
 
@@ -26,7 +26,9 @@ Falling into a cavern, you are joined by similarly equipped heroes on a quest to
   * Meat
   * Gold
   * TreasureChest
-* [Pixel-boy](https://pixel-boy.itch.io/)'s asset packs for [Superpowers](http://superpowers-html5.com/) supporters
+* Placeholder: [Kiira](https://thechayed.itch.io/kiiras-resources-pixel-art)'s free asset pack
+  * [Gameboy Platformer Tileset](http://kiiragames.weebly.com/pixel-art---animations.html)
+* Placeholder: [Pixel-boy](https://pixel-boy.itch.io/)'s asset packs for [Superpowers](http://superpowers-html5.com/) supporters
   * [Backgrounds Asset Pack](https://github.com/sparklinlabs/superpowers-asset-packs/tree/master/backgrounds)
   * [Prehistoric Platformer Asset Pack](https://github.com/sparklinlabs/superpowers-asset-packs/tree/master/prehistoric-platformer)
   * [Medieval Fantasy Asset Pack](https://github.com/sparklinlabs/superpowers-asset-packs/tree/master/medieval-fantasy)
