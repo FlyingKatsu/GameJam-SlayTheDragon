@@ -6,10 +6,13 @@ class PlayerBehavior extends Sup.Behavior {
   
   private initialSize;
   private initialOffset;
+  private allPlatformBodies: Sup.ArcadePhysics2D.Body[] = [];
   
   awake() {
     this.initialSize = this.actor.arcadeBody2D.getSize();
     this.initialOffset = this.actor.arcadeBody2D.getOffset();
+    let platformBodies = Sup.getActor("Platforms").getChildren();
+    for (let platBody of platformBodies) this.allPlatformBodies.push(platBody.arcadeBody2D);
   }
   
   update() {
@@ -20,6 +23,7 @@ class PlayerBehavior extends Sup.Behavior {
     
     let touchSolids = this.actor.arcadeBody2D.getTouches().bottom;
     let velocity = this.actor.arcadeBody2D.getVelocity();
+    let dampenFall = true;
     
     // If falling, check the semi-solid bodies
     let touchPlatforms = false;
@@ -30,7 +34,8 @@ class PlayerBehavior extends Sup.Behavior {
       //this.actor.arcadeBody2D.setOffset({ x: this.initialOffset.x, y: -0.8 });
       
       // Now, we check with every (semi-solid) platform
-      for (let platformBody of Game.allPlatformBodies) {
+      // TODO: apply custom collision here so we can drop down
+      for (let platformBody of this.allPlatformBodies) {
         Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, platformBody);
         if (this.actor.arcadeBody2D.getTouches().bottom) {
           touchPlatforms = true;
@@ -60,9 +65,12 @@ class PlayerBehavior extends Sup.Behavior {
     //let touchBottom = this.actor.arcadeBody2D.getTouches().bottom;
     let touchBottom = touchSolids || touchPlatforms;
     if (touchBottom) {
-      if (Sup.Input.wasKeyJustPressed("UP") || Sup.Input.isKeyDown("W") || Sup.Input.isKeyDown("SPACE")) {
+      if (Sup.Input.wasKeyJustPressed("UP") || Sup.Input.wasKeyJustPressed("W") || Sup.Input.wasKeyJustPressed("SPACE")) {
         velocity.y = this.jumpSpeed;
         this.actor.spriteRenderer.setAnimation("Jump");
+      // If isKeyDown("DOWN") and touchPlatforms to drop down from platform
+      } else if ( Sup.Input.wasKeyJustPressed("DOWN") || Sup.Input.wasKeyJustPressed("S") && touchPlatforms ) {
+        velocity.y = -this.speed;
       } else {
         // Here, we should play either "Idle" or "Run" depending on the horizontal speed
         if (velocity.x === 0) this.actor.spriteRenderer.setAnimation("Idle");
@@ -70,10 +78,22 @@ class PlayerBehavior extends Sup.Behavior {
       }
     } else {
       // Here, we should play either "Jump" or "Fall" depending on the vertical speed
-      if (velocity.y >= 0) this.actor.spriteRenderer.setAnimation("Jump");
-      else this.actor.spriteRenderer.setAnimation("Fall");
+      if (velocity.y >= 0) { 
+        this.actor.spriteRenderer.setAnimation("Jump");
+      } else {
+        this.actor.spriteRenderer.setAnimation("Fall");
+        // If isKeyDown("DOWN") to add extra umph to the fall
+        if ( Sup.Input.isKeyDown("DOWN") || Sup.Input.isKeyDown("S") ) {
+          velocity.y = -Game.MAX_VELOCITY_Y;
+          dampenFall = false;
+        }
+      } 
     }
-
+    
+    // Cap the velocity to avoid going crazy in falls
+    velocity.x = Sup.Math.clamp(velocity.x, -Game.MAX_VELOCITY_X, Game.MAX_VELOCITY_X);
+    if (dampenFall) velocity.y = Sup.Math.clamp(velocity.y, -Game.MAX_VELOCITY_Y/2, Game.MAX_VELOCITY_Y);
+    
     // Finally, we apply the velocity back to the ArcadePhysics body
     this.actor.arcadeBody2D.setVelocity(velocity);
   }

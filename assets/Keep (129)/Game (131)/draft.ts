@@ -8,7 +8,7 @@ module Game {
         
   export let musicPlayer: Sup.Audio.SoundPlayer;
         
-  export let allSolidBodies: Sup.ArcadePhysics2D.Body[] = [];
+  /export let allSolidBodies: Sup.ArcadePhysics2D.Body[] = [];
   export let allPlatformBodies: Sup.ArcadePhysics2D.Body[] = [];
         
   export enum Direction { Up, Left, Down, Right };
