@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 178,
+  "nextEntryId": 180,
   "nodes": [
     {
       "id": "128",
@@ -123,6 +123,16 @@
           "id": "130",
           "name": "Scene",
           "type": "scene"
+        },
+        {
+          "id": "178",
+          "name": "Collision2D",
+          "type": "script"
+        },
+        {
+          "id": "179",
+          "name": "CollisionBehavior",
+          "type": "script"
         },
         {
           "id": "61",
