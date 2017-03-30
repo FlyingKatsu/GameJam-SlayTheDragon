@@ -4,16 +4,21 @@ class TunnelWarpBehavior extends Sup.Behavior {
   
   private target: Sup.Actor;
   private humanActors: Sup.Actor[] = [];
+  private bbox;
   
   awake() {
     // Set target
     this.target = Sup.getActor( this.targetName );
+    // Set bbox
+    this.bbox = Collision2D.getBBox(this.actor);
     // Collect humanoid actors
     this.humanActors.push( Sup.getActor("Player") );
     for ( let heroActor of Sup.getActor("Heroes").getChildren() ) this.humanActors.push( heroActor );
   }
   
   update() {
+    
+    this.bbox = Collision2D.getBBox(this.actor);
     
     // Check if colliding with any human actors, and if so, warp them to the target
     for ( let humanActor of this.humanActors ) {
@@ -26,9 +31,8 @@ class TunnelWarpBehavior extends Sup.Behavior {
       
       // Using custom collision computation      
       // If sensor location is top, only need to check bottom coordinates of humanBody with top coordinates of this body
-      if ( Collision2D.collides( 
-            this.actor.getBehavior(CollisionBehavior).getCollisionPoints(Game.stringLocation[this.sensor]), 
-            humanActor.getBehavior(CollisionBehavior).getCollisionPoints(Game.opposingLocation[this.sensor]) ) ) {
+      if ( Collision2D.collides( this.bbox.edges, Collision2D.getBBox(humanActor).seg.bottom ) != null ) {
+          Sup.log("WARPING");
           humanActor.arcadeBody2D.warpPosition(this.target.getPosition());
       }
       
