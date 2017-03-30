@@ -3,7 +3,7 @@ class CollisionBehavior extends Sup.Behavior {
   private bbox;
   
   awake() {
-    // Set our collision points: Top/AB, Left/AC, Bottom/CD, Right/BD
+    // Get bbox edges, verts, segments
     this.bbox = Collision2D.getBBox(this.actor);
   }
 
@@ -11,8 +11,8 @@ class CollisionBehavior extends Sup.Behavior {
     
   }
   
-  getBBox( sensorLocation:string ) {
-    return this.bbox[sensorLocation];
+  getBBox() {
+    return this.bbox;
   }
   
 }

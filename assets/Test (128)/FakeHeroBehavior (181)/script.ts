@@ -10,38 +10,25 @@ class FakeHeroBehavior extends Sup.Behavior {
     Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, Sup.getActor("Mapper").arcadeBody2D);
     
     if (Sup.Input.wasKeyJustPressed("SHIFT")) {
-
-      if ( Collision2D.collides( 
-            this.actor.getPosition(),
-            this.actor.getBehavior(CollisionBehavior).getBBox("top"), 
-            this.humanActor.getPosition(),
-            this.humanActor.getBehavior(CollisionBehavior).getBBox("top") ) ) {
-          Sup.log("Touched TOP!");
-          //this.humanActor.arcadeBody2D.warpPosition(this.target.getPosition());
-      } else if ( Collision2D.collides( 
-            this.actor.getPosition(),
-            this.actor.getBehavior(CollisionBehavior).getBBox("left"), 
-            this.humanActor.getPosition(),
-            this.humanActor.getBehavior(CollisionBehavior).getBBox("left") ) ) {
-          Sup.log("Touched LEFT!");
-          //this.humanActor.arcadeBody2D.warpPosition(this.target.getPosition());
-      } else if ( Collision2D.collides( 
-            this.actor.getPosition(),
-            this.actor.getBehavior(CollisionBehavior).getBBox("bottom"), 
-            this.humanActor.getPosition(),
-            this.humanActor.getBehavior(CollisionBehavior).getBBox("bottom") ) ) {
-          Sup.log("Touched BOTTOM!");
-          //this.humanActor.arcadeBody2D.warpPosition(this.target.getPosition());
-      } else if ( Collision2D.collides( 
-            this.actor.getPosition(),
-            this.actor.getBehavior(CollisionBehavior).getBBox("right"), 
-            this.humanActor.getPosition(),
-            this.humanActor.getBehavior(CollisionBehavior).getBBox("right") ) ) {
-          Sup.log("Touched RIGHT!");
-          //this.humanActor.arcadeBody2D.warpPosition(this.target.getPosition());
-      } else {
-        //NOP
-      }
+      
+      let bbox = Collision2D.getBBox(this.actor);
+      let otherbbox = Collision2D.getBBox(this.humanActor);
+      //Sup.log(bbox.edges);
+      Sup.log("Check with Human Bottom");
+      Sup.log(otherbbox.seg.bottom);
+      Sup.log( Collision2D.collides( bbox.edges, otherbbox.seg.bottom ) );
+      
+      Sup.log("Check with Human Top");
+      Sup.log(otherbbox.seg.top);
+      Sup.log( Collision2D.collides( bbox.edges, otherbbox.seg.top ) );
+      
+      Sup.log("Check with Human Left");
+      Sup.log(otherbbox.seg.left);
+      Sup.log( Collision2D.collides( bbox.edges, otherbbox.seg.left ) );
+      
+      Sup.log("Check with Human Right");
+      Sup.log(otherbbox.seg.right);
+      Sup.log( Collision2D.collides( bbox.edges, otherbbox.seg.right ) );
     }
   }
 }
