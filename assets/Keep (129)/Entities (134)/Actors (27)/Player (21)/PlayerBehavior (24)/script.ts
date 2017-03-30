@@ -4,8 +4,8 @@ class PlayerBehavior extends Sup.Behavior {
   speed:number = 0.2;
   jumpSpeed:number = 0.4;
   
-  initialSize;
-  initialOffset;
+  private initialSize;
+  private initialOffset;
   
   awake() {
     this.initialSize = this.actor.arcadeBody2D.getSize();
