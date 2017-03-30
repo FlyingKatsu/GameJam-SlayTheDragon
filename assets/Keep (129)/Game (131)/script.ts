@@ -5,6 +5,11 @@ module Game {
         
   export let allSolidBodies: Sup.ArcadePhysics2D.Body[] = [];
   export let allPlatformBodies: Sup.ArcadePhysics2D.Body[] = [];
+        
+  export enum Direction { Up, Left, Down, Right };
+  export enum Location { Top, Left, Bottom, Right };
+  export let stringLocation: string[] = ["top", "left", "bottom", "right"];
+  export let opposingLocation: string[] = ["bottom", "right", "top", "left"];
   
   export function init() {
     
@@ -23,6 +28,7 @@ module Game {
     Sup.ArcadePhysics2D.setGravity(0, -0.02);
     
   }
+  
 }
 
 Game.init();
