@@ -30,10 +30,10 @@
             "formatVersion": 2,
             "type": "box",
             "movable": false,
-            "width": 6,
-            "height": 1,
+            "width": 4,
+            "height": 0.2,
             "offset": {
-              "x": -3,
+              "x": -2,
               "y": 1
             },
             "bounce": {
@@ -67,7 +67,7 @@
         "w": 1
       },
       "scale": {
-        "x": 1,
+        "x": 0.8,
         "y": 1,
         "z": 1
       },
