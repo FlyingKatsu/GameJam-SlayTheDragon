@@ -167,12 +167,6 @@
       "parentBehavior": null,
       "properties": []
     },
-    "CollisionBehavior": {
-      "scriptId": "179",
-      "line": 0,
-      "parentBehavior": null,
-      "properties": []
-    },
     "FakePlayerBehavior": {
       "scriptId": "180",
       "line": 0,

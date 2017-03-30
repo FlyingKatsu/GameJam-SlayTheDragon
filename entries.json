@@ -140,11 +140,6 @@
           "type": "script"
         },
         {
-          "id": "179",
-          "name": "CollisionBehavior",
-          "type": "script"
-        },
-        {
           "id": "61",
           "name": "CameraBehavior",
           "type": "script"
