@@ -53,6 +53,14 @@
             "layersIndex": null
           },
           "id": "3"
+        },
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "CollisionBehavior",
+            "propertyValues": {}
+          },
+          "id": "4"
         }
       ],
       "position": {
