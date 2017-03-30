@@ -72,7 +72,7 @@
                     "behaviorName": "HeroSpawnBehavior",
                     "propertyValues": {}
                   },
-                  "id": "0"
+                  "id": "1"
                 }
               ],
               "position": {
@@ -101,14 +101,6 @@
               "children": [],
               "components": [
                 {
-                  "type": "Behavior",
-                  "config": {
-                    "behaviorName": "TunnelWarpBehavior",
-                    "propertyValues": {}
-                  },
-                  "id": "0"
-                },
-                {
                   "type": "ArcadeBody2D",
                   "config": {
                     "formatVersion": 2,
@@ -129,11 +121,19 @@
                     "layersIndex": null
                   },
                   "id": "1"
+                },
+                {
+                  "type": "Behavior",
+                  "config": {
+                    "behaviorName": "TunnelWarpBehavior",
+                    "propertyValues": {}
+                  },
+                  "id": "2"
                 }
               ],
               "position": {
                 "x": 52,
-                "y": -32,
+                "y": -28,
                 "z": 0
               },
               "orientation": {

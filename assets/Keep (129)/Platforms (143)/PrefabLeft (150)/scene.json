@@ -25,14 +25,6 @@
           "id": "0"
         },
         {
-          "type": "Behavior",
-          "config": {
-            "behaviorName": "PlatformBehavior",
-            "propertyValues": {}
-          },
-          "id": "1"
-        },
-        {
           "type": "ArcadeBody2D",
           "config": {
             "formatVersion": 2,
@@ -53,6 +45,14 @@
             "layersIndex": null
           },
           "id": "2"
+        },
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "PlatformBehavior",
+            "propertyValues": {}
+          },
+          "id": "3"
         }
       ],
       "position": {

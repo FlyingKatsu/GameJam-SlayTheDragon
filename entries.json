@@ -125,11 +125,6 @@
           "type": "scene"
         },
         {
-          "id": "131",
-          "name": "Game",
-          "type": "script"
-        },
-        {
           "id": "61",
           "name": "CameraBehavior",
           "type": "script"
@@ -700,6 +695,11 @@
           "id": "175",
           "name": "TestScene",
           "type": "scene"
+        },
+        {
+          "id": "131",
+          "name": "Game",
+          "type": "script"
         }
       ]
     }

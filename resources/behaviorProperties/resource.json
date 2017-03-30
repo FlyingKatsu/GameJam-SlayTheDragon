@@ -86,12 +86,6 @@
       "parentBehavior": null,
       "properties": []
     },
-    "GameBehavior": {
-      "scriptId": "131",
-      "line": 0,
-      "parentBehavior": null,
-      "properties": []
-    },
     "PlayerBehavior": {
       "scriptId": "24",
       "line": 2,
@@ -104,6 +98,14 @@
         {
           "name": "jumpSpeed",
           "type": "number"
+        },
+        {
+          "name": "initialSize",
+          "type": "any"
+        },
+        {
+          "name": "initialOffset",
+          "type": "any"
         }
       ]
     },

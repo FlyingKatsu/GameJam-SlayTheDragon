@@ -1,15 +1,49 @@
-Sup.ArcadePhysics2D.setGravity(0, -0.02);
+//Sup.ArcadePhysics2D.setGravity(0, -0.02);
 
 class PlayerBehavior extends Sup.Behavior {
-  speed = 0.2;
-  jumpSpeed = 0.4;
-
+  speed:number = 0.2;
+  jumpSpeed:number = 0.4;
+  
+  initialSize;
+  initialOffset;
+  
+  awake() {
+    this.initialSize = this.actor.arcadeBody2D.getSize();
+    this.initialOffset = this.actor.arcadeBody2D.getOffset();
+  }
+  
   update() {
-    Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, Sup.ArcadePhysics2D.getAllBodies());
-
-    // As explained above, we get the current velocity
+    
+    // Check collision with solid bodies (from tilemap)
+    Sup.ArcadePhysics2D.collides( this.actor.arcadeBody2D, Sup.getActor("Map").arcadeBody2D );
+    //Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, Sup.ArcadePhysics2D.getAllBodies());
+    
+    let touchSolids = this.actor.arcadeBody2D.getTouches().bottom;
     let velocity = this.actor.arcadeBody2D.getVelocity();
-
+    
+    // If falling, check the semi-solid bodies
+    let touchPlatforms = false;
+    if ( velocity.y < 0 ) {
+      // We must change the size of the player body so only the feet are checked
+      // To do so, we reduce the height of the body and adapt the offset
+      //this.actor.arcadeBody2D.setSize(this.initialSize.x, 0.4);
+      //this.actor.arcadeBody2D.setOffset({ x: this.initialOffset.x, y: -0.8 });
+      
+      // Now, we check with every (semi-solid) platform
+      for (let platformBody of Game.allPlatformBodies) {
+        Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, platformBody);
+        if (this.actor.arcadeBody2D.getTouches().bottom) {
+          touchPlatforms = true;
+          velocity.y = 0;
+          break;
+        }
+      }
+  
+      // After the check, we have to reset the body to its normal size
+      //this.actor.arcadeBody2D.setSize(this.initialSize.x, this.initialSize.y);
+      //this.actor.arcadeBody2D.setOffset(this.initialOffset);
+    }
+    
     // We override the `.x` component based on the player's input
     if (Sup.Input.isKeyDown("LEFT") || Sup.Input.isKeyDown("A")) {
       velocity.x = -this.speed;
@@ -23,7 +57,8 @@ class PlayerBehavior extends Sup.Behavior {
 
     // If the player is on the ground and wants to jump,
     // we update the `.y` component accordingly
-    let touchBottom = this.actor.arcadeBody2D.getTouches().bottom;
+    //let touchBottom = this.actor.arcadeBody2D.getTouches().bottom;
+    let touchBottom = touchSolids || touchPlatforms;
     if (touchBottom) {
       if (Sup.Input.wasKeyJustPressed("UP") || Sup.Input.isKeyDown("W") || Sup.Input.isKeyDown("SPACE")) {
         velocity.y = this.jumpSpeed;
