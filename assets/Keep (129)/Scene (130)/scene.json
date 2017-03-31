@@ -197,7 +197,7 @@
                 }
               ],
               "position": {
-                "x": 117,
+                "x": 115,
                 "y": 47,
                 "z": 0
               },
@@ -262,7 +262,7 @@
                 }
               ],
               "position": {
-                "x": 11,
+                "x": 6,
                 "y": 47,
                 "z": 0
               },
@@ -309,12 +309,12 @@
           "children": [
             {
               "id": "25",
-              "name": "BranchA",
+              "name": "Lair1",
               "children": [],
               "components": [],
               "position": {
-                "x": 21,
-                "y": -20,
+                "x": 81,
+                "y": 19,
                 "z": 0
               },
               "orientation": {
@@ -336,12 +336,12 @@
             },
             {
               "id": "26",
-              "name": "BranchB",
+              "name": "Lair2",
               "children": [],
               "components": [],
               "position": {
-                "x": 23,
-                "y": -17,
+                "x": 84,
+                "y": 21,
                 "z": 0
               },
               "orientation": {
@@ -363,12 +363,12 @@
             },
             {
               "id": "27",
-              "name": "BranchC",
+              "name": "Lair3",
               "children": [],
               "components": [],
               "position": {
-                "x": 34,
-                "y": -14,
+                "x": 96,
+                "y": 23,
                 "z": 0
               },
               "orientation": {
@@ -390,12 +390,12 @@
             },
             {
               "id": "29",
-              "name": "BranchD",
+              "name": "Lair4",
               "children": [],
               "components": [],
               "position": {
-                "x": 23,
-                "y": -11,
+                "x": 83,
+                "y": 25,
                 "z": 0
               },
               "orientation": {
@@ -417,12 +417,12 @@
             },
             {
               "id": "30",
-              "name": "BranchE",
+              "name": "Lair5",
               "children": [],
               "components": [],
               "position": {
-                "x": 27,
-                "y": -7,
+                "x": 100,
+                "y": 25,
                 "z": 0
               },
               "orientation": {
@@ -444,12 +444,282 @@
             },
             {
               "id": "31",
-              "name": "BranchF",
+              "name": "Lair6",
               "children": [],
               "components": [],
               "position": {
-                "x": 36,
-                "y": -8,
+                "x": 98,
+                "y": 19,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": {
+                "sceneAssetId": "177"
+              }
+            },
+            {
+              "id": "38",
+              "name": "Lair7",
+              "children": [],
+              "components": [],
+              "position": {
+                "x": 87,
+                "y": 27,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": {
+                "sceneAssetId": "177"
+              }
+            },
+            {
+              "id": "39",
+              "name": "Branch1",
+              "children": [],
+              "components": [],
+              "position": {
+                "x": 50,
+                "y": 34,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": {
+                "sceneAssetId": "177"
+              }
+            },
+            {
+              "id": "40",
+              "name": "Branch2",
+              "children": [],
+              "components": [],
+              "position": {
+                "x": 67,
+                "y": 40,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": {
+                "sceneAssetId": "177"
+              }
+            },
+            {
+              "id": "41",
+              "name": "Branch3",
+              "children": [],
+              "components": [],
+              "position": {
+                "x": 49,
+                "y": 41,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": {
+                "sceneAssetId": "177"
+              }
+            },
+            {
+              "id": "42",
+              "name": "Branch4",
+              "children": [],
+              "components": [],
+              "position": {
+                "x": 47,
+                "y": 37,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": {
+                "sceneAssetId": "150"
+              }
+            },
+            {
+              "id": "43",
+              "name": "Branch5",
+              "children": [],
+              "components": [],
+              "position": {
+                "x": 64,
+                "y": 44,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": {
+                "sceneAssetId": "150"
+              }
+            },
+            {
+              "id": "44",
+              "name": "Branch6",
+              "children": [],
+              "components": [],
+              "position": {
+                "x": 64,
+                "y": 50,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": {
+                "sceneAssetId": "150"
+              }
+            },
+            {
+              "id": "45",
+              "name": "Branch7",
+              "children": [],
+              "components": [],
+              "position": {
+                "x": 47,
+                "y": 31,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": {
+                "sceneAssetId": "150"
+              }
+            },
+            {
+              "id": "46",
+              "name": "Branch8",
+              "children": [],
+              "components": [],
+              "position": {
+                "x": 48,
+                "y": 45,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": {
+                "sceneAssetId": "150"
+              }
+            },
+            {
+              "id": "48",
+              "name": "Branch9",
+              "children": [],
+              "components": [],
+              "position": {
+                "x": 50,
+                "y": 48,
                 "z": 0
               },
               "orientation": {
