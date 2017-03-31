@@ -36,8 +36,8 @@
           "children": [],
           "components": [],
           "position": {
-            "x": -4,
-            "y": -32,
+            "x": 0,
+            "y": 0,
             "z": 1
           },
           "orientation": {
@@ -76,8 +76,8 @@
                 }
               ],
               "position": {
-                "x": 0,
-                "y": 5,
+                "x": 24,
+                "y": 56,
                 "z": 0
               },
               "orientation": {
@@ -132,8 +132,138 @@
                 }
               ],
               "position": {
-                "x": 52,
-                "y": -30,
+                "x": 111,
+                "y": 8,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "36",
+              "name": "TunnelWarperHorizRight",
+              "children": [],
+              "components": [
+                {
+                  "type": "ArcadeBody2D",
+                  "config": {
+                    "formatVersion": 2,
+                    "type": "box",
+                    "movable": false,
+                    "width": 1,
+                    "height": 5,
+                    "offset": {
+                      "x": 0,
+                      "y": 0
+                    },
+                    "bounce": {
+                      "x": 0,
+                      "y": 0
+                    },
+                    "tileMapAssetId": null,
+                    "tileSetPropertyName": null,
+                    "layersIndex": null
+                  },
+                  "id": "1"
+                },
+                {
+                  "type": "Behavior",
+                  "config": {
+                    "behaviorName": "TunnelWarpBehavior",
+                    "propertyValues": {
+                      "targetName": {
+                        "type": "string",
+                        "value": "TunnelWarperHorizLeft"
+                      },
+                      "sensor": {
+                        "type": "number",
+                        "value": 1
+                      }
+                    }
+                  },
+                  "id": "2"
+                }
+              ],
+              "position": {
+                "x": 116,
+                "y": 47,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "37",
+              "name": "TunnelWarperHorizLeft",
+              "children": [],
+              "components": [
+                {
+                  "type": "ArcadeBody2D",
+                  "config": {
+                    "formatVersion": 2,
+                    "type": "box",
+                    "movable": false,
+                    "width": 1,
+                    "height": 5,
+                    "offset": {
+                      "x": 0,
+                      "y": 0
+                    },
+                    "bounce": {
+                      "x": 0,
+                      "y": 0
+                    },
+                    "tileMapAssetId": null,
+                    "tileSetPropertyName": null,
+                    "layersIndex": null
+                  },
+                  "id": "1"
+                },
+                {
+                  "type": "Behavior",
+                  "config": {
+                    "behaviorName": "TunnelWarpBehavior",
+                    "propertyValues": {
+                      "targetName": {
+                        "type": "string",
+                        "value": "TunnelWarperHorizRight"
+                      },
+                      "sensor": {
+                        "type": "number",
+                        "value": 3
+                      }
+                    }
+                  },
+                  "id": "2"
+                }
+              ],
+              "position": {
+                "x": 12,
+                "y": 47,
                 "z": 0
               },
               "orientation": {
@@ -648,8 +778,8 @@
               "children": [],
               "components": [],
               "position": {
-                "x": 0,
-                "y": 0,
+                "x": 24,
+                "y": 56,
                 "z": 2
               },
               "orientation": {
@@ -801,8 +931,8 @@
             }
           ],
           "position": {
-            "x": 0,
-            "y": 0,
+            "x": 24,
+            "y": 56,
             "z": 10
           },
           "orientation": {
