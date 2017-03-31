@@ -9,6 +9,7 @@ class PlayerBehavior extends Sup.Behavior {
   private allPlatformBodies: Sup.ArcadePhysics2D.Body[] = [];
   
   private controls;
+  private equipment;
   
   awake() {
     this.initialSize = this.actor.arcadeBody2D.getSize();
@@ -17,6 +18,9 @@ class PlayerBehavior extends Sup.Behavior {
     // Platform bodies
     let platformBodies = Sup.getActor("Platforms").getChildren();
     for (let platBody of platformBodies) this.allPlatformBodies.push(platBody.arcadeBody2D);
+    
+    // Equipment
+    let equipment = this.actor.getChild("Equipment");
     
     // Init controls obj
     this.controls = {
@@ -42,56 +46,15 @@ class PlayerBehavior extends Sup.Behavior {
   update() {
     
     // Store controls status so we only have to reduce N per update
-    // Just Pressed
-    this.controls.pressed.left = Controls.pressed("moveLeft");
-    this.controls.pressed.right = Controls.pressed("moveRight");
-    this.controls.pressed.jump = Controls.pressed("jump");
-    this.controls.pressed.down = Controls.pressed("moveDown");
-    this.controls.pressed.swap = Controls.pressed("swap");
-    this.controls.pressed.use = Controls.pressed("use");
-    // Held
-    this.controls.held.left = Controls.held("moveLeft");
-    this.controls.held.right = Controls.held("moveRight");
-    this.controls.held.jump = Controls.held("jump");
-    this.controls.held.down = Controls.held("moveDown");
-    this.controls.held.swap = Controls.held("swap");
-    this.controls.held.use = Controls.held("use");
+    this.updateControls();
     
-    // Check item interactions
-    if ( this.controls.pressed.swap ) Sup.log("Swapped item!");
-    if ( this.controls.pressed.use ) Sup.log("Used item!");
+    // Handle interactions with items
+    this.processItems();
     
-    // Check collision with solid bodies (from tilemap)
-    Sup.ArcadePhysics2D.collides( this.actor.arcadeBody2D, Sup.getActor("Map").arcadeBody2D );
-    //Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, Sup.ArcadePhysics2D.getAllBodies());
+    // Handle solid body collisions
+    let {touchSolids, velocity, dampenFall, touchPlatforms } = this.updateSolidCollisions() ;
     
-    let touchSolids = this.actor.arcadeBody2D.getTouches().bottom;
-    let velocity = this.actor.arcadeBody2D.getVelocity();
-    let dampenFall = true;
-    
-    // If falling, check the semi-solid bodies
-    let touchPlatforms = false;
-    if ( velocity.y < 0 ) {
-      // We must change the size of the player body so only the feet are checked
-      // To do so, we reduce the height of the body and adapt the offset
-      //this.actor.arcadeBody2D.setSize(this.initialSize.x, 0.4);
-      //this.actor.arcadeBody2D.setOffset({ x: this.initialOffset.x, y: -0.8 });
-      
-      // Now, we check with every (semi-solid) platform
-      // TODO: apply custom collision here so we can drop down
-      for (let platformBody of this.allPlatformBodies) {
-        Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, platformBody);
-        if (this.actor.arcadeBody2D.getTouches().bottom) {
-          touchPlatforms = true;
-          velocity.y = 0;
-          break;
-        }
-      }
-  
-      // After the check, we have to reset the body to its normal size
-      //this.actor.arcadeBody2D.setSize(this.initialSize.x, this.initialSize.y);
-      //this.actor.arcadeBody2D.setOffset(this.initialOffset);
-    }
+    // Process player input for movement controls
     
     // We override the `.x` component based on the player's input
     if ( this.controls.held.left ) {
@@ -106,7 +69,6 @@ class PlayerBehavior extends Sup.Behavior {
 
     // If the player is on the ground and wants to jump,
     // we update the `.y` component accordingly
-    //let touchBottom = this.actor.arcadeBody2D.getTouches().bottom;
     let touchBottom = touchSolids || touchPlatforms;
     if (touchBottom) {
       if ( this.controls.pressed.jump ) {
@@ -141,5 +103,102 @@ class PlayerBehavior extends Sup.Behavior {
     // Finally, we apply the velocity back to the ArcadePhysics body
     this.actor.arcadeBody2D.setVelocity(velocity);
   }
+  
+  
+  // Helper functions
+  
+  private updateControls() {
+    // Just Pressed
+    this.controls.pressed.left = Controls.pressed("moveLeft");
+    this.controls.pressed.right = Controls.pressed("moveRight");
+    this.controls.pressed.jump = Controls.pressed("jump");
+    this.controls.pressed.down = Controls.pressed("moveDown");
+    this.controls.pressed.swap = Controls.pressed("swap");
+    this.controls.pressed.use = Controls.pressed("use");
+    // Held
+    this.controls.held.left = Controls.held("moveLeft");
+    this.controls.held.right = Controls.held("moveRight");
+    this.controls.held.jump = Controls.held("jump");
+    this.controls.held.down = Controls.held("moveDown");
+    this.controls.held.swap = Controls.held("swap");
+    this.controls.held.use = Controls.held("use");
+  }
+  
+  private processItems() {
+    if ( this.controls.pressed.swap ) Sup.log("Swapped item!");
+    if ( this.controls.pressed.use ) Sup.log("Used item!");
+    
+    // Check item actions
+    
+    if ( this.controls.pressed.use && this.equipment ) {
+      // Handle interactions
+      switch ( this.equipment.getBehavior(ItemBehavior).itemtype ) {
+        case Game.Item.Weapon:
+          if (Game.nearbyInteractives.length == 0) {
+            // TODO: Play default animation and sfx
+          } else {
+            // Handle differently based on weapon type
+            switch( this.equipment.getBehavior(WeaponBehavior).itemtype) {
+              case Game.Weapon.Axe:
+                // TODO: Check for treetrunk | chest in nearbyInteractives
+                break;
+                
+              case Game.Weapon.Spade:
+                // TODO: Check for dirt | chest in nearbyInteractives
+                break;
+                
+              case Game.Weapon.SquirtGun:
+                // TODO: Check for fruitspawner | chest in nearbyInteractives
+                break;
+                
+              case Game.Weapon.Sword:
+              default:
+                // TODO: Check for fruitspawner | chest in nearbyInteractives
+                break;
+            }
+          }
+          break;
+
+        case Game.Item.Food:
+          // TODO: Play animation and sfx
+          // TODO: Restore health
+          break;
+
+        case Game.Item.Gold:
+          // TODO: Play animation and sfx
+          // TODO: Attract nearby NPC or Dragon
+          break;
+
+        default:
+          break;
+      }  
+    } 
+  }
+  
+  private updateSolidCollisions() {
+    // Check collision with solid bodies (from tilemap)
+    Sup.ArcadePhysics2D.collides( this.actor.arcadeBody2D, Sup.getActor("Map").arcadeBody2D );
+    
+    let touchSolids = this.actor.arcadeBody2D.getTouches().bottom;
+    let velocity = this.actor.arcadeBody2D.getVelocity();
+    let dampenFall = true;
+    
+    // If falling, check the semi-solid bodies
+    let touchPlatforms = false;
+    if ( velocity.y < 0 ) {
+      // TODO: apply custom collision here so we can drop down
+      for (let platformBody of this.allPlatformBodies) {
+        Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, platformBody);
+        if (this.actor.arcadeBody2D.getTouches().bottom) {
+          touchPlatforms = true;
+          velocity.y = 0;
+          break;
+        }
+      }
+    }
+    
+    return {touchSolids, velocity, dampenFall, touchPlatforms};
+  }
+  
 }
 Sup.registerBehavior(PlayerBehavior);

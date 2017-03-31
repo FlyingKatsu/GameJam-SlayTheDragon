@@ -187,6 +187,28 @@
       "line": 0,
       "parentBehavior": null,
       "properties": []
+    },
+    "ItemBehavior": {
+      "scriptId": "183",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "itemtype",
+          "type": "number"
+        }
+      ]
+    },
+    "WeaponBehavior": {
+      "scriptId": "184",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "itemtype",
+          "type": "number"
+        }
+      ]
     }
   }
 }

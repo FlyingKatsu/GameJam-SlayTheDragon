@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 183,
+  "nextEntryId": 185,
   "nodes": [
     {
       "id": "128",
@@ -295,6 +295,11 @@
                           "type": "script"
                         }
                       ]
+                    },
+                    {
+                      "id": "184",
+                      "name": "WeaponBehavior",
+                      "type": "script"
                     }
                   ]
                 },
@@ -370,6 +375,11 @@
                       "type": "script"
                     }
                   ]
+                },
+                {
+                  "id": "183",
+                  "name": "ItemBehavior",
+                  "type": "script"
                 }
               ]
             },
