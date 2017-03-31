@@ -2,7 +2,7 @@
 
 class PlayerBehavior extends Sup.Behavior {
   speed:number = 0.2;
-  jumpSpeed:number = 0.45;
+  jumpSpeed:number = 0.4;
   
   private initialSize;
   private initialOffset;

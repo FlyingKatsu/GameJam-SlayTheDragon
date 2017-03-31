@@ -31,9 +31,15 @@ class TunnelWarpBehavior extends Sup.Behavior {
       
       // Using custom collision computation      
       // If sensor location is top, only need to check bottom coordinates of humanBody with top coordinates of this body
-      if ( Collision2D.collides( this.bbox.edges, Collision2D.getBBox(humanActor).seg[Game.opposingLocation[Game[this.sensor]]] ) != null ) {
-          //Sup.log("WARPING");
-          humanActor.arcadeBody2D.warpPosition(this.target.getPosition());
+      if ( Collision2D.collides( this.bbox.edges, Collision2D.getBBox(humanActor).seg[Game.stringLocation[this.sensor]] ) != null ) {
+        //Sup.log("WARPING");
+        if ( this.sensor === 0 || this.sensor === 2 ) {
+          // Maintain relative x pos
+          humanActor.arcadeBody2D.warpPosition(humanActor.getPosition().x + (this.target.getPosition().x - this.actor.getPosition().x), this.target.getPosition().y);
+        } else {
+          // Maintain relative y pos
+          humanActor.arcadeBody2D.warpPosition(this.target.getPosition().x, humanActor.getPosition().y + (this.target.getPosition().y - this.actor.getPosition().y));
+        }
       }
       
     }
