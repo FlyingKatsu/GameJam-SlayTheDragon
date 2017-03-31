@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 185,
+  "nextEntryId": 186,
   "nodes": [
     {
       "id": "128",
@@ -247,6 +247,11 @@
               "name": "Items",
               "type": null,
               "children": [
+                {
+                  "id": "185",
+                  "name": "Font",
+                  "type": "font"
+                },
                 {
                   "id": "13",
                   "name": "Weapons",
