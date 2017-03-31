@@ -5,18 +5,25 @@ module Controls {
     moveLeft: [ "A", "LEFT" ],
     moveDown: [ "S", "DOWN" ],
     moveRight: [ "D", "RIGHT" ],
-    swap: [ "W", "UP" ],
-    use: [ "W", "UP" ],
+    swap: [ "Q", "SHIFT", "Z" ],
+    use: [ "E", "C", "ENTER" ],
   };
   
+  let cbPressed = (acc, key) => acc || Sup.Input.wasKeyJustPressed(key);
+  let cbHeld = (acc, key) => acc || Sup.Input.isKeyDown(key);
+  
   export function pressed( action:string ):boolean {
-    return Controls.keyboard[action].reduce( (acc, key) => acc || Sup.Input.wasKeyJustPressed(key) );
-    //return Sup.Input.wasKeyJustPressed( Controls.keyboard[action] );
+    // let result = Sup.Input.wasKeyJustPressed( Controls.keyboard[action] );
+    let result = Controls.keyboard[action].reduce( cbPressed, false );
+    //Sup.log (result);
+    return result;
   }
   
   export function held( action:string ):boolean {
-    return Controls.keyboard[action].reduce( (acc, key) => acc || Sup.Input.isKeyDown(key) );
-    //return Sup.Input.isKeyDown( Controls.keyboard[action] );
+    //let result = Sup.Input.isKeyDown( Controls.keyboard[action] );
+    let result =  Controls.keyboard[action].reduce( cbHeld, false );
+    //Sup.log (result);
+    return result;
   }
   
   

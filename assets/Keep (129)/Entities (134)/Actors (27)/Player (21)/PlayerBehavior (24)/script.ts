@@ -8,14 +8,57 @@ class PlayerBehavior extends Sup.Behavior {
   private initialOffset;
   private allPlatformBodies: Sup.ArcadePhysics2D.Body[] = [];
   
+  private controls;
+  
   awake() {
     this.initialSize = this.actor.arcadeBody2D.getSize();
     this.initialOffset = this.actor.arcadeBody2D.getOffset();
+    
+    // Platform bodies
     let platformBodies = Sup.getActor("Platforms").getChildren();
     for (let platBody of platformBodies) this.allPlatformBodies.push(platBody.arcadeBody2D);
+    
+    // Init controls obj
+    this.controls = {
+      pressed: {
+        left: false,
+        right: false,
+        jump: false,
+        down: false,
+        swap: false,
+        use: false
+      },
+      held: {
+        left: false,
+        right: false,
+        jump: false,
+        down: false,
+        swap: false,
+        use: false
+      }
+    };
   }
   
   update() {
+    
+    // Store controls status so we only have to reduce N per update
+    // Just Pressed
+    this.controls.pressed.left = Controls.pressed("moveLeft");
+    this.controls.pressed.right = Controls.pressed("moveRight");
+    this.controls.pressed.jump = Controls.pressed("jump");
+    this.controls.pressed.down = Controls.pressed("moveDown");
+    this.controls.pressed.swap = Controls.pressed("swap");
+    this.controls.pressed.use = Controls.pressed("use");
+    // Held
+    this.controls.held.left = Controls.held("moveLeft");
+    this.controls.held.right = Controls.held("moveRight");
+    this.controls.held.jump = Controls.held("jump");
+    this.controls.held.down = Controls.held("moveDown");
+    this.controls.held.swap = Controls.held("swap");
+    this.controls.held.use = Controls.held("use");
+    
+    // Test Keyboad controls module
+    //Sup.log(this.controls);
     
     // Check collision with solid bodies (from tilemap)
     Sup.ArcadePhysics2D.collides( this.actor.arcadeBody2D, Sup.getActor("Map").arcadeBody2D );
@@ -50,11 +93,11 @@ class PlayerBehavior extends Sup.Behavior {
     }
     
     // We override the `.x` component based on the player's input
-    if (Sup.Input.isKeyDown("LEFT") || Sup.Input.isKeyDown("A")) {
+    if ( this.controls.held.left ) {
       velocity.x = -this.speed;
       // When going left, we flip the sprite
       this.actor.spriteRenderer.setHorizontalFlip(true);
-    } else if (Sup.Input.isKeyDown("RIGHT") || Sup.Input.isKeyDown("D")) {
+    } else if ( this.controls.held.right ) {
       velocity.x = this.speed;
       // When going right, we clear the flip
       this.actor.spriteRenderer.setHorizontalFlip(false);
@@ -65,11 +108,11 @@ class PlayerBehavior extends Sup.Behavior {
     //let touchBottom = this.actor.arcadeBody2D.getTouches().bottom;
     let touchBottom = touchSolids || touchPlatforms;
     if (touchBottom) {
-      if (Sup.Input.wasKeyJustPressed("UP") || Sup.Input.wasKeyJustPressed("W") || Sup.Input.wasKeyJustPressed("SPACE")) {
+      if ( this.controls.pressed.jump ) {
         velocity.y = this.jumpSpeed;
         this.actor.spriteRenderer.setAnimation("Jump");
       // If isKeyDown("DOWN") and touchPlatforms to drop down from platform
-      } else if ( Sup.Input.wasKeyJustPressed("DOWN") || Sup.Input.wasKeyJustPressed("S") && touchPlatforms ) {
+      } else if ( this.controls.pressed.down && touchPlatforms ) {
         velocity.y = -this.speed;
       } else {
         // Here, we should play either "Idle" or "Run" depending on the horizontal speed
@@ -83,7 +126,7 @@ class PlayerBehavior extends Sup.Behavior {
       } else {
         this.actor.spriteRenderer.setAnimation("Fall");
         // If isKeyDown("DOWN") to add extra umph to the fall
-        if ( Sup.Input.isKeyDown("DOWN") || Sup.Input.isKeyDown("S") ) {
+        if ( this.controls.held.down ) {
           velocity.y = -Game.MAX_VELOCITY_Y;
           dampenFall = false;
         }
