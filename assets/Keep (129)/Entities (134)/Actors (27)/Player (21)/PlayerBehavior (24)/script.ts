@@ -57,8 +57,9 @@ class PlayerBehavior extends Sup.Behavior {
     this.controls.held.swap = Controls.held("swap");
     this.controls.held.use = Controls.held("use");
     
-    // Test Keyboad controls module
-    //Sup.log(this.controls);
+    // Check item interactions
+    if ( this.controls.pressed.swap ) Sup.log("Swapped item!");
+    if ( this.controls.pressed.use ) Sup.log("Used item!");
     
     // Check collision with solid bodies (from tilemap)
     Sup.ArcadePhysics2D.collides( this.actor.arcadeBody2D, Sup.getActor("Map").arcadeBody2D );
