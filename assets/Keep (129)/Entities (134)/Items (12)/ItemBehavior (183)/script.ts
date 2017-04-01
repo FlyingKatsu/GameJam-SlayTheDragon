@@ -76,6 +76,7 @@ class ItemBehavior extends Sup.Behavior {
     // Set local position
     this.actor.setLocalX(0);
     this.actor.setLocalY(0);
+    this.actor.setLocalZ(0);
     
     // Set global position of sprite
     this.sprite.arcadeBody2D.warpPosition( Sup.getActor("Player").getPosition() );
@@ -101,6 +102,7 @@ class ItemBehavior extends Sup.Behavior {
     // Set local position
     this.actor.setLocalX(this.heldPositionX);
     this.actor.setLocalY(this.heldPositionY);
+    this.actor.setLocalZ(1); // In front of player
     
     // Re-adjust position if flipped
     if (this.isFlipped) this.actor.setLocalX(-1 * this.heldPositionX);

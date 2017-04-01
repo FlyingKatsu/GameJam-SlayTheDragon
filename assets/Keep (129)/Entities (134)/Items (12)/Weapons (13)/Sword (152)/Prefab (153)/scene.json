@@ -148,10 +148,6 @@
               "name": {
                 "type": "string",
                 "value": "Sword"
-              },
-              "heldPositionX": {
-                "type": "number",
-                "value": 1
               }
             }
           },

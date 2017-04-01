@@ -152,6 +152,10 @@
               "name": {
                 "type": "string",
                 "value": "Fruit"
+              },
+              "heldPositionX": {
+                "type": "number",
+                "value": -0.5
               }
             }
           },

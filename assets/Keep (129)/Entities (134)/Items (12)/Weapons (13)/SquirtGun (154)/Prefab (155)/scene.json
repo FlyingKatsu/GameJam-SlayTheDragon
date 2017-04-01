@@ -144,10 +144,6 @@
               "name": {
                 "type": "string",
                 "value": "SquirtGun"
-              },
-              "heldPositionX": {
-                "type": "number",
-                "value": -1
               }
             }
           },
