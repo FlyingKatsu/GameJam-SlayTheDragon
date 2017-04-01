@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 182,
+  "nextEntryId": 186,
   "nodes": [
     {
       "id": "128",
@@ -130,13 +130,13 @@
       "type": null,
       "children": [
         {
-          "id": "130",
-          "name": "Scene",
-          "type": "scene"
-        },
-        {
           "id": "178",
           "name": "Collision2D",
+          "type": "script"
+        },
+        {
+          "id": "182",
+          "name": "Controls",
           "type": "script"
         },
         {
@@ -248,6 +248,11 @@
               "type": null,
               "children": [
                 {
+                  "id": "185",
+                  "name": "Font",
+                  "type": "font"
+                },
+                {
                   "id": "13",
                   "name": "Weapons",
                   "type": null,
@@ -295,6 +300,11 @@
                           "type": "script"
                         }
                       ]
+                    },
+                    {
+                      "id": "184",
+                      "name": "WeaponBehavior",
+                      "type": "script"
                     }
                   ]
                 },
@@ -370,6 +380,11 @@
                       "type": "script"
                     }
                   ]
+                },
+                {
+                  "id": "183",
+                  "name": "ItemBehavior",
+                  "type": "script"
                 }
               ]
             },
@@ -709,6 +724,11 @@
         {
           "id": "175",
           "name": "TestScene",
+          "type": "scene"
+        },
+        {
+          "id": "130",
+          "name": "Scene",
           "type": "scene"
         },
         {

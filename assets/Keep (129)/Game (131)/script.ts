@@ -10,6 +10,7 @@ module Game {
         
   //export let allSolidBodies: Sup.ArcadePhysics2D.Body[] = [];
   //export let allPlatformBodies: Sup.ArcadePhysics2D.Body[] = [];
+  export let allPlatformBodies: Sup.ArcadePhysics2D.Body[] = [];
         
   export enum Direction { Up, Left, Down, Right };
   export enum Location { Top, Left, Bottom, Right };
@@ -18,6 +19,9 @@ module Game {
   
   export enum State { Init, Play, Done  };
   export let state: Game.State = Game.State.Init;
+        
+  export enum Item { Weapon, Food, Gold };
+  export enum Weapon { Sword, Axe, Spade, SquirtGun };
   
   export function init() {
     Game.state = Game.State.Init;

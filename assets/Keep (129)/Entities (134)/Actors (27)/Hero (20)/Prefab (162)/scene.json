@@ -4,7 +4,35 @@
     {
       "id": "0",
       "name": "Hero",
-      "children": [],
+      "children": [
+        {
+          "id": "1",
+          "name": "Equipment",
+          "children": [],
+          "components": [],
+          "position": {
+            "x": 1,
+            "y": 0,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": {
+            "sceneAssetId": "153"
+          }
+        }
+      ],
       "components": [
         {
           "type": "SpriteRenderer",
