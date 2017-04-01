@@ -9,7 +9,8 @@ class PlayerBehavior extends Sup.Behavior {
   private allPlatformBodies: Sup.ArcadePhysics2D.Body[] = [];
   
   private controls;
-  private equipment;
+  private equipment: Sup.Actor;
+  private equipmentBehavior: ItemBehavior;
   
   awake() {
     this.initialSize = this.actor.arcadeBody2D.getSize();
@@ -20,7 +21,8 @@ class PlayerBehavior extends Sup.Behavior {
     for (let platBody of platformBodies) this.allPlatformBodies.push(platBody.arcadeBody2D);
     
     // Equipment
-    let equipment = this.actor.getChild("Equipment");
+    this.equipment = this.actor.getChild("Equipment");
+    this.equipmentBehavior =  this.equipment.getBehavior(ItemBehavior);
     
     // Init controls obj
     this.controls = {
@@ -59,12 +61,12 @@ class PlayerBehavior extends Sup.Behavior {
     // We override the `.x` component based on the player's input
     if ( this.controls.held.left ) {
       velocity.x = -this.speed;
-      // When going left, we flip the sprite
-      this.actor.spriteRenderer.setHorizontalFlip(true);
+      // When going left, we flip the sprite=
+      this.setFlip(true);
     } else if ( this.controls.held.right ) {
       velocity.x = this.speed;
       // When going right, we clear the flip
-      this.actor.spriteRenderer.setHorizontalFlip(false);
+      this.setFlip(false);
     } else velocity.x = 0;
 
     // If the player is on the ground and wants to jump,
@@ -106,6 +108,12 @@ class PlayerBehavior extends Sup.Behavior {
   
   
   // Helper functions
+  private setFlip( v:boolean ):void {
+    // If we aren't flipped yet, flip the equipment as well
+    if ( this.actor.spriteRenderer.getHorizontalFlip() != v ) this.equipmentBehavior.flip();
+    // Set whether or not we are flipped
+    this.actor.spriteRenderer.setHorizontalFlip(v);
+  }
   
   private updateControls() {
     // Just Pressed
@@ -132,7 +140,7 @@ class PlayerBehavior extends Sup.Behavior {
     
     if ( this.controls.pressed.use && this.equipment ) {
       // Handle interactions
-      switch ( this.equipment.getBehavior(ItemBehavior).itemtype ) {
+      switch ( this.equipmentBehavior.itemtype ) {
         case Game.Item.Weapon:
           if (Game.nearbyInteractives.length == 0) {
             // TODO: Play default animation and sfx
