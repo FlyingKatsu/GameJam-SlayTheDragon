@@ -119,4 +119,4 @@ class ItemBehavior extends Sup.Behavior {
   }
   
 }
-Sup.registerBehavior(ItemBehavior
+Sup.registerBehavior(ItemBehavior);
