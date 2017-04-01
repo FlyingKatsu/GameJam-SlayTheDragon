@@ -31,6 +31,8 @@ class ItemBehavior extends Sup.Behavior {
     if (!this.isEquipped) {
       // Collide with solid tiles
       Sup.ArcadePhysics2D.collides( this.sprite.arcadeBody2D, Sup.getActor("Map").arcadeBody2D );
+      // Collide with platforms
+      Sup.ArcadePhysics2D.collides( this.sprite.arcadeBody2D, Game.allPlatformBodies );
       // Parent should follow the sprite
       this.actor.arcadeBody2D.warpPosition(this.sprite.getPosition());
       

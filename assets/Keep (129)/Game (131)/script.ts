@@ -10,6 +10,7 @@ module Game {
         
   //export let allSolidBodies: Sup.ArcadePhysics2D.Body[] = [];
   //export let allPlatformBodies: Sup.ArcadePhysics2D.Body[] = [];
+  export let allPlatformBodies: Sup.ArcadePhysics2D.Body[] = [];
         
   export enum Direction { Up, Left, Down, Right };
   export enum Location { Top, Left, Bottom, Right };

@@ -6,7 +6,6 @@ class PlayerBehavior extends Sup.Behavior {
   
   private initialSize;
   private initialOffset;
-  private allPlatformBodies: Sup.ArcadePhysics2D.Body[] = [];
   
   private controls;
   private equipment: Sup.Actor;
@@ -24,7 +23,7 @@ class PlayerBehavior extends Sup.Behavior {
     
     // Platform bodies
     let platformBodies = Sup.getActor("Platforms").getChildren();
-    for (let platBody of platformBodies) this.allPlatformBodies.push(platBody.arcadeBody2D);
+    for (let platBody of platformBodies) Game.allPlatformBodies.push(platBody.arcadeBody2D);
     
     // Equipment
     this.equipment = this.actor.getChild("Equipment");
@@ -275,7 +274,7 @@ class PlayerBehavior extends Sup.Behavior {
     let touchPlatforms = false;
     if ( velocity.y < 0 ) {
       // TODO: apply custom collision here so we can drop down
-      for (let platformBody of this.allPlatformBodies) {
+      for (let platformBody of Game.allPlatformBodies) {
         Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, platformBody);
         if (this.actor.arcadeBody2D.getTouches().bottom) {
           touchPlatforms = true;
