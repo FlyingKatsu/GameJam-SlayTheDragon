@@ -11,7 +11,7 @@
           "config": {
             "formatVersion": 1,
             "spriteAssetId": "44",
-            "animationId": "1",
+            "animationId": null,
             "horizontalFlip": false,
             "verticalFlip": false,
             "castShadow": false,
@@ -29,7 +29,7 @@
           "config": {
             "formatVersion": 2,
             "type": "box",
-            "movable": true,
+            "movable": false,
             "width": 3,
             "height": 3,
             "offset": {
