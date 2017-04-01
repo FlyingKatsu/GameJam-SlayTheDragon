@@ -74,10 +74,7 @@ class ItemBehavior extends Sup.Behavior {
     // Set global position of sprite
     this.sprite.arcadeBody2D.warpPosition( Sup.getActor("Player").getPosition() );
     
-    // Reset Flip
-    if (this.isFlipped) this.flip();
-    
-    Sup.log("Dropped item! " + this.actor.getName());
+    //Sup.log("Dropped item! " + this.actor.getName());
   }
   
   // Equipped: no movement; follow player position on updates; no label visibility
@@ -99,7 +96,13 @@ class ItemBehavior extends Sup.Behavior {
     this.actor.setLocalX(this.heldPositionX);
     this.actor.setLocalY(this.heldPositionY);
     
-    Sup.log("Equipped item! " + this.actor.getName());
+    // Re-adjust position if flipped
+    if (this.isFlipped) this.actor.setLocalX(-1 * this.heldPositionX);
+    
+    // Set flip according to player
+    if (Sup.getActor("Player").spriteRenderer.getHorizontalFlip() != this.isFlipped) this.flip();
+    
+    //Sup.log("Equipped item! " + this.actor.getName());
   }
   
   // When player changes directions, so should this item, if it's equipped
@@ -116,4 +119,4 @@ class ItemBehavior extends Sup.Behavior {
   }
   
 }
-Sup.registerBehavior(ItemBehavior);
+Sup.registerBehavior(ItemBehavior

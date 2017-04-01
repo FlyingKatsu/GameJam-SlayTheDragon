@@ -194,7 +194,7 @@ class PlayerBehavior extends Sup.Behavior {
       
       // Get closest object and swap
       let {a, d} = this.getNearestObject();
-      Sup.log(a);
+      
       if (a && d < Infinity && a != this.equipment) {
         this.equipment = a;
         this.equipmentBehavior = a.getBehavior(ItemBehavior);
