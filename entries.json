@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 192,
+  "nextEntryId": 195,
   "nodes": [
     {
       "id": "128",
@@ -594,6 +594,23 @@
               "id": "133",
               "name": "Prefab",
               "type": "scene"
+            },
+            {
+              "id": "192",
+              "name": "HUD",
+              "type": null,
+              "children": [
+                {
+                  "id": "193",
+                  "name": "Prefab",
+                  "type": "scene"
+                },
+                {
+                  "id": "194",
+                  "name": "HUD",
+                  "type": "sprite"
+                }
+              ]
             }
           ]
         },

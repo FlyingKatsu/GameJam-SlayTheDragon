@@ -1258,114 +1258,10 @@
           "prefab": null
         },
         {
-          "id": "15",
+          "id": "55",
           "name": "Camera",
-          "children": [
-            {
-              "id": "16",
-              "name": "FixedBG",
-              "children": [],
-              "components": [],
-              "position": {
-                "x": 0,
-                "y": 0,
-                "z": -11
-              },
-              "orientation": {
-                "x": 0,
-                "y": 0,
-                "z": 0,
-                "w": 1
-              },
-              "scale": {
-                "x": 1,
-                "y": 1,
-                "z": 1
-              },
-              "visible": true,
-              "layer": 0,
-              "prefab": null
-            },
-            {
-              "id": "17",
-              "name": "FixedFG",
-              "children": [],
-              "components": [],
-              "position": {
-                "x": 0,
-                "y": 0,
-                "z": -1
-              },
-              "orientation": {
-                "x": 0,
-                "y": 0,
-                "z": 0,
-                "w": 1
-              },
-              "scale": {
-                "x": 1,
-                "y": 1,
-                "z": 1
-              },
-              "visible": true,
-              "layer": 0,
-              "prefab": null
-            },
-            {
-              "id": "18",
-              "name": "HUDFromPrefab",
-              "children": [],
-              "components": [],
-              "position": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-              },
-              "orientation": {
-                "x": 0,
-                "y": 0,
-                "z": 0,
-                "w": 1
-              },
-              "scale": {
-                "x": 1,
-                "y": 1,
-                "z": 1
-              },
-              "visible": true,
-              "layer": 0,
-              "prefab": null
-            }
-          ],
-          "components": [
-            {
-              "type": "Camera",
-              "config": {
-                "formatVersion": 1,
-                "mode": "orthographic",
-                "fov": 45,
-                "orthographicScale": 16,
-                "viewport": {
-                  "x": 0,
-                  "y": 0,
-                  "width": 1,
-                  "height": 1
-                },
-                "depth": 0,
-                "nearClippingPlane": 0.1,
-                "farClippingPlane": 1000
-              },
-              "id": "1"
-            },
-            {
-              "type": "Behavior",
-              "config": {
-                "behaviorName": "CameraBehavior",
-                "propertyValues": {}
-              },
-              "id": "2"
-            }
-          ],
+          "children": [],
+          "components": [],
           "position": {
             "x": 24,
             "y": 56,
@@ -1384,7 +1280,9 @@
           },
           "visible": true,
           "layer": 0,
-          "prefab": null
+          "prefab": {
+            "sceneAssetId": "193"
+          }
         }
       ],
       "components": [],
