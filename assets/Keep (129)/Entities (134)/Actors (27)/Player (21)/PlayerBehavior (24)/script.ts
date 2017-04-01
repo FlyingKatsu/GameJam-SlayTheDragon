@@ -50,8 +50,9 @@ class PlayerBehavior extends Sup.Behavior {
     // Store controls status so we only have to reduce N per update
     this.updateControls();
     
-    // Handle interactions with items
-    this.processItems();
+    // Handle interactions with items    
+    this.processUseItem();
+    this.processSwapItem();
     
     // Handle solid body collisions
     let {touchSolids, velocity, dampenFall, touchPlatforms } = this.updateSolidCollisions() ;
@@ -110,7 +111,7 @@ class PlayerBehavior extends Sup.Behavior {
   // Helper functions
   private setFlip( v:boolean ):void {
     // If we aren't flipped yet, flip the equipment as well
-    if ( this.actor.spriteRenderer.getHorizontalFlip() != v ) this.equipmentBehavior.flip();
+    if ( this.equipmentBehavior && this.actor.spriteRenderer.getHorizontalFlip() != v ) this.equipmentBehavior.flip();
     // Set whether or not we are flipped
     this.actor.spriteRenderer.setHorizontalFlip(v);
   }
@@ -132,8 +133,34 @@ class PlayerBehavior extends Sup.Behavior {
     this.controls.held.use = Controls.held("use");
   }
   
-  private processItems() {
-    if ( this.controls.pressed.swap ) Sup.log("Swapped item!");
+  private processSwapItem() {
+    // If user is using an item, don't do anything here!
+    if ( this.controls.held.use && this.equipment ) return;
+    if ( !this.controls.pressed.swap ) return;
+    
+    // If user is near an item,
+    if ( Game.nearbyObjects.length > 0 ) {
+      if ( this.equipmentBehavior ) this.equipmentBehavior.onDropped(); // Drop current equipment
+      
+      // Get closest object and swap
+      // TODO: Get nearest object
+      //this.equipment = nearestObj;
+      //this.equipmentBehavior = nearestObj.getBehavior(ItemBehavior);
+      //this.equipmentBehavior.onEquipped();
+      
+    } else {
+      // Otherwise just drop it, assuming we have an item
+      if ( this.equipment ) {
+        // Drop it
+        this.equipmentBehavior.onDropped();
+        // Set our references to null
+        this.equipment = null;
+        this.equipmentBehavior = null;
+      }
+    }
+  }
+  
+  private processUseItem() {
     if ( this.controls.pressed.use ) Sup.log("Used item!");
     
     // Check item actions

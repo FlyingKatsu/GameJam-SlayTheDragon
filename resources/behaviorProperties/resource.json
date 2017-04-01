@@ -196,6 +196,22 @@
         {
           "name": "itemtype",
           "type": "number"
+        },
+        {
+          "name": "groupName",
+          "type": "string"
+        },
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "heldPositionX",
+          "type": "number"
+        },
+        {
+          "name": "heldPositionY",
+          "type": "number"
         }
       ]
     },

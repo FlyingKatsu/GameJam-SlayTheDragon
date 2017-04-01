@@ -130,13 +130,13 @@
       "type": null,
       "children": [
         {
-          "id": "130",
-          "name": "Scene",
-          "type": "scene"
-        },
-        {
           "id": "178",
           "name": "Collision2D",
+          "type": "script"
+        },
+        {
+          "id": "182",
+          "name": "Controls",
           "type": "script"
         },
         {
@@ -727,16 +727,16 @@
           "type": "scene"
         },
         {
+          "id": "130",
+          "name": "Scene",
+          "type": "scene"
+        },
+        {
           "id": "131",
           "name": "Game",
           "type": "script"
         }
       ]
-    },
-    {
-      "id": "182",
-      "name": "Controls",
-      "type": "script"
     }
   ]
 }
