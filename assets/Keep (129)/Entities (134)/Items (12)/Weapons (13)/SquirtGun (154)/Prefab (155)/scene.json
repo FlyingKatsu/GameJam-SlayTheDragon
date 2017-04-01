@@ -21,7 +21,7 @@
                 "size": 16,
                 "color": null,
                 "overrideOpacity": true,
-                "opacity": 0.9
+                "opacity": 1
               },
               "id": "0"
             }
@@ -55,8 +55,8 @@
               "type": "SpriteRenderer",
               "config": {
                 "formatVersion": 1,
-                "spriteAssetId": "45",
-                "animationId": null,
+                "spriteAssetId": "186",
+                "animationId": "2",
                 "horizontalFlip": false,
                 "verticalFlip": false,
                 "castShadow": false,
@@ -140,7 +140,16 @@
           "type": "Behavior",
           "config": {
             "behaviorName": "ItemBehavior",
-            "propertyValues": {}
+            "propertyValues": {
+              "name": {
+                "type": "string",
+                "value": "SquirtGun"
+              },
+              "heldPositionX": {
+                "type": "number",
+                "value": -1
+              }
+            }
           },
           "id": "1"
         },

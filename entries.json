@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 186,
+  "nextEntryId": 192,
   "nodes": [
     {
       "id": "128",
@@ -302,9 +302,26 @@
                       ]
                     },
                     {
+                      "id": "187",
+                      "name": "Spade",
+                      "type": null,
+                      "children": [
+                        {
+                          "id": "188",
+                          "name": "Prefab",
+                          "type": "scene"
+                        }
+                      ]
+                    },
+                    {
                       "id": "184",
                       "name": "WeaponBehavior",
                       "type": "script"
+                    },
+                    {
+                      "id": "186",
+                      "name": "Weapons",
+                      "type": "sprite"
                     }
                   ]
                 },
@@ -356,6 +373,11 @@
                           "type": "script"
                         }
                       ]
+                    },
+                    {
+                      "id": "191",
+                      "name": "Food",
+                      "type": "sprite"
                     }
                   ]
                 },

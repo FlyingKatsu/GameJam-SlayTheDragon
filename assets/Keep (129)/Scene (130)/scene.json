@@ -768,7 +768,62 @@
             {
               "id": "8",
               "name": "Weapons",
-              "children": [],
+              "children": [
+                {
+                  "id": "49",
+                  "name": "Spade",
+                  "children": [],
+                  "components": [],
+                  "position": {
+                    "x": 58,
+                    "y": 33,
+                    "z": 0
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": {
+                    "sceneAssetId": "188"
+                  }
+                },
+                {
+                  "id": "50",
+                  "name": "SquirtGun",
+                  "children": [],
+                  "components": [],
+                  "position": {
+                    "x": 36,
+                    "y": 47,
+                    "z": 0
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": {
+                    "sceneAssetId": "155"
+                  }
+                }
+              ],
               "components": [],
               "position": {
                 "x": 0,
@@ -793,7 +848,62 @@
             {
               "id": "9",
               "name": "Food",
-              "children": [],
+              "children": [
+                {
+                  "id": "51",
+                  "name": "Fruit",
+                  "children": [],
+                  "components": [],
+                  "position": {
+                    "x": 44,
+                    "y": 31,
+                    "z": 0
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": {
+                    "sceneAssetId": "160"
+                  }
+                },
+                {
+                  "id": "52",
+                  "name": "Meat",
+                  "children": [],
+                  "components": [],
+                  "position": {
+                    "x": 111,
+                    "y": 25,
+                    "z": 0
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": {
+                    "sceneAssetId": "159"
+                  }
+                }
+              ],
               "components": [],
               "position": {
                 "x": 0,
@@ -818,7 +928,35 @@
             {
               "id": "10",
               "name": "Gold",
-              "children": [],
+              "children": [
+                {
+                  "id": "53",
+                  "name": "Gold",
+                  "children": [],
+                  "components": [],
+                  "position": {
+                    "x": 13,
+                    "y": 46,
+                    "z": 0
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": {
+                    "sceneAssetId": "161"
+                  }
+                }
+              ],
               "components": [],
               "position": {
                 "x": 0,
@@ -872,7 +1010,35 @@
                 {
                   "id": "32",
                   "name": "Chest",
-                  "children": [],
+                  "children": [
+                    {
+                      "id": "54",
+                      "name": "Treasure",
+                      "children": [],
+                      "components": [],
+                      "position": {
+                        "x": -6,
+                        "y": 52,
+                        "z": 0
+                      },
+                      "orientation": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0,
+                        "w": 1
+                      },
+                      "scale": {
+                        "x": 1,
+                        "y": 1,
+                        "z": 1
+                      },
+                      "visible": true,
+                      "layer": 0,
+                      "prefab": {
+                        "sceneAssetId": "165"
+                      }
+                    }
+                  ],
                   "components": [],
                   "position": {
                     "x": 21.636064529418945,

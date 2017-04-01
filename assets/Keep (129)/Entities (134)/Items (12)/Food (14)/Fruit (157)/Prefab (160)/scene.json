@@ -21,7 +21,7 @@
                 "size": 16,
                 "color": null,
                 "overrideOpacity": true,
-                "opacity": 0.9
+                "opacity": 1
               },
               "id": "0"
             }
@@ -55,8 +55,8 @@
               "type": "SpriteRenderer",
               "config": {
                 "formatVersion": 1,
-                "spriteAssetId": "48",
-                "animationId": null,
+                "spriteAssetId": "191",
+                "animationId": "1",
                 "horizontalFlip": false,
                 "verticalFlip": false,
                 "castShadow": false,
@@ -144,6 +144,14 @@
               "itemtype": {
                 "type": "number",
                 "value": 1
+              },
+              "groupName": {
+                "type": "string",
+                "value": "Food"
+              },
+              "name": {
+                "type": "string",
+                "value": "Fruit"
               }
             }
           },

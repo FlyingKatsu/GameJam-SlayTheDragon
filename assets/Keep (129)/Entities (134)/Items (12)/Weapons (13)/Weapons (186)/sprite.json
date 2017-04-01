@@ -6,13 +6,13 @@
   "filtering": "pixelated",
   "wrapping": "clampToEdge",
   "pixelsPerUnit": 32,
-  "framesPerSecond": 4,
+  "framesPerSecond": 10,
   "opacity": null,
   "alphaTest": 0.1,
   "frameOrder": "rows",
   "grid": {
-    "width": 64,
-    "height": 64
+    "width": 65,
+    "height": 32
   },
   "origin": {
     "x": 0.5,
@@ -20,18 +20,25 @@
   },
   "animations": [
     {
-      "id": "1",
-      "name": "Idle",
+      "id": "0",
+      "name": "Sword",
       "startFrameIndex": 0,
       "endFrameIndex": 0,
       "speed": 1
     },
     {
-      "id": "0",
-      "name": "Open",
+      "id": "1",
+      "name": "Spade",
       "startFrameIndex": 0,
-      "endFrameIndex": 1,
-      "speed": 2
+      "endFrameIndex": 0,
+      "speed": 1
+    },
+    {
+      "id": "2",
+      "name": "SquirtGun",
+      "startFrameIndex": 0,
+      "endFrameIndex": 0,
+      "speed": 1
     }
   ],
   "mapSlots": {

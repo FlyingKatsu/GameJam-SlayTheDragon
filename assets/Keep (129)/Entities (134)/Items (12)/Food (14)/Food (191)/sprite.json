@@ -6,13 +6,13 @@
   "filtering": "pixelated",
   "wrapping": "clampToEdge",
   "pixelsPerUnit": 32,
-  "framesPerSecond": 4,
+  "framesPerSecond": 10,
   "opacity": null,
   "alphaTest": 0.1,
   "frameOrder": "rows",
   "grid": {
-    "width": 64,
-    "height": 64
+    "width": 32,
+    "height": 32
   },
   "origin": {
     "x": 0.5,
@@ -20,18 +20,32 @@
   },
   "animations": [
     {
-      "id": "1",
-      "name": "Idle",
+      "id": "0",
+      "name": "Gold",
       "startFrameIndex": 0,
       "endFrameIndex": 0,
       "speed": 1
     },
     {
-      "id": "0",
-      "name": "Open",
+      "id": "1",
+      "name": "Fruit",
       "startFrameIndex": 0,
-      "endFrameIndex": 1,
-      "speed": 2
+      "endFrameIndex": 0,
+      "speed": 1
+    },
+    {
+      "id": "2",
+      "name": "Fish",
+      "startFrameIndex": 0,
+      "endFrameIndex": 0,
+      "speed": 1
+    },
+    {
+      "id": "3",
+      "name": "Meat",
+      "startFrameIndex": 0,
+      "endFrameIndex": 0,
+      "speed": 1
     }
   ],
   "mapSlots": {

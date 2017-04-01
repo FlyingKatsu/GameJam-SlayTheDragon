@@ -21,7 +21,7 @@
                 "size": 16,
                 "color": null,
                 "overrideOpacity": true,
-                "opacity": 0.9
+                "opacity": 1
               },
               "id": "0"
             }
@@ -55,8 +55,8 @@
               "type": "SpriteRenderer",
               "config": {
                 "formatVersion": 1,
-                "spriteAssetId": "46",
-                "animationId": null,
+                "spriteAssetId": "191",
+                "animationId": "0",
                 "horizontalFlip": false,
                 "verticalFlip": false,
                 "castShadow": false,
@@ -144,6 +144,14 @@
               "itemtype": {
                 "type": "number",
                 "value": 2
+              },
+              "groupName": {
+                "type": "string",
+                "value": "Gold"
+              },
+              "name": {
+                "type": "string",
+                "value": "Coin"
               }
             }
           },

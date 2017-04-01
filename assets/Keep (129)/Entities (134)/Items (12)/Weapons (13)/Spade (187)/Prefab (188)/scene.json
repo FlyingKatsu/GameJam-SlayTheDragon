@@ -3,7 +3,7 @@
   "nodes": [
     {
       "id": "0",
-      "name": "Sword",
+      "name": "Spade",
       "children": [
         {
           "id": "4",
@@ -15,7 +15,7 @@
               "config": {
                 "formatVersion": 2,
                 "fontAssetId": "185",
-                "text": "sword",
+                "text": "shovel",
                 "alignment": "center",
                 "verticalAlignment": "bottom",
                 "size": 16,
@@ -56,7 +56,7 @@
               "config": {
                 "formatVersion": 1,
                 "spriteAssetId": "186",
-                "animationId": "0",
+                "animationId": "1",
                 "horizontalFlip": true,
                 "verticalFlip": false,
                 "castShadow": false,
@@ -147,7 +147,7 @@
               },
               "name": {
                 "type": "string",
-                "value": "Sword"
+                "value": "Spade"
               },
               "heldPositionX": {
                 "type": "number",
@@ -164,7 +164,7 @@
             "propertyValues": {
               "itemtype": {
                 "type": "number",
-                "value": 0
+                "value": 2
               }
             }
           },
