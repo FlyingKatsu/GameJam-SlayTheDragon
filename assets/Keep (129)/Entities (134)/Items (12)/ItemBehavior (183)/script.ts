@@ -60,7 +60,7 @@ class ItemBehavior extends Sup.Behavior {
     // Reparent object to Items actor in appropriate child
     this.actor.setParent( this.groupActor );
     // Rename object to what it is
-    this.actor.setName( this.name );
+    this.actor.setName( this.name + this.groupActor.getChildren().length );
     
     // Set sprite movement
     this.sprite.arcadeBody2D.setMovable(true);
@@ -68,13 +68,16 @@ class ItemBehavior extends Sup.Behavior {
     this.label.setVisible(true);
     
     // Set local position
-    //this.actor.setLocalX(0);
-    //this.actor.setLocalY(0);
+    this.actor.setLocalX(0);
+    this.actor.setLocalY(0);
     
     // Set global position of sprite
     this.sprite.arcadeBody2D.warpPosition( Sup.getActor("Player").getPosition() );
     
-    Sup.log("Dropped item! " + this.name);
+    // Reset Flip
+    if (this.isFlipped) this.flip();
+    
+    Sup.log("Dropped item! " + this.actor.getName());
   }
   
   // Equipped: no movement; follow player position on updates; no label visibility
@@ -93,9 +96,10 @@ class ItemBehavior extends Sup.Behavior {
     this.label.setVisible(false);
     
     // Set local position
-    //this.actor.setLocalX(this.heldPositionX);
-    //this.actor.setLocalY(this.heldPositionY);
-    Sup.log("Equipped item! " + this.name);
+    this.actor.setLocalX(this.heldPositionX);
+    this.actor.setLocalY(this.heldPositionY);
+    
+    Sup.log("Equipped item! " + this.actor.getName());
   }
   
   // When player changes directions, so should this item, if it's equipped

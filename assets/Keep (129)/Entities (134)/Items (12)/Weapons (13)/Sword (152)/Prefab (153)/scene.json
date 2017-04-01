@@ -144,6 +144,14 @@
               "heldPosOffset": {
                 "type": "number",
                 "value": 1
+              },
+              "name": {
+                "type": "string",
+                "value": "Sword"
+              },
+              "heldPositionX": {
+                "type": "number",
+                "value": 1
               }
             }
           },

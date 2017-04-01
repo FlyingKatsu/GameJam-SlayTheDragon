@@ -12,6 +12,12 @@ class PlayerBehavior extends Sup.Behavior {
   private equipment: Sup.Actor;
   private equipmentBehavior: ItemBehavior;
   
+  private nearbyItems: Sup.Actor[] = [];
+  private nearbyWeapons: Sup.Actor[] = [];
+  private nearbyFood: Sup.Actor[] = [];
+  private nearbyGold: Sup.Actor[] = [];
+  private nearbyInteractives: Sup.Actor[] = [];
+  
   awake() {
     this.initialSize = this.actor.arcadeBody2D.getSize();
     this.initialOffset = this.actor.arcadeBody2D.getOffset();
@@ -49,6 +55,9 @@ class PlayerBehavior extends Sup.Behavior {
     
     // Store controls status so we only have to reduce N per update
     this.updateControls();
+    
+    // Store nearby object status for quick access
+    if (this.controls.pressed.swap || this.controls.pressed.use) this.updateNearbyObjects();
     
     // Handle interactions with items    
     this.processUseItem();
@@ -105,6 +114,12 @@ class PlayerBehavior extends Sup.Behavior {
     
     // Finally, we apply the velocity back to the ArcadePhysics body
     this.actor.arcadeBody2D.setVelocity(velocity);
+    
+    this.nearbyItems = [];
+    this.nearbyWeapons = [];
+    this.nearbyFood = [];
+    this.nearbyGold = [];
+    this.nearbyInteractives = [];
   }
   
   
@@ -133,20 +148,58 @@ class PlayerBehavior extends Sup.Behavior {
     this.controls.held.use = Controls.held("use");
   }
   
+  private updateNearbyObjects() {
+    for ( let item of Sup.getActor("Weapons") .getChildren()) {
+      if ( Sup.ArcadePhysics2D.intersects(this.actor.arcadeBody2D, item.arcadeBody2D) ) {
+        this.nearbyWeapons.push(item);
+        this.nearbyItems.push(item);
+      }
+    }
+    for ( let item of Sup.getActor("Food") .getChildren()) {
+      if ( Sup.ArcadePhysics2D.intersects(this.actor.arcadeBody2D, item.arcadeBody2D) ) {
+        this.nearbyFood.push(item);
+        this.nearbyItems.push(item);
+      }
+    }
+    for ( let item of Sup.getActor("Gold") .getChildren()) {
+      if ( Sup.ArcadePhysics2D.intersects(this.actor.arcadeBody2D, item.arcadeBody2D) ) {
+        this.nearbyGold.push(item);
+        this.nearbyItems.push(item);
+      }
+    }
+    /*for ( let item of Sup.getActor("Interactive") .getChildren()) {
+      if ( Sup.ArcadePhysics2D.intersects(this.actor.arcadeBody2D, item.arcadeBody2D) ) {
+        this.nearbyInteractives.push(item);
+        this.nearbyItems.push(item);
+      }
+    }*/
+  }
+  
+  private getNearestObject() {
+    return this.nearbyItems.reduce( function(acc,item) {
+      let distance = Sup.getActor("Player").getPosition().distanceTo(item.getPosition());
+      if (distance < acc.d) return { a:item, d:distance }
+      return acc;
+    }, {a:this.actor,d:Infinity} );
+  }
+  
   private processSwapItem() {
     // If user is using an item, don't do anything here!
     if ( this.controls.held.use && this.equipment ) return;
     if ( !this.controls.pressed.swap ) return;
     
     // If user is near an item,
-    if ( Game.nearbyObjects.length > 0 ) {
+    if ( this.nearbyItems.length > 0 ) {
       if ( this.equipmentBehavior ) this.equipmentBehavior.onDropped(); // Drop current equipment
       
       // Get closest object and swap
-      // TODO: Get nearest object
-      //this.equipment = nearestObj;
-      //this.equipmentBehavior = nearestObj.getBehavior(ItemBehavior);
-      //this.equipmentBehavior.onEquipped();
+      let {a, d} = this.getNearestObject();
+      Sup.log(a);
+      if (a && d < Infinity && a != this.equipment) {
+        this.equipment = a;
+        this.equipmentBehavior = a.getBehavior(ItemBehavior);
+        this.equipmentBehavior.onEquipped();
+      }
       
     } else {
       // Otherwise just drop it, assuming we have an item
@@ -169,7 +222,7 @@ class PlayerBehavior extends Sup.Behavior {
       // Handle interactions
       switch ( this.equipmentBehavior.itemtype ) {
         case Game.Item.Weapon:
-          if (Game.nearbyInteractives.length == 0) {
+          if (this.nearbyInteractives.length == 0) {
             // TODO: Play default animation and sfx
           } else {
             // Handle differently based on weapon type
