@@ -57,7 +57,7 @@
                 "formatVersion": 1,
                 "spriteAssetId": "186",
                 "animationId": "0",
-                "horizontalFlip": true,
+                "horizontalFlip": false,
                 "verticalFlip": false,
                 "castShadow": false,
                 "receiveShadow": false,
@@ -75,10 +75,10 @@
                 "formatVersion": 2,
                 "type": "box",
                 "movable": false,
-                "width": 0.5,
-                "height": 1.2,
+                "width": 1,
+                "height": 2,
                 "offset": {
-                  "x": 0.05,
+                  "x": 0,
                   "y": 0
                 },
                 "bounce": {
@@ -100,7 +100,7 @@
           "orientation": {
             "x": 0,
             "y": 0,
-            "z": -0.3826834323650898,
+            "z": 0.3826834323650898,
             "w": 0.9238795325112867
           },
           "scale": {

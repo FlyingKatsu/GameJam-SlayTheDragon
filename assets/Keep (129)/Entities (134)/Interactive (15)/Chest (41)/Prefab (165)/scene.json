@@ -23,6 +23,28 @@
             "shaderAssetId": null
           },
           "id": "0"
+        },
+        {
+          "type": "ArcadeBody2D",
+          "config": {
+            "formatVersion": 2,
+            "type": "box",
+            "movable": true,
+            "width": 3,
+            "height": 3,
+            "offset": {
+              "x": 0,
+              "y": 0.5
+            },
+            "bounce": {
+              "x": 0,
+              "y": 0
+            },
+            "tileMapAssetId": null,
+            "tileSetPropertyName": null,
+            "layersIndex": null
+          },
+          "id": "1"
         }
       ],
       "position": {

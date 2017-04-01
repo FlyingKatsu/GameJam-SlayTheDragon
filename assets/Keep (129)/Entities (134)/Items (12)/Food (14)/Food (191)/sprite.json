@@ -29,22 +29,22 @@
     {
       "id": "1",
       "name": "Fruit",
-      "startFrameIndex": 0,
-      "endFrameIndex": 0,
+      "startFrameIndex": 1,
+      "endFrameIndex": 1,
       "speed": 1
     },
     {
       "id": "2",
       "name": "Fish",
-      "startFrameIndex": 0,
-      "endFrameIndex": 0,
+      "startFrameIndex": 2,
+      "endFrameIndex": 2,
       "speed": 1
     },
     {
       "id": "3",
       "name": "Meat",
-      "startFrameIndex": 0,
-      "endFrameIndex": 0,
+      "startFrameIndex": 3,
+      "endFrameIndex": 3,
       "speed": 1
     }
   ],

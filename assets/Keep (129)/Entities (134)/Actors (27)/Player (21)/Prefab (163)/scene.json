@@ -38,8 +38,8 @@
           "type": "SpriteRenderer",
           "config": {
             "formatVersion": 1,
-            "spriteAssetId": "28",
-            "animationId": "0",
+            "spriteAssetId": "65",
+            "animationId": null,
             "horizontalFlip": false,
             "verticalFlip": false,
             "castShadow": false,

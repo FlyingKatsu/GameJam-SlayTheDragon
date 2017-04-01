@@ -75,8 +75,8 @@
                 "formatVersion": 2,
                 "type": "box",
                 "movable": true,
-                "width": 1.5,
-                "height": 1.5,
+                "width": 1,
+                "height": 1,
                 "offset": {
                   "x": 0,
                   "y": 0

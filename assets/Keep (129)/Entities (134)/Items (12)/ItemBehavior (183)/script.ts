@@ -24,6 +24,12 @@ class ItemBehavior extends Sup.Behavior {
     this.groupActor = Sup.getActor(this.groupName);
     this.isEquipped = ( this.actor.getParent().getName() == "Player" );
     this.isFlipped = false;
+    
+    if (!this.isEquipped) {
+      // Set sprite to be movable, but not the parent
+      this.sprite.arcadeBody2D.setMovable(true);
+      this.actor.arcadeBody2D.setMovable(false);
+    }
   }
 
   update() {
@@ -40,12 +46,10 @@ class ItemBehavior extends Sup.Behavior {
       if ( Sup.ArcadePhysics2D.intersects(this.actor.arcadeBody2D, Sup.getActor("Player").arcadeBody2D) ) {
         // set visibility
         this.label.setVisible(true); 
-        // TODO: add to nearby objects if not already
         
       } else {
         // no longer close to player so disable visibility
-        this.label.setVisible(false);        
-        // TODO: remove from nearby objects if not already
+        this.label.setVisible(false); 
         
       }
     }

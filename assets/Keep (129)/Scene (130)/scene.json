@@ -1037,6 +1037,33 @@
                       "prefab": {
                         "sceneAssetId": "165"
                       }
+                    },
+                    {
+                      "id": "55",
+                      "name": "Treasure 2",
+                      "children": [],
+                      "components": [],
+                      "position": {
+                        "x": 2,
+                        "y": 42,
+                        "z": 0
+                      },
+                      "orientation": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0,
+                        "w": 1
+                      },
+                      "scale": {
+                        "x": 1,
+                        "y": 1,
+                        "z": 1
+                      },
+                      "visible": true,
+                      "layer": 0,
+                      "prefab": {
+                        "sceneAssetId": "165"
+                      }
                     }
                   ],
                   "components": [],
