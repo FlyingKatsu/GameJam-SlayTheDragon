@@ -17,6 +17,8 @@ class PlayerBehavior extends Sup.Behavior {
   private nearbyGold: Sup.Actor[] = [];
   private nearbyInteractives: Sup.Actor[] = [];
   
+  private dropFromPlatform: boolean = false;
+  
   awake() {
     this.initialSize = this.actor.arcadeBody2D.getSize();
     this.initialOffset = this.actor.arcadeBody2D.getOffset();
@@ -88,6 +90,7 @@ class PlayerBehavior extends Sup.Behavior {
       // If isKeyDown("DOWN") and touchPlatforms to drop down from platform
       } else if ( this.controls.pressed.down && touchPlatforms ) {
         velocity.y = -this.speed;
+        this.dropFromPlatform = true;
       } else {
         // Here, we should play either "Idle" or "Run" depending on the horizontal speed
         if (velocity.x === 0) this.actor.spriteRenderer.setAnimation("Idle");
@@ -114,6 +117,7 @@ class PlayerBehavior extends Sup.Behavior {
     // Finally, we apply the velocity back to the ArcadePhysics body
     this.actor.arcadeBody2D.setVelocity(velocity);
     
+    // Empty storage
     this.nearbyItems = [];
     this.nearbyWeapons = [];
     this.nearbyFood = [];
@@ -269,20 +273,32 @@ class PlayerBehavior extends Sup.Behavior {
     let touchSolids = this.actor.arcadeBody2D.getTouches().bottom;
     let velocity = this.actor.arcadeBody2D.getVelocity();
     let dampenFall = true;
+    let intersectsPlatform = false;
     
     // If falling, check the semi-solid bodies
     let touchPlatforms = false;
     if ( velocity.y < 0 ) {
-      // TODO: apply custom collision here so we can drop down
-      for (let platformBody of Game.allPlatformBodies) {
-        Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, platformBody);
-        if (this.actor.arcadeBody2D.getTouches().bottom) {
-          touchPlatforms = true;
-          velocity.y = 0;
-          break;
+      
+      if (this.dropFromPlatform) {
+        for (let platformBody of Game.allPlatformBodies) {
+          if (Sup.ArcadePhysics2D.intersects(this.actor.arcadeBody2D, platformBody)) {
+           intersectsPlatform = true;
+          }
+        }
+      } else {
+        for (let platformBody of Game.allPlatformBodies) {
+          Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, platformBody);
+          if (this.actor.arcadeBody2D.getTouches().bottom) {
+            touchPlatforms = true;
+            velocity.y = 0;
+            break;
+          }
         }
       }
+      
     }
+    
+    if (!intersectsPlatform && this.dropFromPlatform) this.dropFromPlatform = false;
     
     return {touchSolids, velocity, dampenFall, touchPlatforms};
   }
