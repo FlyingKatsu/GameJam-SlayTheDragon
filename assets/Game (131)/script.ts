@@ -28,7 +28,7 @@ module Game {
     gold: 0,
     kill: 0,
     hero: 0,
-    herostatus: ["> nothing to report..."],
+    herostatus: ["You fell into a cave!"],
     dragon: "???"
   };
   
@@ -41,7 +41,7 @@ module Game {
       gold: 0,
       kill: 0,
       hero: 0,
-      herostatus: ["nothing to report..."],
+      herostatus: ["You fell into a cave!"],
       dragon: "???"
     };
     

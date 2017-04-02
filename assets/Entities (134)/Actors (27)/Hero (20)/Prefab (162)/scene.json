@@ -11,9 +11,9 @@
           "children": [],
           "components": [],
           "position": {
-            "x": 1,
+            "x": 0,
             "y": 0,
-            "z": 0
+            "z": 1
           },
           "orientation": {
             "x": 0,
@@ -31,6 +31,92 @@
           "prefab": {
             "sceneAssetId": "153"
           }
+        },
+        {
+          "id": "2",
+          "name": "Dialogue",
+          "children": [
+            {
+              "id": "3",
+              "name": "DialogueBG",
+              "children": [],
+              "components": [
+                {
+                  "type": "SpriteRenderer",
+                  "config": {
+                    "formatVersion": 1,
+                    "spriteAssetId": "195",
+                    "animationId": null,
+                    "horizontalFlip": false,
+                    "verticalFlip": false,
+                    "castShadow": false,
+                    "receiveShadow": false,
+                    "color": "ffffff",
+                    "overrideOpacity": true,
+                    "opacity": null,
+                    "materialType": "basic",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": -1
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "TextRenderer",
+              "config": {
+                "formatVersion": 2,
+                "fontAssetId": "185",
+                "text": "Slay the Dragon!",
+                "alignment": "center",
+                "verticalAlignment": "center",
+                "size": null,
+                "color": null,
+                "overrideOpacity": false,
+                "opacity": null
+              },
+              "id": "0"
+            }
+          ],
+          "position": {
+            "x": 0,
+            "y": 2.2,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": false,
+          "layer": 0,
+          "prefab": null
         }
       ],
       "components": [
@@ -39,7 +125,7 @@
           "config": {
             "formatVersion": 1,
             "spriteAssetId": "26",
-            "animationId": "0",
+            "animationId": "9",
             "horizontalFlip": false,
             "verticalFlip": false,
             "castShadow": false,

@@ -252,7 +252,7 @@ class PlayerBehavior extends Sup.Behavior {
         }        
         this.equipment = a;
         this.equipmentBehavior = a.getBehavior(ItemBehavior);
-        this.equipmentBehavior.onEquipped();
+        this.equipmentBehavior.onEquipped(this.actor);
       }
       
     } else {

@@ -18,17 +18,21 @@ class ItemBehavior extends Sup.Behavior {
   private isEquipped: boolean;
   private isFlipped: boolean;
   
+  private owner: Sup.Actor;
+  
   awake() {
     this.label = this.actor.getChild("Label");
     this.sprite = this.actor.getChild("Sprite");
     this.groupActor = Sup.getActor(this.groupName);
-    this.isEquipped = ( this.actor.getParent().getName() == "Player" );
+    this.isEquipped = ( this.actor.getParent().getName() == "Player" || this.actor.getParent().getName() == "Hero" );
     this.isFlipped = false;
     
     if (!this.isEquipped) {
       // Set sprite to be movable, but not the parent
       this.sprite.arcadeBody2D.setMovable(true);
       this.actor.arcadeBody2D.setMovable(false);
+    } else {
+      this.owner = this.actor.getParent();
     }
   }
 
@@ -79,18 +83,21 @@ class ItemBehavior extends Sup.Behavior {
     this.actor.setLocalZ(0);
     
     // Set global position of sprite
-    this.sprite.arcadeBody2D.warpPosition( Sup.getActor("Player").getPosition() );
+    this.sprite.arcadeBody2D.warpPosition( this.owner.getPosition() );
     
+    this.owner = null;
     //Sup.log("Dropped item! " + this.actor.getName());
   }
   
   // Equipped: no movement; follow player position on updates; no label visibility
-  onEquipped():void {
+  onEquipped(owner:Sup.Actor):void {
     if (this.isEquipped) return; // it's already equipped! do nothing.
     this.isEquipped = true;
     
-    // Reparent object to Player
-    this.actor.setParent( Sup.getActor("Player") );
+    this.owner = owner;
+    
+    // Reparent object to owner
+    this.actor.setParent( owner );
     // Rename object to Equipment
     this.actor.setName( "Equipment" );
     
@@ -102,13 +109,13 @@ class ItemBehavior extends Sup.Behavior {
     // Set local position
     this.actor.setLocalX(this.heldPositionX);
     this.actor.setLocalY(this.heldPositionY);
-    this.actor.setLocalZ(1); // In front of player
+    this.actor.setLocalZ(1); // In front of owner
     
     // Re-adjust position if flipped
     if (this.isFlipped) this.actor.setLocalX(-1 * this.heldPositionX);
     
-    // Set flip according to player
-    if (Sup.getActor("Player").spriteRenderer.getHorizontalFlip() != this.isFlipped) this.flip();
+    // Set flip according to owner
+    if (owner.spriteRenderer.getHorizontalFlip() != this.isFlipped) this.flip();
     
     //Sup.log("Equipped item! " + this.actor.getName());
   }

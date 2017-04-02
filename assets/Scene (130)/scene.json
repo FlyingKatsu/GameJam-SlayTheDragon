@@ -1213,7 +1213,35 @@
             {
               "id": "11",
               "name": "Heroes",
-              "children": [],
+              "children": [
+                {
+                  "id": "57",
+                  "name": "Hero",
+                  "children": [],
+                  "components": [],
+                  "position": {
+                    "x": 22,
+                    "y": 68,
+                    "z": 0
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": {
+                    "sceneAssetId": "162"
+                  }
+                }
+              ],
               "components": [],
               "position": {
                 "x": 0,
