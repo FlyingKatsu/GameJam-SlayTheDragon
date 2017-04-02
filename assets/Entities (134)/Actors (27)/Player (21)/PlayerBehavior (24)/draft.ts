@@ -305,7 +305,7 @@ class PlayerBehavior extends Sup.Behavior {
             this.dialogue.text = "Take THIS! HAH!";
             this.dialogue.timer = 60;
             this.actor.getChild("Dialogue").textRenderer.setText(this.dialogue.text);
-          } else {
+          } /else {
             // Get nearest Interactive
             let {a, d} = this.getNearestInteractive();
             if ( a != this.actor && d < Infinity && a.getBehavior(ChestBehavior) ) {

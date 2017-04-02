@@ -102,7 +102,16 @@
       "scriptId": "39",
       "line": 0,
       "parentBehavior": null,
-      "properties": []
+      "properties": [
+        {
+          "name": "contentGroup",
+          "type": "string"
+        },
+        {
+          "name": "contents",
+          "type": "string"
+        }
+      ]
     },
     "DirtBehavior": {
       "scriptId": "170",

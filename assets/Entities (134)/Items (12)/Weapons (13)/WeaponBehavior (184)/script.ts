@@ -8,5 +8,9 @@ class WeaponBehavior extends Sup.Behavior {
   update() {
     
   }
+  
+  attack() {
+    
+  }
 }
 Sup.registerBehavior(WeaponBehavior);

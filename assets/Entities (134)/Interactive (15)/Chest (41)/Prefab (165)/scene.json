@@ -45,6 +45,23 @@
             "layersIndex": null
           },
           "id": "1"
+        },
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "ChestBehavior",
+            "propertyValues": {
+              "contentGroup": {
+                "type": "string",
+                "value": "Gold"
+              },
+              "contents": {
+                "type": "string",
+                "value": "Coin"
+              }
+            }
+          },
+          "id": "2"
         }
       ],
       "position": {
