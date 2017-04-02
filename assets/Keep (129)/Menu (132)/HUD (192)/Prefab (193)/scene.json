@@ -282,6 +282,47 @@
               "prefab": null
             },
             {
+              "id": "16",
+              "name": "MoveCTRL",
+              "children": [],
+              "components": [
+                {
+                  "type": "TextRenderer",
+                  "config": {
+                    "formatVersion": 2,
+                    "fontAssetId": "185",
+                    "text": "left | right\nA | D",
+                    "alignment": "center",
+                    "verticalAlignment": "center",
+                    "size": null,
+                    "color": "ffffff",
+                    "overrideOpacity": false,
+                    "opacity": null
+                  },
+                  "id": "1"
+                }
+              ],
+              "position": {
+                "x": -11.75,
+                "y": -7.1,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
               "id": "12",
               "name": "Jump",
               "children": [],
@@ -305,6 +346,47 @@
               "position": {
                 "x": -8.75,
                 "y": -6.1,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "17",
+              "name": "JumpCTRL",
+              "children": [],
+              "components": [
+                {
+                  "type": "TextRenderer",
+                  "config": {
+                    "formatVersion": 2,
+                    "fontAssetId": "185",
+                    "text": "up\nspacebar\nW",
+                    "alignment": "center",
+                    "verticalAlignment": "center",
+                    "size": null,
+                    "color": "ffffff",
+                    "overrideOpacity": false,
+                    "opacity": null
+                  },
+                  "id": "1"
+                }
+              ],
+              "position": {
+                "x": -8.75,
+                "y": -7.1,
                 "z": 0
               },
               "orientation": {
@@ -364,6 +446,47 @@
               "prefab": null
             },
             {
+              "id": "18",
+              "name": "FallCTRL",
+              "children": [],
+              "components": [
+                {
+                  "type": "TextRenderer",
+                  "config": {
+                    "formatVersion": 2,
+                    "fontAssetId": "185",
+                    "text": "down\nS",
+                    "alignment": "center",
+                    "verticalAlignment": "center",
+                    "size": null,
+                    "color": null,
+                    "overrideOpacity": false,
+                    "opacity": null
+                  },
+                  "id": "1"
+                }
+              ],
+              "position": {
+                "x": -5.75,
+                "y": -7.1,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
               "id": "13",
               "name": "Swap",
               "children": [],
@@ -387,6 +510,47 @@
               "position": {
                 "x": -2.75,
                 "y": -6.1,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "19",
+              "name": "SwapCTRL",
+              "children": [],
+              "components": [
+                {
+                  "type": "TextRenderer",
+                  "config": {
+                    "formatVersion": 2,
+                    "fontAssetId": "185",
+                    "text": "Z\nshift\nQ",
+                    "alignment": "center",
+                    "verticalAlignment": "center",
+                    "size": null,
+                    "color": "ffffff",
+                    "overrideOpacity": false,
+                    "opacity": null
+                  },
+                  "id": "1"
+                }
+              ],
+              "position": {
+                "x": -2.75,
+                "y": -7.1,
                 "z": 0
               },
               "orientation": {
@@ -444,6 +608,47 @@
               "visible": true,
               "layer": 0,
               "prefab": null
+            },
+            {
+              "id": "20",
+              "name": "UseCTRL",
+              "children": [],
+              "components": [
+                {
+                  "type": "TextRenderer",
+                  "config": {
+                    "formatVersion": 2,
+                    "fontAssetId": "185",
+                    "text": "C\nreturn\nE",
+                    "alignment": "center",
+                    "verticalAlignment": "center",
+                    "size": null,
+                    "color": "ffffff",
+                    "overrideOpacity": false,
+                    "opacity": null
+                  },
+                  "id": "1"
+                }
+              ],
+              "position": {
+                "x": 0.25,
+                "y": -7.1,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
             }
           ],
           "components": [
@@ -469,7 +674,7 @@
           "position": {
             "x": 0,
             "y": 0,
-            "z": -1
+            "z": -2
           },
           "orientation": {
             "x": 0,
