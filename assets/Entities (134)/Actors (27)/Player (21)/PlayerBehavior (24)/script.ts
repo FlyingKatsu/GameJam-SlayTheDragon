@@ -203,12 +203,42 @@ class PlayerBehavior extends Sup.Behavior {
     
     // If user is near an item,
     if ( this.nearbyItems.length > 0 ) {
-      if ( this.equipmentBehavior ) this.equipmentBehavior.onDropped(); // Drop current equipment
       
-      // Get closest object and swap
+      // Get closest object
       let {a, d} = this.getNearestObject();
       
+      // If current is gold, check if we should increment or drop
+      if ( this.equipmentBehavior && this.equipmentBehavior.itemtype == Game.Item.Gold) {
+        
+        // If nearest is also gold: don't swap, just increment and destroy
+        if ( a.getBehavior(ItemBehavior).itemtype == Game.Item.Gold ) { 
+          // Add gold amount
+          Game.data.gold += a.getBehavior(GoldBehavior).amount;
+          // Update HUD
+          Game.updateHUD();
+          // Destroy other gold
+          a.destroy();
+          
+          // End
+          return;
+        } else { // Drop gold with amount from Game.data and set Game.data to 0
+          this.equipment.getBehavior(GoldBehavior).onDropped();
+        }
+      }
+      
+      // Swap
+      if ( this.equipmentBehavior ) this.equipmentBehavior.onDropped(); // Drop current equipment
+        
+      // Pick up closest object
       if (a && d < Infinity && a != this.equipment) {
+        
+        // If it's gold, increment Game.data.gold
+        if ( a.getBehavior(ItemBehavior).itemtype == Game.Item.Gold ) { 
+          // Add gold amount
+          Game.data.gold += a.getBehavior(GoldBehavior).amount;
+          // Update HUD
+          Game.updateHUD();
+        }        
         this.equipment = a;
         this.equipmentBehavior = a.getBehavior(ItemBehavior);
         this.equipmentBehavior.onEquipped();
@@ -217,6 +247,12 @@ class PlayerBehavior extends Sup.Behavior {
     } else {
       // Otherwise just drop it, assuming we have an item
       if ( this.equipment ) {
+        
+        if ( this.equipmentBehavior.itemtype == Game.Item.Gold ) {
+          // Drop gold with amount from Game.data and set Game.data to 0
+          this.equipment.getBehavior(GoldBehavior).onDropped();
+        }
+        
         // Drop it
         this.equipmentBehavior.onDropped();
         // Set our references to null

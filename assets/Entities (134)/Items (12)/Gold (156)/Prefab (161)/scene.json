@@ -205,6 +205,14 @@
             }
           },
           "id": "1"
+        },
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "GoldBehavior",
+            "propertyValues": {}
+          },
+          "id": "2"
         }
       ],
       "position": {

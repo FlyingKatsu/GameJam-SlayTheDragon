@@ -28,7 +28,7 @@ module Game {
     gold: 0,
     kill: 0,
     hero: 0,
-    herostatus: ["> nothing to report...","",""],
+    herostatus: ["> nothing to report..."],
     dragon: "???"
   };
   
@@ -41,7 +41,7 @@ module Game {
       gold: 0,
       kill: 0,
       hero: 0,
-      herostatus: ["nothing to report...","",""],
+      herostatus: ["nothing to report..."],
       dragon: "???"
     };
     
@@ -74,6 +74,7 @@ module Game {
   }
   
   export function updateHUD() {
+    Sup.log(Game.data);
     let HUD = Sup.getActor("HUD");
     if (HUD) {
       HUD.getChild("HeartCount").textRenderer.setText("Health: " + Game.data.heart);

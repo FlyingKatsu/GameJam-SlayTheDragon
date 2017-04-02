@@ -931,11 +931,38 @@
               "children": [
                 {
                   "id": "53",
-                  "name": "Gold",
+                  "name": "Coin",
                   "children": [],
                   "components": [],
                   "position": {
                     "x": 16,
+                    "y": 45,
+                    "z": 0
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": {
+                    "sceneAssetId": "161"
+                  }
+                },
+                {
+                  "id": "56",
+                  "name": "Coin 2",
+                  "children": [],
+                  "components": [],
+                  "position": {
+                    "x": 25,
                     "y": 45,
                     "z": 0
                   },

@@ -46,7 +46,12 @@
       "scriptId": "47",
       "line": 0,
       "parentBehavior": null,
-      "properties": []
+      "properties": [
+        {
+          "name": "amount",
+          "type": "number"
+        }
+      ]
     },
     "CameraBehavior": {
       "scriptId": "61",
