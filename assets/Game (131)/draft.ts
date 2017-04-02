@@ -81,7 +81,7 @@ module Game {
       HUD.getChild("GoldCount").textRenderer.setText("Gold: " + Game.data.gold);
       HUD.getChild("KillCount").textRenderer.setText("Kills: " + Game.data.kill);
       HUD.getChild("DeathCount").textRenderer.setText("Hero Count: " + Sup.getActor("Heroes").getChildren().length + "/" + Game.data.hero);
-      HUD.getChild("DragonStatus").textRenderer.setText("Dragon Status: " + Sup.getActor("Heroes").getChildren().length + "/" + Game.data.hero);
+      HUD.getChild("DragonStatus").textRenderer.setText("Dragon Status: " + Game.data.hero);
     }
   }
   
