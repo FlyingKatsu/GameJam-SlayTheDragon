@@ -775,8 +775,8 @@
                   "children": [],
                   "components": [],
                   "position": {
-                    "x": 58,
-                    "y": 33,
+                    "x": 107,
+                    "y": 42,
                     "z": 0
                   },
                   "orientation": {
@@ -802,8 +802,8 @@
                   "children": [],
                   "components": [],
                   "position": {
-                    "x": 36,
-                    "y": 47,
+                    "x": 38,
+                    "y": 10,
                     "z": 0
                   },
                   "orientation": {
@@ -856,7 +856,88 @@
                   "components": [],
                   "position": {
                     "x": 44,
-                    "y": 31,
+                    "y": 33,
+                    "z": 0
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": {
+                    "sceneAssetId": "160"
+                  }
+                },
+                {
+                  "id": "64",
+                  "name": "Fruit 2",
+                  "children": [],
+                  "components": [],
+                  "position": {
+                    "x": 52,
+                    "y": 43,
+                    "z": 0
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": {
+                    "sceneAssetId": "160"
+                  }
+                },
+                {
+                  "id": "65",
+                  "name": "Fruit 3",
+                  "children": [],
+                  "components": [],
+                  "position": {
+                    "x": 70,
+                    "y": 42,
+                    "z": 0
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": {
+                    "sceneAssetId": "160"
+                  }
+                },
+                {
+                  "id": "69",
+                  "name": "Fruit 4",
+                  "children": [],
+                  "components": [],
+                  "position": {
+                    "x": 40,
+                    "y": 29,
                     "z": 0
                   },
                   "orientation": {
@@ -883,7 +964,88 @@
                   "components": [],
                   "position": {
                     "x": 89,
-                    "y": 30,
+                    "y": 29,
+                    "z": 0
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": {
+                    "sceneAssetId": "159"
+                  }
+                },
+                {
+                  "id": "71",
+                  "name": "Meat 2",
+                  "children": [],
+                  "components": [],
+                  "position": {
+                    "x": 81,
+                    "y": 27,
+                    "z": 0
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": {
+                    "sceneAssetId": "159"
+                  }
+                },
+                {
+                  "id": "72",
+                  "name": "Meat 3",
+                  "children": [],
+                  "components": [],
+                  "position": {
+                    "x": 86,
+                    "y": 23,
+                    "z": 0
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": {
+                    "sceneAssetId": "159"
+                  }
+                },
+                {
+                  "id": "73",
+                  "name": "Meat 4",
+                  "children": [],
+                  "components": [],
+                  "position": {
+                    "x": 94,
+                    "y": 25,
                     "z": 0
                   },
                   "orientation": {
@@ -935,7 +1097,7 @@
                   "children": [],
                   "components": [],
                   "position": {
-                    "x": 16,
+                    "x": 17,
                     "y": 45,
                     "z": 0
                   },
@@ -962,8 +1124,116 @@
                   "children": [],
                   "components": [],
                   "position": {
-                    "x": 25,
+                    "x": 39,
                     "y": 45,
+                    "z": 0
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": {
+                    "sceneAssetId": "161"
+                  }
+                },
+                {
+                  "id": "66",
+                  "name": "Coin 3",
+                  "children": [],
+                  "components": [],
+                  "position": {
+                    "x": 58,
+                    "y": 8,
+                    "z": 0
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": {
+                    "sceneAssetId": "161"
+                  }
+                },
+                {
+                  "id": "67",
+                  "name": "Coin 4",
+                  "children": [],
+                  "components": [],
+                  "position": {
+                    "x": 13,
+                    "y": 8,
+                    "z": 0
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": {
+                    "sceneAssetId": "161"
+                  }
+                },
+                {
+                  "id": "68",
+                  "name": "Coin 5",
+                  "children": [],
+                  "components": [],
+                  "position": {
+                    "x": 114,
+                    "y": 23,
+                    "z": 0
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": {
+                    "sceneAssetId": "161"
+                  }
+                },
+                {
+                  "id": "70",
+                  "name": "Coin 6",
+                  "children": [],
+                  "components": [],
+                  "position": {
+                    "x": 62,
+                    "y": 52,
                     "z": 0
                   },
                   "orientation": {
