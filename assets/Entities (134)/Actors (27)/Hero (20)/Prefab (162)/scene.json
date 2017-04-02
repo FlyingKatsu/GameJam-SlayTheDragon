@@ -124,8 +124,8 @@
           "type": "SpriteRenderer",
           "config": {
             "formatVersion": 1,
-            "spriteAssetId": "26",
-            "animationId": "9",
+            "spriteAssetId": "65",
+            "animationId": "4",
             "horizontalFlip": false,
             "verticalFlip": false,
             "castShadow": false,

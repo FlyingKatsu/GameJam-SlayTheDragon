@@ -6,13 +6,13 @@
   "filtering": "pixelated",
   "wrapping": "clampToEdge",
   "pixelsPerUnit": 32,
-  "framesPerSecond": 10,
+  "framesPerSecond": 4,
   "opacity": null,
   "alphaTest": 0.1,
   "frameOrder": "rows",
   "grid": {
-    "width": 64,
-    "height": 72
+    "width": 80,
+    "height": 78
   },
   "origin": {
     "x": 0.5,
@@ -29,22 +29,50 @@
     {
       "id": "1",
       "name": "Move",
-      "startFrameIndex": 0,
-      "endFrameIndex": 0,
-      "speed": 1
+      "startFrameIndex": 1,
+      "endFrameIndex": 4,
+      "speed": 2
     },
     {
       "id": "2",
       "name": "Jump",
-      "startFrameIndex": 0,
-      "endFrameIndex": 0,
-      "speed": 1
+      "startFrameIndex": 5,
+      "endFrameIndex": 6,
+      "speed": 2
     },
     {
       "id": "3",
       "name": "Fall",
-      "startFrameIndex": 0,
-      "endFrameIndex": 0,
+      "startFrameIndex": 7,
+      "endFrameIndex": 7,
+      "speed": 1
+    },
+    {
+      "id": "4",
+      "name": "HeroIdle",
+      "startFrameIndex": 8,
+      "endFrameIndex": 8,
+      "speed": 1
+    },
+    {
+      "id": "5",
+      "name": "HeroMove",
+      "startFrameIndex": 9,
+      "endFrameIndex": 12,
+      "speed": 1
+    },
+    {
+      "id": "6",
+      "name": "HeroJump",
+      "startFrameIndex": 13,
+      "endFrameIndex": 14,
+      "speed": 2
+    },
+    {
+      "id": "7",
+      "name": "HeroFall",
+      "startFrameIndex": 15,
+      "endFrameIndex": 15,
       "speed": 1
     }
   ],
