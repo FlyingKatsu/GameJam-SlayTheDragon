@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 199,
+  "nextEntryId": 200,
   "nodes": [
     {
       "id": "178",
@@ -90,6 +90,11 @@
         {
           "id": "150",
           "name": "PrefabLeft",
+          "type": "scene"
+        },
+        {
+          "id": "199",
+          "name": "PrefabBlank",
           "type": "scene"
         },
         {

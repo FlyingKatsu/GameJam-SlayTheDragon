@@ -53,6 +53,13 @@
       "startFrameIndex": 4,
       "endFrameIndex": 4,
       "speed": 1
+    },
+    {
+      "id": "5",
+      "name": "Empty",
+      "startFrameIndex": 5,
+      "endFrameIndex": 5,
+      "speed": 1
     }
   ],
   "mapSlots": {
