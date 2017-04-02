@@ -22,12 +22,19 @@ module Game {
         
   export enum Item { Weapon, Food, Gold };
   export enum Weapon { Sword, Axe, Spade, SquirtGun };
+        
+  export let counters = {
+    heart: 3,
+    gold: 0,
+    kill: 0,
+    
+  };
   
   export function init() {
     Game.state = Game.State.Init;
     
     // Play Music
-    Game.musicPlayer = new Sup.Audio.SoundPlayer("Keep/Music/Pyre", 0.25, { loop: true });
+    Game.musicPlayer = new Sup.Audio.SoundPlayer("Music/Pyre", 0.25, { loop: true });
     musicPlayer.play();
     
     // NOTE: this only works if the scene is loaded, but for some reason not in a timeout callback
@@ -44,7 +51,7 @@ module Game {
     
     // NOTE:  Behavior classes won't be recognized at runtime unless this script is the very last in the hierarchy
     // Load scene
-    Sup.loadScene("Keep/Scene");
+    Sup.loadScene("Scene");
     Game.playerActor = Sup.getActor("Player");
     
     // Set Gamestate
@@ -52,6 +59,20 @@ module Game {
     
     // Set Gravity
     Sup.ArcadePhysics2D.setGravity(0, -0.02);
+  }
+  
+  export function updateHUD() {
+    
+  }
+  
+  export function endGame() {
+    if (Game.musicPlayer) Game.musicPlayer.stop();
+    Game.musicPlayer = new Sup.Audio.SoundPlayer("Music/Pyre", 0.25, { loop: true });
+    Game.musicPlayer.play();
+    
+    Sup.loadScene("Menu/Prefab");
+    
+    Game.state = Game.State.Done;
   }
   
 }
