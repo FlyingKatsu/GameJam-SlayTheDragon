@@ -54,7 +54,7 @@
           "visible": true,
           "layer": 0,
           "prefab": {
-            "sceneAssetId": null
+            "sceneAssetId": "145"
           }
         },
         {
@@ -1044,8 +1044,143 @@
                       "children": [],
                       "components": [],
                       "position": {
-                        "x": 16,
+                        "x": 17,
                         "y": 45,
+                        "z": 0
+                      },
+                      "orientation": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0,
+                        "w": 1
+                      },
+                      "scale": {
+                        "x": 1,
+                        "y": 1,
+                        "z": 1
+                      },
+                      "visible": true,
+                      "layer": 0,
+                      "prefab": {
+                        "sceneAssetId": "165"
+                      }
+                    },
+                    {
+                      "id": "59",
+                      "name": "Treasure 2",
+                      "children": [],
+                      "components": [],
+                      "position": {
+                        "x": 62,
+                        "y": 52,
+                        "z": 0
+                      },
+                      "orientation": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0,
+                        "w": 1
+                      },
+                      "scale": {
+                        "x": 1,
+                        "y": 1,
+                        "z": 1
+                      },
+                      "visible": true,
+                      "layer": 0,
+                      "prefab": {
+                        "sceneAssetId": "165"
+                      }
+                    },
+                    {
+                      "id": "60",
+                      "name": "Treasure 3",
+                      "children": [],
+                      "components": [],
+                      "position": {
+                        "x": 58,
+                        "y": 8,
+                        "z": 0
+                      },
+                      "orientation": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0,
+                        "w": 1
+                      },
+                      "scale": {
+                        "x": 1,
+                        "y": 1,
+                        "z": 1
+                      },
+                      "visible": true,
+                      "layer": 0,
+                      "prefab": {
+                        "sceneAssetId": "165"
+                      }
+                    },
+                    {
+                      "id": "61",
+                      "name": "Treasure 4",
+                      "children": [],
+                      "components": [],
+                      "position": {
+                        "x": 13,
+                        "y": 8,
+                        "z": 0
+                      },
+                      "orientation": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0,
+                        "w": 1
+                      },
+                      "scale": {
+                        "x": 1,
+                        "y": 1,
+                        "z": 1
+                      },
+                      "visible": true,
+                      "layer": 0,
+                      "prefab": {
+                        "sceneAssetId": "165"
+                      }
+                    },
+                    {
+                      "id": "62",
+                      "name": "Treasure 5",
+                      "children": [],
+                      "components": [],
+                      "position": {
+                        "x": 39,
+                        "y": 45,
+                        "z": 0
+                      },
+                      "orientation": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0,
+                        "w": 1
+                      },
+                      "scale": {
+                        "x": 1,
+                        "y": 1,
+                        "z": 1
+                      },
+                      "visible": true,
+                      "layer": 0,
+                      "prefab": {
+                        "sceneAssetId": "165"
+                      }
+                    },
+                    {
+                      "id": "63",
+                      "name": "Treasure 6",
+                      "children": [],
+                      "components": [],
+                      "position": {
+                        "x": 114,
+                        "y": 23,
                         "z": 0
                       },
                       "orientation": {
