@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 195,
+  "nextEntryId": 196,
   "nodes": [
     {
       "id": "128",
@@ -407,6 +407,11 @@
                   "id": "183",
                   "name": "ItemBehavior",
                   "type": "script"
+                },
+                {
+                  "id": "195",
+                  "name": "ItemBG",
+                  "type": "sprite"
                 }
               ]
             },
