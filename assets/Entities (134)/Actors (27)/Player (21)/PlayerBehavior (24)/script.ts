@@ -191,12 +191,12 @@ class PlayerBehavior extends Sup.Behavior {
         this.nearbyItems.push(item);
       }
     }
-    for ( let item of Sup.getActor("Interactive") .getChildren()) {
+    /*for ( let item of Sup.getActor("Interactive") .getChildren()) {
       if ( Sup.ArcadePhysics2D.intersects(this.actor.arcadeBody2D, item.arcadeBody2D) ) {
         this.nearbyInteractives.push(item);
         //this.nearbyItems.push(item);
       }
-    }
+    }*/
   }
   
   private getNearestObject() {
@@ -305,7 +305,7 @@ class PlayerBehavior extends Sup.Behavior {
             this.dialogue.text = "Take THIS! HAH!";
             this.dialogue.timer = 60;
             this.actor.getChild("Dialogue").textRenderer.setText(this.dialogue.text);
-          } else {
+          } /*else {
             // Get nearest Interactive
             let {a, d} = this.getNearestInteractive();
             if ( a != this.actor && d < Infinity && a.getBehavior(ChestBehavior) ) {
@@ -337,7 +337,7 @@ class PlayerBehavior extends Sup.Behavior {
                   break;
               }
             }
-            }
+            }*/
             break;
 
         case Game.Item.Food:
