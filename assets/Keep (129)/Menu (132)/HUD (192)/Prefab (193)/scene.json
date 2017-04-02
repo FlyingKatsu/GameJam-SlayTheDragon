@@ -11,7 +11,7 @@
           "children": [
             {
               "id": "2",
-              "name": "Hearts",
+              "name": "HeartCount",
               "children": [],
               "components": [
                 {
@@ -52,7 +52,7 @@
             },
             {
               "id": "3",
-              "name": "Gold",
+              "name": "GoldCount",
               "children": [],
               "components": [
                 {
@@ -93,7 +93,7 @@
             },
             {
               "id": "4",
-              "name": "Kills",
+              "name": "KillCount",
               "children": [],
               "components": [
                 {
@@ -134,7 +134,7 @@
             },
             {
               "id": "5",
-              "name": "Deaths",
+              "name": "DeathCount",
               "children": [],
               "components": [
                 {
@@ -175,7 +175,7 @@
             },
             {
               "id": "7",
-              "name": "Monitor",
+              "name": "HeroMonitor",
               "children": [
                 {
                   "id": "21",
@@ -239,6 +239,47 @@
               "position": {
                 "x": 4.2,
                 "y": -6.1,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "22",
+              "name": "DragonStatus",
+              "children": [],
+              "components": [
+                {
+                  "type": "TextRenderer",
+                  "config": {
+                    "formatVersion": 2,
+                    "fontAssetId": "185",
+                    "text": "Dragon Status: ",
+                    "alignment": "left",
+                    "verticalAlignment": "center",
+                    "size": null,
+                    "color": null,
+                    "overrideOpacity": false,
+                    "opacity": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 2.75,
+                "y": -4.65,
                 "z": 0
               },
               "orientation": {
