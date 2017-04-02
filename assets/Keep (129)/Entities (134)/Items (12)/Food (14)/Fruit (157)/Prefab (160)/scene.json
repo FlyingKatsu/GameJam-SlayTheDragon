@@ -18,17 +18,17 @@
                 "text": "fruit",
                 "alignment": "center",
                 "verticalAlignment": "center",
-                "size": 16,
+                "size": null,
                 "color": null,
-                "overrideOpacity": true,
-                "opacity": 1
+                "overrideOpacity": false,
+                "opacity": null
               },
               "id": "0"
             }
           ],
           "position": {
             "x": 0,
-            "y": -2,
+            "y": 1,
             "z": 0
           },
           "orientation": {

@@ -17,18 +17,18 @@
                 "fontAssetId": "185",
                 "text": "meat",
                 "alignment": "center",
-                "verticalAlignment": "bottom",
-                "size": 16,
+                "verticalAlignment": "center",
+                "size": null,
                 "color": null,
-                "overrideOpacity": true,
-                "opacity": 1
+                "overrideOpacity": false,
+                "opacity": null
               },
               "id": "0"
             }
           ],
           "position": {
             "x": 0,
-            "y": -2,
+            "y": 1,
             "z": 0
           },
           "orientation": {
