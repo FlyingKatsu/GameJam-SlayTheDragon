@@ -61,7 +61,6 @@ module Game {
   }
   
   export function startGame() {
-    
     // NOTE:  Behavior classes won't be recognized at runtime unless this script is the very last in the hierarchy
     // Load scene
     Sup.loadScene("Scene");

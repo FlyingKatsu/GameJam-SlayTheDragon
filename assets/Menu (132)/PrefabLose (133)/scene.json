@@ -64,7 +64,7 @@
                   "config": {
                     "formatVersion": 2,
                     "fontAssetId": "185",
-                    "text": "Press SPACEBAR to play again",
+                    "text": "R to play again",
                     "alignment": "center",
                     "verticalAlignment": "center",
                     "size": null,
