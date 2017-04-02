@@ -74,7 +74,6 @@ module Game {
   }
   
   export function updateHUD() {
-    Sup.log(Game.data);
     let HUD = Sup.getActor("HUD");
     if (HUD) {
       HUD.getChild("HeartCount").textRenderer.setText("Health: " + Game.data.heart);

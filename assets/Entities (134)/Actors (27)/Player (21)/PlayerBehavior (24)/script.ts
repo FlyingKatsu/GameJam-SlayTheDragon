@@ -19,6 +19,9 @@ class PlayerBehavior extends Sup.Behavior {
   
   private dropFromPlatform: boolean = false;
   
+  private dialogue = { text: "", timer: 0 };
+  
+  
   awake() {
     this.initialSize = this.actor.arcadeBody2D.getSize();
     this.initialOffset = this.actor.arcadeBody2D.getOffset();
@@ -62,6 +65,14 @@ class PlayerBehavior extends Sup.Behavior {
     if ( Game.data.heart <= 0 ) Game.endGame(false);
     
     if (Game.state == Game.State.Play) {
+      
+      // Update dialogue obj
+      if ( this.dialogue.timer == 0 ) {
+        this.actor.getChild("Dialogue").setVisible(false);
+      } else {
+        this.actor.getChild("Dialogue").setVisible(true);
+        this.dialogue.timer--;
+      }
 
       // Store controls status so we only have to reduce N per update
       this.updateControls();
@@ -298,7 +309,21 @@ class PlayerBehavior extends Sup.Behavior {
 
         case Game.Item.Food:
           // TODO: Play animation and sfx
-          // TODO: Restore health
+          
+          let response = this.equipment.getBehavior(FoodBehavior).onUsed();
+          
+          // Say yum
+          this.dialogue.text = response;
+          this.dialogue.timer = 60;
+          this.actor.getChild("Dialogue").textRenderer.setText(this.dialogue.text);
+          
+          // Destroy the item
+          this.equipment.destroy();
+          
+          // Set our references to null
+          this.equipment = null;
+          this.equipmentBehavior = null;
+          
           break;
 
         case Game.Item.Gold:

@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 198,
+  "nextEntryId": 199,
   "nodes": [
     {
       "id": "178",
@@ -216,11 +216,6 @@
                       "id": "48",
                       "name": "FruitSprite",
                       "type": "sprite"
-                    },
-                    {
-                      "id": "38",
-                      "name": "FruitBehavior",
-                      "type": "script"
                     }
                   ]
                 },
@@ -238,11 +233,6 @@
                       "id": "35",
                       "name": "MeatSprite",
                       "type": "sprite"
-                    },
-                    {
-                      "id": "36",
-                      "name": "MeatBehavior",
-                      "type": "script"
                     }
                   ]
                 },
@@ -250,6 +240,11 @@
                   "id": "191",
                   "name": "Food",
                   "type": "sprite"
+                },
+                {
+                  "id": "198",
+                  "name": "FoodBehavior",
+                  "type": "script"
                 }
               ]
             },

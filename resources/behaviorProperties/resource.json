@@ -24,18 +24,6 @@
       "parentBehavior": null,
       "properties": []
     },
-    "MeatBehavior": {
-      "scriptId": "36",
-      "line": 0,
-      "parentBehavior": null,
-      "properties": []
-    },
-    "FruitBehavior": {
-      "scriptId": "38",
-      "line": 0,
-      "parentBehavior": null,
-      "properties": []
-    },
     "TreeBehavior": {
       "scriptId": "40",
       "line": 0,
@@ -162,6 +150,25 @@
       "line": 0,
       "parentBehavior": null,
       "properties": []
+    },
+    "FoodBehavior": {
+      "scriptId": "198",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "amount",
+          "type": "number"
+        },
+        {
+          "name": "foodtype",
+          "type": "string"
+        },
+        {
+          "name": "response",
+          "type": "string"
+        }
+      ]
     }
   }
 }

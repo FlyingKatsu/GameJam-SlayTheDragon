@@ -205,6 +205,19 @@
             }
           },
           "id": "1"
+        },
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "FoodBehavior",
+            "propertyValues": {
+              "response": {
+                "type": "string",
+                "value": ""
+              }
+            }
+          },
+          "id": "2"
         }
       ],
       "position": {
