@@ -110,7 +110,7 @@ class HeroBehavior extends Sup.Behavior {
 
           // Stop moving and pick it up!
           velocity.x = 0;
-          this.itemTimer = 120;
+          this.itemTimer = 60;
 
           switch ( a.getBehavior(ItemBehavior).itemtype ) {
             case Game.Item.Weapon:
@@ -179,10 +179,10 @@ class HeroBehavior extends Sup.Behavior {
     let actor = this.actor;
     return this.nearbyItems.reduce( function(acc,item) {
       let distance = actor.getPosition().distanceTo(item.getPosition());
-      // Make sure it is closest AND in front (not behind)
+      // Make sure it is closest AND in front (not too far behind)
       let inFront = item.getX() - actor.getX();
       if (actor.spriteRenderer.getHorizontalFlip()) inFront * -1;
-      if (distance < acc.d && inFront > 0) return { a:item, d:distance }
+      if (distance < acc.d && inFront > -1) return { a:item, d:distance }
       return acc;
     }, {a:this.actor,d:Infinity} );
   }
@@ -194,7 +194,7 @@ class HeroBehavior extends Sup.Behavior {
     this.actor.getChild("Dialogue").textRenderer.setText(this.dialogue.text);
     
     // Update monitor
-    Game.data.herostatus.push(action);
+    Game.data.herostatus.push("> " + action);
     Game.updateHeroMonitor();
   }
   

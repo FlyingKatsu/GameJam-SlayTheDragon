@@ -28,7 +28,7 @@ module Game {
     gold: 0,
     kill: 0,
     hero: 0,
-    herostatus: ["You fell into a cave!"],
+    herostatus: ["> You fell into a cave!"],
     dragon: "???"
   };
   
@@ -41,7 +41,7 @@ module Game {
       gold: 0,
       kill: 0,
       hero: 0,
-      herostatus: ["You fell into a cave!"],
+      herostatus: ["> You fell into a cave!"],
       dragon: "???"
     };
     
@@ -85,13 +85,15 @@ module Game {
   }
   
   export function updateHeroMonitor() {
+    Sup.log(Game.data.herostatus)
     let monitor = Sup.getActor("HeroMonitor");
     if (monitor) {
-      let text = "";
-      for (let i = 0; i < Game.data.herostatus.length; i++) {
-        if (i > 2) { Game.data.herostatus.pop(); }
-        else { text += "> " + Game.data.herostatus[i] + "\n";  }
+      if (Game.data.herostatus.length > 3) {
+        Game.data.herostatus.reverse(); // flip around so we can pop
+        for ( let i = 0; i < Game.data.herostatus.length - 3; i++ ) Game.data.herostatus.pop();
+        Game.data.herostatus.reverse(); // flip around to regain order
       }
+      let text = Game.data.herostatus.join("\n");
       monitor.getChild("Log").textRenderer.setText(text);
     }
   }
