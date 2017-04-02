@@ -29,7 +29,7 @@ module Game {
     kill: 0,
     hero: 0,
     herostatus: ["> You fell into a cave!"],
-    dragon: "???"
+    dragon: "Zzz"
   };
   
   export function init() {
@@ -42,7 +42,7 @@ module Game {
       kill: 0,
       hero: 0,
       herostatus: ["> You fell into a cave!"],
-      dragon: "???"
+      dragon: "Zzz"
     };
     
     // Reset Music

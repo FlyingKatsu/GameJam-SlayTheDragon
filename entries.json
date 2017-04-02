@@ -17,28 +17,6 @@
       "type": "script"
     },
     {
-      "id": "120",
-      "name": "BG",
-      "type": null,
-      "children": [
-        {
-          "id": "121",
-          "name": "Sky",
-          "type": "sprite"
-        },
-        {
-          "id": "122",
-          "name": "Mountains",
-          "type": "sprite"
-        },
-        {
-          "id": "123",
-          "name": "Trees",
-          "type": "sprite"
-        }
-      ]
-    },
-    {
       "id": "144",
       "name": "Map",
       "type": null,
@@ -507,142 +485,13 @@
       "type": null,
       "children": [
         {
-          "id": "86",
-          "name": "Title",
-          "type": "sound"
-        },
-        {
-          "id": "80",
-          "name": "Overworld",
-          "type": "sound"
-        },
-        {
           "id": "81",
           "name": "TaintedOverworld",
           "type": "sound"
         },
         {
-          "id": "82",
-          "name": "DragonLair",
-          "type": "sound"
-        },
-        {
-          "id": "83",
-          "name": "DragonFight",
-          "type": "sound"
-        },
-        {
-          "id": "84",
-          "name": "Crunk",
-          "type": "sound"
-        },
-        {
-          "id": "85",
-          "name": "Chasm",
-          "type": "sound"
-        },
-        {
           "id": "87",
           "name": "Pyre",
-          "type": "sound"
-        }
-      ]
-    },
-    {
-      "id": "88",
-      "name": "SFX",
-      "type": null,
-      "children": [
-        {
-          "id": "89",
-          "name": "Slash",
-          "type": "sound"
-        },
-        {
-          "id": "91",
-          "name": "Shoot",
-          "type": "sound"
-        },
-        {
-          "id": "92",
-          "name": "Jump",
-          "type": "sound"
-        },
-        {
-          "id": "94",
-          "name": "Hit",
-          "type": "sound"
-        },
-        {
-          "id": "95",
-          "name": "Dead",
-          "type": "sound"
-        },
-        {
-          "id": "96",
-          "name": "Roar",
-          "type": "sound"
-        },
-        {
-          "id": "97",
-          "name": "Snooze",
-          "type": "sound"
-        },
-        {
-          "id": "98",
-          "name": "Firebreath",
-          "type": "sound"
-        },
-        {
-          "id": "108",
-          "name": "DragonHit",
-          "type": "sound"
-        },
-        {
-          "id": "99",
-          "name": "Foot",
-          "type": null,
-          "children": [
-            {
-              "id": "100",
-              "name": "0",
-              "type": "sound"
-            },
-            {
-              "id": "101",
-              "name": "1",
-              "type": "sound"
-            },
-            {
-              "id": "102",
-              "name": "2",
-              "type": "sound"
-            },
-            {
-              "id": "103",
-              "name": "3",
-              "type": "sound"
-            }
-          ]
-        },
-        {
-          "id": "104",
-          "name": "Open",
-          "type": "sound"
-        },
-        {
-          "id": "105",
-          "name": "Take",
-          "type": "sound"
-        },
-        {
-          "id": "106",
-          "name": "Drop",
-          "type": "sound"
-        },
-        {
-          "id": "107",
-          "name": "Swap",
           "type": "sound"
         }
       ]
