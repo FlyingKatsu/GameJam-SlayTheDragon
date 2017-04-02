@@ -266,9 +266,9 @@
                   "config": {
                     "formatVersion": 2,
                     "fontAssetId": "185",
-                    "text": "Dragon Status: ",
+                    "text": "Dragon Status: ???",
                     "alignment": "left",
-                    "verticalAlignment": "center",
+                    "verticalAlignment": "top",
                     "size": null,
                     "color": null,
                     "overrideOpacity": false,
