@@ -4,7 +4,16 @@
       "scriptId": "23",
       "line": 0,
       "parentBehavior": null,
-      "properties": []
+      "properties": [
+        {
+          "name": "speed",
+          "type": "number"
+        },
+        {
+          "name": "heroname",
+          "type": "string"
+        }
+      ]
     },
     "DragonBehavior": {
       "scriptId": "25",
@@ -24,18 +33,6 @@
       "parentBehavior": null,
       "properties": []
     },
-    "MeatBehavior": {
-      "scriptId": "36",
-      "line": 0,
-      "parentBehavior": null,
-      "properties": []
-    },
-    "FruitBehavior": {
-      "scriptId": "38",
-      "line": 0,
-      "parentBehavior": null,
-      "properties": []
-    },
     "TreeBehavior": {
       "scriptId": "40",
       "line": 0,
@@ -46,7 +43,12 @@
       "scriptId": "47",
       "line": 0,
       "parentBehavior": null,
-      "properties": []
+      "properties": [
+        {
+          "name": "amount",
+          "type": "number"
+        }
+      ]
     },
     "CameraBehavior": {
       "scriptId": "61",
@@ -54,61 +56,8 @@
       "parentBehavior": null,
       "properties": []
     },
-    "SceneManagerBehavior": {
-      "scriptId": "68",
-      "line": 0,
-      "parentBehavior": null,
-      "properties": [
-        {
-          "name": "targetScene",
-          "type": "string"
-        }
-      ]
-    },
-    "ButtonBehavior": {
-      "scriptId": "73",
-      "line": 0,
-      "parentBehavior": null,
-      "properties": [
-        {
-          "name": "targetScene",
-          "type": "string"
-        },
-        {
-          "name": "hovered",
-          "type": "boolean"
-        }
-      ]
-    },
-    "HUDBehavior": {
-      "scriptId": "74",
-      "line": 0,
-      "parentBehavior": null,
-      "properties": []
-    },
     "PlayerBehavior": {
       "scriptId": "24",
-      "line": 2,
-      "parentBehavior": null,
-      "properties": [
-        {
-          "name": "speed",
-          "type": "number"
-        },
-        {
-          "name": "jumpSpeed",
-          "type": "number"
-        }
-      ]
-    },
-    "CameraBehaviorTest": {
-      "scriptId": "138",
-      "line": 0,
-      "parentBehavior": null,
-      "properties": []
-    },
-    "CharacterBehavior": {
-      "scriptId": "141",
       "line": 2,
       "parentBehavior": null,
       "properties": [
@@ -167,27 +116,6 @@
       "parentBehavior": null,
       "properties": []
     },
-    "FakePlayerBehavior": {
-      "scriptId": "180",
-      "line": 0,
-      "parentBehavior": null,
-      "properties": [
-        {
-          "name": "speed",
-          "type": "number"
-        },
-        {
-          "name": "jumpSpeed",
-          "type": "number"
-        }
-      ]
-    },
-    "FakeHeroBehavior": {
-      "scriptId": "181",
-      "line": 0,
-      "parentBehavior": null,
-      "properties": []
-    },
     "ItemBehavior": {
       "scriptId": "183",
       "line": 0,
@@ -223,6 +151,31 @@
         {
           "name": "itemtype",
           "type": "number"
+        }
+      ]
+    },
+    "PlayerEndBehavior": {
+      "scriptId": "196",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
+    },
+    "FoodBehavior": {
+      "scriptId": "198",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "amount",
+          "type": "number"
+        },
+        {
+          "name": "foodtype",
+          "type": "string"
+        },
+        {
+          "name": "response",
+          "type": "string"
         }
       ]
     }

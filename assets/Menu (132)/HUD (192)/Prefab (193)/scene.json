@@ -1,0 +1,828 @@
+{
+  "formatVersion": 1,
+  "nodes": [
+    {
+      "id": "1",
+      "name": "Camera",
+      "children": [
+        {
+          "id": "0",
+          "name": "HUD",
+          "children": [
+            {
+              "id": "2",
+              "name": "HeartCount",
+              "children": [],
+              "components": [
+                {
+                  "type": "TextRenderer",
+                  "config": {
+                    "formatVersion": 2,
+                    "fontAssetId": "185",
+                    "text": "Health: 3",
+                    "alignment": "center",
+                    "verticalAlignment": "top",
+                    "size": null,
+                    "color": null,
+                    "overrideOpacity": false,
+                    "opacity": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": -11.75,
+                "y": -4.65,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "3",
+              "name": "GoldCount",
+              "children": [],
+              "components": [
+                {
+                  "type": "TextRenderer",
+                  "config": {
+                    "formatVersion": 2,
+                    "fontAssetId": "185",
+                    "text": "Gold: 0",
+                    "alignment": "center",
+                    "verticalAlignment": "top",
+                    "size": null,
+                    "color": null,
+                    "overrideOpacity": false,
+                    "opacity": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": -8.75,
+                "y": -4.65,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "4",
+              "name": "KillCount",
+              "children": [],
+              "components": [
+                {
+                  "type": "TextRenderer",
+                  "config": {
+                    "formatVersion": 2,
+                    "fontAssetId": "185",
+                    "text": "Kills: 0",
+                    "alignment": "center",
+                    "verticalAlignment": "top",
+                    "size": null,
+                    "color": null,
+                    "overrideOpacity": false,
+                    "opacity": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": -5.75,
+                "y": -4.65,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "5",
+              "name": "DeathCount",
+              "children": [],
+              "components": [
+                {
+                  "type": "TextRenderer",
+                  "config": {
+                    "formatVersion": 2,
+                    "fontAssetId": "185",
+                    "text": "Hero Count: 0 / 0",
+                    "alignment": "right",
+                    "verticalAlignment": "center",
+                    "size": null,
+                    "color": "000000",
+                    "overrideOpacity": false,
+                    "opacity": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 12.75,
+                "y": -6.1,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "7",
+              "name": "HeroMonitor",
+              "children": [
+                {
+                  "id": "21",
+                  "name": "Log",
+                  "children": [],
+                  "components": [
+                    {
+                      "type": "TextRenderer",
+                      "config": {
+                        "formatVersion": 2,
+                        "fontAssetId": "185",
+                        "text": "> nothing to report...",
+                        "alignment": "left",
+                        "verticalAlignment": "top",
+                        "size": null,
+                        "color": null,
+                        "overrideOpacity": false,
+                        "opacity": null
+                      },
+                      "id": "0"
+                    }
+                  ],
+                  "position": {
+                    "x": -1.4,
+                    "y": -0.1,
+                    "z": 0
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": null
+                }
+              ],
+              "components": [
+                {
+                  "type": "TextRenderer",
+                  "config": {
+                    "formatVersion": 2,
+                    "fontAssetId": "185",
+                    "text": "Hero Monitor",
+                    "alignment": "center",
+                    "verticalAlignment": "center",
+                    "size": null,
+                    "color": "000000",
+                    "overrideOpacity": false,
+                    "opacity": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 4.2,
+                "y": -6.1,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "22",
+              "name": "DragonStatus",
+              "children": [],
+              "components": [
+                {
+                  "type": "TextRenderer",
+                  "config": {
+                    "formatVersion": 2,
+                    "fontAssetId": "185",
+                    "text": "Dragon Status: ???",
+                    "alignment": "left",
+                    "verticalAlignment": "top",
+                    "size": null,
+                    "color": null,
+                    "overrideOpacity": false,
+                    "opacity": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 2.75,
+                "y": -4.65,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [],
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": -1
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "6",
+          "name": "Controls",
+          "children": [
+            {
+              "id": "8",
+              "name": "Move",
+              "children": [],
+              "components": [
+                {
+                  "type": "TextRenderer",
+                  "config": {
+                    "formatVersion": 2,
+                    "fontAssetId": "185",
+                    "text": "Move",
+                    "alignment": "center",
+                    "verticalAlignment": "center",
+                    "size": null,
+                    "color": "000000",
+                    "overrideOpacity": false,
+                    "opacity": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": -11.75,
+                "y": -6.1,
+                "z": 1
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "16",
+              "name": "MoveCTRL",
+              "children": [],
+              "components": [
+                {
+                  "type": "TextRenderer",
+                  "config": {
+                    "formatVersion": 2,
+                    "fontAssetId": "185",
+                    "text": "left | right\nA | D",
+                    "alignment": "center",
+                    "verticalAlignment": "center",
+                    "size": null,
+                    "color": "ffffff",
+                    "overrideOpacity": false,
+                    "opacity": null
+                  },
+                  "id": "1"
+                }
+              ],
+              "position": {
+                "x": -11.75,
+                "y": -7.1,
+                "z": 1
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "12",
+              "name": "Jump",
+              "children": [],
+              "components": [
+                {
+                  "type": "TextRenderer",
+                  "config": {
+                    "formatVersion": 2,
+                    "fontAssetId": "185",
+                    "text": "Jump",
+                    "alignment": "center",
+                    "verticalAlignment": "center",
+                    "size": null,
+                    "color": "000000",
+                    "overrideOpacity": false,
+                    "opacity": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": -8.75,
+                "y": -6.1,
+                "z": 1
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "17",
+              "name": "JumpCTRL",
+              "children": [],
+              "components": [
+                {
+                  "type": "TextRenderer",
+                  "config": {
+                    "formatVersion": 2,
+                    "fontAssetId": "185",
+                    "text": "up\nspacebar\nW",
+                    "alignment": "center",
+                    "verticalAlignment": "center",
+                    "size": null,
+                    "color": "ffffff",
+                    "overrideOpacity": false,
+                    "opacity": null
+                  },
+                  "id": "1"
+                }
+              ],
+              "position": {
+                "x": -8.75,
+                "y": -7.1,
+                "z": 1
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "15",
+              "name": "Fall",
+              "children": [],
+              "components": [
+                {
+                  "type": "TextRenderer",
+                  "config": {
+                    "formatVersion": 2,
+                    "fontAssetId": "185",
+                    "text": "Fall",
+                    "alignment": "center",
+                    "verticalAlignment": "center",
+                    "size": null,
+                    "color": "000000",
+                    "overrideOpacity": false,
+                    "opacity": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": -5.75,
+                "y": -6.1,
+                "z": 1
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "18",
+              "name": "FallCTRL",
+              "children": [],
+              "components": [
+                {
+                  "type": "TextRenderer",
+                  "config": {
+                    "formatVersion": 2,
+                    "fontAssetId": "185",
+                    "text": "down\nS",
+                    "alignment": "center",
+                    "verticalAlignment": "center",
+                    "size": null,
+                    "color": null,
+                    "overrideOpacity": false,
+                    "opacity": null
+                  },
+                  "id": "1"
+                }
+              ],
+              "position": {
+                "x": -5.75,
+                "y": -7.1,
+                "z": 1
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "13",
+              "name": "Swap",
+              "children": [],
+              "components": [
+                {
+                  "type": "TextRenderer",
+                  "config": {
+                    "formatVersion": 2,
+                    "fontAssetId": "185",
+                    "text": "Swap Item",
+                    "alignment": "center",
+                    "verticalAlignment": "center",
+                    "size": null,
+                    "color": "000000",
+                    "overrideOpacity": false,
+                    "opacity": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": -2.75,
+                "y": -6.1,
+                "z": 1
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "19",
+              "name": "SwapCTRL",
+              "children": [],
+              "components": [
+                {
+                  "type": "TextRenderer",
+                  "config": {
+                    "formatVersion": 2,
+                    "fontAssetId": "185",
+                    "text": "Z\nshift\nQ",
+                    "alignment": "center",
+                    "verticalAlignment": "center",
+                    "size": null,
+                    "color": "ffffff",
+                    "overrideOpacity": false,
+                    "opacity": null
+                  },
+                  "id": "1"
+                }
+              ],
+              "position": {
+                "x": -2.75,
+                "y": -7.1,
+                "z": 1
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "14",
+              "name": "Use",
+              "children": [],
+              "components": [
+                {
+                  "type": "TextRenderer",
+                  "config": {
+                    "formatVersion": 2,
+                    "fontAssetId": "185",
+                    "text": "Use Item",
+                    "alignment": "center",
+                    "verticalAlignment": "center",
+                    "size": null,
+                    "color": "000000",
+                    "overrideOpacity": false,
+                    "opacity": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0.25,
+                "y": -6.1,
+                "z": 1
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "20",
+              "name": "UseCTRL",
+              "children": [],
+              "components": [
+                {
+                  "type": "TextRenderer",
+                  "config": {
+                    "formatVersion": 2,
+                    "fontAssetId": "185",
+                    "text": "C\nreturn\nE",
+                    "alignment": "center",
+                    "verticalAlignment": "center",
+                    "size": null,
+                    "color": "ffffff",
+                    "overrideOpacity": false,
+                    "opacity": null
+                  },
+                  "id": "1"
+                }
+              ],
+              "position": {
+                "x": 0.25,
+                "y": -7.1,
+                "z": 1
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "SpriteRenderer",
+              "config": {
+                "formatVersion": 1,
+                "spriteAssetId": "194",
+                "animationId": null,
+                "horizontalFlip": false,
+                "verticalFlip": false,
+                "castShadow": false,
+                "receiveShadow": false,
+                "color": "FFFFFF",
+                "overrideOpacity": false,
+                "opacity": null,
+                "materialType": "basic",
+                "shaderAssetId": null
+              },
+              "id": "0"
+            }
+          ],
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": -2
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        }
+      ],
+      "components": [
+        {
+          "type": "Camera",
+          "config": {
+            "formatVersion": 1,
+            "mode": "orthographic",
+            "fov": 45,
+            "orthographicScale": 16.5,
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "depth": 0,
+            "nearClippingPlane": 0.1,
+            "farClippingPlane": 1000
+          },
+          "id": "0"
+        },
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "CameraBehavior",
+            "propertyValues": {}
+          },
+          "id": "1"
+        }
+      ],
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    }
+  ]
+}

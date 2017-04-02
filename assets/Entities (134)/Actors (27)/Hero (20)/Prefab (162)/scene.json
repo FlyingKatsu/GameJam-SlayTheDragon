@@ -1,0 +1,193 @@
+{
+  "formatVersion": 1,
+  "nodes": [
+    {
+      "id": "0",
+      "name": "Hero",
+      "children": [
+        {
+          "id": "1",
+          "name": "Equipment",
+          "children": [],
+          "components": [],
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": {
+            "sceneAssetId": "153"
+          }
+        },
+        {
+          "id": "2",
+          "name": "Dialogue",
+          "children": [
+            {
+              "id": "3",
+              "name": "DialogueBG",
+              "children": [],
+              "components": [
+                {
+                  "type": "SpriteRenderer",
+                  "config": {
+                    "formatVersion": 1,
+                    "spriteAssetId": "195",
+                    "animationId": null,
+                    "horizontalFlip": false,
+                    "verticalFlip": false,
+                    "castShadow": false,
+                    "receiveShadow": false,
+                    "color": "ffffff",
+                    "overrideOpacity": true,
+                    "opacity": null,
+                    "materialType": "basic",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": -1
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "TextRenderer",
+              "config": {
+                "formatVersion": 2,
+                "fontAssetId": "185",
+                "text": "Slay the Dragon!",
+                "alignment": "center",
+                "verticalAlignment": "center",
+                "size": null,
+                "color": null,
+                "overrideOpacity": false,
+                "opacity": null
+              },
+              "id": "0"
+            }
+          ],
+          "position": {
+            "x": 0,
+            "y": 2.2,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": false,
+          "layer": 0,
+          "prefab": null
+        }
+      ],
+      "components": [
+        {
+          "type": "SpriteRenderer",
+          "config": {
+            "formatVersion": 1,
+            "spriteAssetId": "26",
+            "animationId": "9",
+            "horizontalFlip": false,
+            "verticalFlip": false,
+            "castShadow": false,
+            "receiveShadow": false,
+            "color": "ffffff",
+            "overrideOpacity": false,
+            "opacity": null,
+            "materialType": "basic",
+            "shaderAssetId": null
+          },
+          "id": "1"
+        },
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "HeroBehavior",
+            "propertyValues": {}
+          },
+          "id": "2"
+        },
+        {
+          "type": "ArcadeBody2D",
+          "config": {
+            "formatVersion": 2,
+            "type": "box",
+            "movable": true,
+            "width": 1.6,
+            "height": 1.8,
+            "offset": {
+              "x": -0.4,
+              "y": -0.05
+            },
+            "bounce": {
+              "x": 0,
+              "y": 0
+            },
+            "tileMapAssetId": null,
+            "tileSetPropertyName": null,
+            "layersIndex": null
+          },
+          "id": "3"
+        }
+      ],
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    }
+  ]
+}

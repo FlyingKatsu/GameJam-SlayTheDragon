@@ -1,0 +1,236 @@
+{
+  "formatVersion": 1,
+  "nodes": [
+    {
+      "id": "0",
+      "name": "Sword",
+      "children": [
+        {
+          "id": "4",
+          "name": "Label",
+          "children": [
+            {
+              "id": "6",
+              "name": "ItemBG",
+              "children": [],
+              "components": [
+                {
+                  "type": "SpriteRenderer",
+                  "config": {
+                    "formatVersion": 1,
+                    "spriteAssetId": "195",
+                    "animationId": null,
+                    "horizontalFlip": false,
+                    "verticalFlip": false,
+                    "castShadow": false,
+                    "receiveShadow": false,
+                    "color": "ffffff",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "basic",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": -1
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "TextRenderer",
+              "config": {
+                "formatVersion": 2,
+                "fontAssetId": "185",
+                "text": "sword",
+                "alignment": "center",
+                "verticalAlignment": "center",
+                "size": null,
+                "color": null,
+                "overrideOpacity": false,
+                "opacity": null
+              },
+              "id": "0"
+            }
+          ],
+          "position": {
+            "x": 0,
+            "y": 1.25,
+            "z": 1
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": false,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "5",
+          "name": "Sprite",
+          "children": [],
+          "components": [
+            {
+              "type": "SpriteRenderer",
+              "config": {
+                "formatVersion": 1,
+                "spriteAssetId": "186",
+                "animationId": "0",
+                "horizontalFlip": false,
+                "verticalFlip": false,
+                "castShadow": false,
+                "receiveShadow": false,
+                "color": "ffffff",
+                "overrideOpacity": false,
+                "opacity": null,
+                "materialType": "basic",
+                "shaderAssetId": null
+              },
+              "id": "0"
+            },
+            {
+              "type": "ArcadeBody2D",
+              "config": {
+                "formatVersion": 2,
+                "type": "box",
+                "movable": false,
+                "width": 1,
+                "height": 1.5,
+                "offset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "bounce": {
+                  "x": 0,
+                  "y": 0
+                },
+                "tileMapAssetId": null,
+                "tileSetPropertyName": null,
+                "layersIndex": null
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0.3826834323650898,
+            "w": 0.9238795325112867
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        }
+      ],
+      "components": [
+        {
+          "type": "ArcadeBody2D",
+          "config": {
+            "formatVersion": 2,
+            "type": "box",
+            "movable": false,
+            "width": 3,
+            "height": 3,
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "bounce": {
+              "x": 0,
+              "y": 0
+            },
+            "tileMapAssetId": null,
+            "tileSetPropertyName": null,
+            "layersIndex": null
+          },
+          "id": "2"
+        },
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "ItemBehavior",
+            "propertyValues": {
+              "heldPosOffset": {
+                "type": "number",
+                "value": 1
+              },
+              "name": {
+                "type": "string",
+                "value": "Sword"
+              }
+            }
+          },
+          "id": "3"
+        },
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "WeaponBehavior",
+            "propertyValues": {
+              "itemtype": {
+                "type": "number",
+                "value": 0
+              }
+            }
+          },
+          "id": "4"
+        }
+      ],
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    }
+  ]
+}
