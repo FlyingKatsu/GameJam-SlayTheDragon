@@ -17,7 +17,7 @@ module Game {
   export let stringLocation: string[] = ["top", "left", "bottom", "right"];
   export let opposingLocation: string[] = ["bottom", "right", "top", "left"];
   
-  export enum State { Init, Play, Done  };
+  export enum State { Init, Play, OnHold, Done  };
   export let state: Game.State = Game.State.Init;
         
   export enum Item { Weapon, Food, Gold };
@@ -47,7 +47,7 @@ module Game {
     
     // Reset Music
     if (Game.musicPlayer) Game.musicPlayer.stop();
-    Game.musicPlayer = new Sup.Audio.SoundPlayer("Music/Pyre", 0.25, { loop: true });
+    Game.musicPlayer = new Sup.Audio.SoundPlayer("Music/TaintedOverworld", 0.25, { loop: true });
     musicPlayer.play();
     
     // NOTE: this only works if the scene is loaded, but for some reason not in a timeout callback
@@ -81,7 +81,7 @@ module Game {
       HUD.getChild("GoldCount").textRenderer.setText("Gold: " + Game.data.gold);
       HUD.getChild("KillCount").textRenderer.setText("Kills: " + Game.data.kill);
       HUD.getChild("DeathCount").textRenderer.setText("Hero Count: " + Sup.getActor("Heroes").getChildren().length + "/" + Game.data.hero);
-      HUD.getChild("DragonStatus").textRenderer.setText("Dragon Status: " + Sup.getActor("Heroes").getChildren().length + "/" + Game.data.hero);
+      HUD.getChild("DragonStatus").textRenderer.setText("Dragon Status: " + Game.data.dragon);
     }
   }
   
@@ -97,15 +97,75 @@ module Game {
     }
   }
   
-  export function endGame() {
+  export function endGame(gameWon: boolean) {
+    let scene = gameWon ? "Menu/PrefabWin" : "Menu/PrefabLose";
+    
     // Change music
     if (Game.musicPlayer) Game.musicPlayer.stop();
     Game.musicPlayer = new Sup.Audio.SoundPlayer("Music/Pyre", 0.25, { loop: true });
     Game.musicPlayer.play();
     
-    Sup.loadScene("Menu/Prefab");
+    // Change to Menu scene
+    Sup.loadScene(scene);
+    let text = Sup.getActor("Status").textRenderer.getText();
     
+    if (gameWon) {
+      if (Game.data.dragon == "Dead") {
+        text = "You slayed the dragon. Nice work.\nBut you're still stuck in the cave...";
+        Sup.getActor("Restart").textRenderer.setText("Press SPACEBAR to try again");
+      }
+      if (Game.data.kill > Game.data.hero / 5) text += "\nYou really love slaying, don't you?";
+      if (Game.data.gold > 500) text += "\nWhat will you do with all that gold?";
+    } else {
+      if (Game.data.kill > Game.data.hero / 5) text += "\nDo you prefer dragons over people?";
+      if (Game.data.gold > 500) text += "\nWhat will you do with all that gold?";
+    }
+    Sup.getActor("Status").textRenderer.setText(text);
     Game.state = Game.State.Done;
+    return;
+  }
+  
+  export function endGame2(gameWon: boolean) {
+    //let tune = gameWon ? "Music/Pyre" : "Music/Pyre";
+    let scene = gameWon ? "Menu/PrefabWin" : "Menu/PrefabLose";
+    
+    // Change music
+    if (Game.musicPlayer) Game.musicPlayer.stop();
+    Game.musicPlayer = new Sup.Audio.SoundPlayer("Music/Pyre", 0.25, { loop: true });
+    Game.musicPlayer.play();
+    
+    if (gameWon) {
+      // Add Menu screen to scene
+      Sup.appendScene(scene);
+      let text = Sup.getActor("Status").textRenderer.getText();
+      
+      if (Game.data.dragon == "Dead") {
+        text = "You slayed the dragon. Nice work.\nBut you're still stuck in the cave...";
+        Sup.getActor("Restart").textRenderer.setText("Press SPACEBAR to try again");
+      }
+      
+      if (Game.data.kill > Game.data.hero / 5) text += "\nYou really love slaying, don't you?";
+      if (Game.data.gold > 500) text += "\nWhat will you do with all that gold?";
+      
+      Game.state = Game.State.OnHold;
+      Sup.getActor("Status").textRenderer.setText(text);
+    } else {
+      // Change to Menu scene
+      Sup.loadScene(scene);
+      let text = Sup.getActor("Status").textRenderer.getText();
+      
+      if (Game.data.kill > Game.data.hero / 5) text += "\nDo you prefer dragons over people?";
+      if (Game.data.gold > 500) text += "\nWhat will you do with all that gold?";
+      
+      Game.state = Game.State.Done;
+      Sup.getActor("Status").textRenderer.setText(text);
+    }    
+  }
+  
+  export function continueGame() {
+    Sup.getActor("EndScene").destroy();
+    Sup.ArcadePhysics2D.setGravity(0, -0.02);
+    Game.state = Game.State.Play;
   }
   
 }

@@ -53,76 +53,86 @@ class PlayerBehavior extends Sup.Behavior {
   }
   
   update() {
+    // Debug endings
+    if ( Sup.Input.wasKeyJustPressed("P") ) Game.data.dragon = "Dead";
+    if ( Sup.Input.wasKeyJustPressed("R") ) Game.endGame(false);
+    if ( Sup.Input.wasKeyJustPressed("T") ) Game.endGame(true);
     
-    // Store controls status so we only have to reduce N per update
-    this.updateControls();
+    // End game if dead
+    if ( Game.data.heart <= 0 ) Game.endGame(false);
     
-    // Store nearby object status for quick access
-    if (this.controls.pressed.swap || this.controls.pressed.use) this.updateNearbyObjects();
-    
-    // Handle interactions with items    
-    this.processUseItem();
-    this.processSwapItem();
-    
-    // Handle solid body collisions
-    let {touchSolids, velocity, dampenFall, touchPlatforms } = this.updateSolidCollisions() ;
-    
-    // Process player input for movement controls
-    
-    // We override the `.x` component based on the player's input
-    if ( this.controls.held.left ) {
-      velocity.x = -this.speed;
-      // When going left, we flip the sprite=
-      this.setFlip(true);
-    } else if ( this.controls.held.right ) {
-      velocity.x = this.speed;
-      // When going right, we clear the flip
-      this.setFlip(false);
-    } else velocity.x = 0;
+    if (Game.state == Game.State.Play) {
 
-    // If the player is on the ground and wants to jump,
-    // we update the `.y` component accordingly
-    let touchBottom = touchSolids || touchPlatforms;
-    if (touchBottom) {
-      if ( this.controls.pressed.jump ) {
-        velocity.y = this.jumpSpeed;
-        this.actor.spriteRenderer.setAnimation("Jump");
-      // If isKeyDown("DOWN") and touchPlatforms to drop down from platform
-      } else if ( this.controls.pressed.down && touchPlatforms ) {
-        velocity.y = -this.speed;
-        this.dropFromPlatform = true;
-      } else {
-        // Here, we should play either "Idle" or "Run" depending on the horizontal speed
-        if (velocity.x === 0) this.actor.spriteRenderer.setAnimation("Idle");
-        else this.actor.spriteRenderer.setAnimation("Move");
-      }
-    } else {
-      // Here, we should play either "Jump" or "Fall" depending on the vertical speed
-      if (velocity.y >= 0) { 
-        this.actor.spriteRenderer.setAnimation("Jump");
-      } else {
-        this.actor.spriteRenderer.setAnimation("Fall");
-        // If isKeyDown("DOWN") to add extra umph to the fall
-        if ( this.controls.held.down ) {
-          velocity.y = -Game.MAX_VELOCITY_Y;
-          dampenFall = false;
+      // Store controls status so we only have to reduce N per update
+      this.updateControls();
+
+      // Store nearby object status for quick access
+      if (this.controls.pressed.swap || this.controls.pressed.use) this.updateNearbyObjects();
+
+      // Handle interactions with items    
+      this.processUseItem();
+      this.processSwapItem();
+
+      // Handle solid body collisions
+      let {touchSolids, velocity, dampenFall, touchPlatforms } = this.updateSolidCollisions() ;
+
+      // Process player input for movement controls
+
+      // We override the `.x` component based on the player's input
+      if ( this.controls.held.left ) {
+        velocity.x = -this.speed;
+        // When going left, we flip the sprite=
+        this.setFlip(true);
+      } else if ( this.controls.held.right ) {
+        velocity.x = this.speed;
+        // When going right, we clear the flip
+        this.setFlip(false);
+      } else velocity.x = 0;
+
+      // If the player is on the ground and wants to jump,
+      // we update the `.y` component accordingly
+      let touchBottom = touchSolids || touchPlatforms;
+      if (touchBottom) {
+        if ( this.controls.pressed.jump ) {
+          velocity.y = this.jumpSpeed;
+          this.actor.spriteRenderer.setAnimation("Jump");
+        // If isKeyDown("DOWN") and touchPlatforms to drop down from platform
+        } else if ( this.controls.pressed.down && touchPlatforms ) {
+          velocity.y = -this.speed;
+          this.dropFromPlatform = true;
+        } else {
+          // Here, we should play either "Idle" or "Run" depending on the horizontal speed
+          if (velocity.x === 0) this.actor.spriteRenderer.setAnimation("Idle");
+          else this.actor.spriteRenderer.setAnimation("Move");
         }
-      } 
+      } else {
+        // Here, we should play either "Jump" or "Fall" depending on the vertical speed
+        if (velocity.y >= 0) { 
+          this.actor.spriteRenderer.setAnimation("Jump");
+        } else {
+          this.actor.spriteRenderer.setAnimation("Fall");
+          // If isKeyDown("DOWN") to add extra umph to the fall
+          if ( this.controls.held.down ) {
+            velocity.y = -Game.MAX_VELOCITY_Y;
+            dampenFall = false;
+          }
+        } 
+      }
+
+      // Cap the velocity to avoid going crazy in falls
+      velocity.x = Sup.Math.clamp(velocity.x, -Game.MAX_VELOCITY_X, Game.MAX_VELOCITY_X);
+      if (dampenFall) velocity.y = Sup.Math.clamp(velocity.y, -Game.MAX_VELOCITY_Y/2, Game.MAX_VELOCITY_Y);
+
+      // Finally, we apply the velocity back to the ArcadePhysics body
+      this.actor.arcadeBody2D.setVelocity(velocity);
+
+      // Empty storage
+      this.nearbyItems = [];
+      this.nearbyWeapons = [];
+      this.nearbyFood = [];
+      this.nearbyGold = [];
+      this.nearbyInteractives = [];
     }
-    
-    // Cap the velocity to avoid going crazy in falls
-    velocity.x = Sup.Math.clamp(velocity.x, -Game.MAX_VELOCITY_X, Game.MAX_VELOCITY_X);
-    if (dampenFall) velocity.y = Sup.Math.clamp(velocity.y, -Game.MAX_VELOCITY_Y/2, Game.MAX_VELOCITY_Y);
-    
-    // Finally, we apply the velocity back to the ArcadePhysics body
-    this.actor.arcadeBody2D.setVelocity(velocity);
-    
-    // Empty storage
-    this.nearbyItems = [];
-    this.nearbyWeapons = [];
-    this.nearbyFood = [];
-    this.nearbyGold = [];
-    this.nearbyInteractives = [];
   }
   
   

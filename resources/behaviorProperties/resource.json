@@ -151,6 +151,12 @@
           "type": "number"
         }
       ]
+    },
+    "PlayerEndBehavior": {
+      "scriptId": "196",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
     }
   }
 }

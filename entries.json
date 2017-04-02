@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 196,
+  "nextEntryId": 198,
   "nodes": [
     {
       "id": "178",
@@ -469,7 +469,12 @@
       "children": [
         {
           "id": "133",
-          "name": "Prefab",
+          "name": "PrefabLose",
+          "type": "scene"
+        },
+        {
+          "id": "197",
+          "name": "PrefabWin",
           "type": "scene"
         },
         {
@@ -488,6 +493,11 @@
               "type": "sprite"
             }
           ]
+        },
+        {
+          "id": "196",
+          "name": "PlayerEndBehavior",
+          "type": "script"
         }
       ]
     },
