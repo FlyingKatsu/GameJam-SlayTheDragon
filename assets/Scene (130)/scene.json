@@ -882,8 +882,8 @@
                   "children": [],
                   "components": [],
                   "position": {
-                    "x": 111,
-                    "y": 25,
+                    "x": 89,
+                    "y": 30,
                     "z": 0
                   },
                   "orientation": {
@@ -1187,8 +1187,36 @@
           "children": [
             {
               "id": "12",
-              "name": "Dragon",
-              "children": [],
+              "name": "Dragons",
+              "children": [
+                {
+                  "id": "58",
+                  "name": "Dragon",
+                  "children": [],
+                  "components": [],
+                  "position": {
+                    "x": 110,
+                    "y": 25,
+                    "z": 0
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": {
+                    "sceneAssetId": "164"
+                  }
+                }
+              ],
               "components": [],
               "position": {
                 "x": 0,

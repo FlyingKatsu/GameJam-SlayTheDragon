@@ -11,8 +11,8 @@
   "alphaTest": 0.1,
   "frameOrder": "rows",
   "grid": {
-    "width": 126,
-    "height": 113
+    "width": 320,
+    "height": 192
   },
   "origin": {
     "x": 0.5,
@@ -21,38 +21,31 @@
   "animations": [
     {
       "id": "0",
-      "name": "Fly",
+      "name": "Idle",
       "startFrameIndex": 0,
-      "endFrameIndex": 4,
-      "speed": 2
+      "endFrameIndex": 1,
+      "speed": 1
     },
     {
       "id": "1",
       "name": "Attack",
-      "startFrameIndex": 5,
-      "endFrameIndex": 8,
+      "startFrameIndex": 1,
+      "endFrameIndex": 4,
       "speed": 2
     },
     {
       "id": "2",
-      "name": "Hurt",
-      "startFrameIndex": 9,
-      "endFrameIndex": 10,
+      "name": "Fly",
+      "startFrameIndex": 5,
+      "endFrameIndex": 7,
       "speed": 1
     },
     {
-      "id": "3",
+      "id": "5",
       "name": "Dead",
-      "startFrameIndex": 11,
-      "endFrameIndex": 15,
-      "speed": 2
-    },
-    {
-      "id": "4",
-      "name": "Fire",
-      "startFrameIndex": 5,
-      "endFrameIndex": 6,
-      "speed": 2
+      "startFrameIndex": 1,
+      "endFrameIndex": 1,
+      "speed": 1
     }
   ],
   "mapSlots": {

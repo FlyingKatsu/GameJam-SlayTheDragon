@@ -85,7 +85,6 @@ module Game {
   }
   
   export function updateHeroMonitor() {
-    Sup.log(Game.data.herostatus)
     let monitor = Sup.getActor("HeroMonitor");
     if (monitor) {
       if (Game.data.herostatus.length > 3) {
