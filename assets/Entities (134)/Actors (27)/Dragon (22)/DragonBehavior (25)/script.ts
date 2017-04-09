@@ -48,7 +48,7 @@ class DragonBehavior extends Sup.Behavior {
           for ( let i = 0; i < this.counter; i++ ) text += "<3";
           Game.data.dragon = text;
           Game.updateHUD();
-          this.actor.getChild("Dialogue").textRenderer.setText(text);
+          this.actor.getChild("Dialogue").textRenderer.setText("Yum!" + text);
           this.dialogue.timer = 60;
           
           destroyItem = true;
@@ -67,7 +67,7 @@ class DragonBehavior extends Sup.Behavior {
   checkDeathOnHit() {
     if ( this.belly.defense == 0 || this.head.defense == 0 ) {
       // TODO: Play dead
-      this.dialogue.text = "Slayed!";
+      this.actor.getChild("Dialogue").textRenderer.setText(":X");
       this.dialogue.timer = 60;
       Game.data.dragon = "Slayed!";
       Game.updateHUD();
@@ -78,7 +78,7 @@ class DragonBehavior extends Sup.Behavior {
         text = "";
         for ( let i = this.counter; i <= 0; i++ ) text += ">:(";
       }
-      this.dialogue.text = text;
+      this.actor.getChild("Dialogue").textRenderer.setText(text);
       this.dialogue.timer = 60;
       Game.data.dragon = text;
       Game.updateHUD();
