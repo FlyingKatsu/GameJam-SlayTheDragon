@@ -53,6 +53,7 @@ class HeroBehavior extends Sup.Behavior {
         if ( this.deathTimer <= 0 ) {
           // Update HUD and counter
           Game.data.kill++;
+          
           Game.updateHUD();
           
           // Kill this hero

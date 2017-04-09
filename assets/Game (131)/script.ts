@@ -28,6 +28,7 @@ module Game {
     gold: 0,
     kill: 0,
     hero: 1,
+    herodeath: 0,
     herostatus: ["> You fell into a cave!"],
     dragon: "Asleep"
   };
@@ -41,6 +42,7 @@ module Game {
       gold: 0,
       kill: 0,
       hero: 1,
+      herodeath: 0,
       herostatus: ["> You fell into a cave!"],
       dragon: "Asleep"
     };
@@ -79,7 +81,7 @@ module Game {
       HUD.getChild("HeartCount").textRenderer.setText("Health: " + Game.data.heart);
       HUD.getChild("GoldCount").textRenderer.setText("Gold: " + Game.data.gold);
       HUD.getChild("KillCount").textRenderer.setText("Kills: " + Game.data.kill);
-      HUD.getChild("DeathCount").textRenderer.setText("Hero Count: " + Sup.getActor("Heroes").getChildren().length + "/" + Game.data.hero);
+      HUD.getChild("DeathCount").textRenderer.setText("Hero Count: " + (Game.data.hero - Game.data.herodeath) + "/" + Game.data.hero);
       HUD.getChild("DragonStatus").textRenderer.setText("Dragon Status: " + Game.data.dragon);
     }
   }

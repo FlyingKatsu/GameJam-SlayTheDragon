@@ -12,13 +12,17 @@ class TunnelWarpBehavior extends Sup.Behavior {
     // Set bbox
     this.bbox = Collision2D.getBBox(this.actor);
     // Collect humanoid actors
-    this.humanActors.push( Sup.getActor("Player") );
-    for ( let heroActor of Sup.getActor("Heroes").getChildren() ) this.humanActors.push( heroActor );
+    //this.humanActors.push( Sup.getActor("Player") );
+    //for ( let heroActor of Sup.getActor("Heroes").getChildren() ) this.humanActors.push( heroActor );
   }
   
   update() {
     
     this.bbox = Collision2D.getBBox(this.actor);
+    
+    // Update hero list
+    this.humanActors.push( Sup.getActor("Player") );
+    for ( let heroActor of Sup.getActor("Heroes").getChildren() ) this.humanActors.push( heroActor );
     
     // Check if colliding with any human actors, and if so, warp them to the target
     for ( let humanActor of this.humanActors ) {
@@ -43,6 +47,9 @@ class TunnelWarpBehavior extends Sup.Behavior {
       }
       
     }
+    
+    // Clear hero list
+    this.humanActors = [];
     
   }
   

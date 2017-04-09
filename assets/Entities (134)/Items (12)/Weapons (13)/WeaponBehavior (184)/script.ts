@@ -30,12 +30,13 @@ class WeaponBehavior extends Sup.Behavior {
           for ( let hero of Sup.getActor("Heroes").getChildren() ) {
             if ( Sup.ArcadePhysics2D.intersects(hero.arcadeBody2D, this.actor.getChild("Sprite").arcadeBody2D) ) {
               this.hitProcessed = true;
-              Sup.log("Hit Hero");
+              //Sup.log("Hit Hero");
               let isDead = hero.getBehavior(HitBehavior).processHit(this.power);
               if (isDead) {
-                // TODO: Death sequence                
+                hero.getBehavior(HeroBehavior).killed();
               } else {
                 // TODO: Retaliate
+                hero.getBehavior(HeroBehavior).attacked();
               }
             }
           }
@@ -58,7 +59,7 @@ class WeaponBehavior extends Sup.Behavior {
           if ( !this.hitProcessed && Sup.ArcadePhysics2D.intersects(hitbox.arcadeBody2D, this.actor.getChild("Sprite").arcadeBody2D) ) {
             let isDead = hitbox.getBehavior(HitBehavior).processHit(this.power);
             dragon.getBehavior(DragonBehavior).checkDeathOnHit();
-            Sup.log("Hit Dragon");
+            //Sup.log("Hit Dragon");
             this.hitProcessed = true;
           }
         }
