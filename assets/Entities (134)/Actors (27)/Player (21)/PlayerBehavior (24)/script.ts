@@ -290,8 +290,13 @@ class PlayerBehavior extends Sup.Behavior {
   }
   
   private processUseItem() {
-    //if ( this.controls.pressed.use ) Sup.log("Used item!");
-    
+    if ( this.controls.pressed.use ) {
+      Sup.log("Used item!");
+      
+      Sup.log("Sword Timer: " + this.equipment.getBehavior(WeaponBehavior).timer);
+      Sup.log("Sword isAttacking: " + this.equipment.getBehavior(WeaponBehavior).isAttacking);
+      Sup.log("Sword hitProcessed: " + this.equipment.getBehavior(WeaponBehavior).hitProcessed);
+    }
     // Check item actions
     
     if ( this.controls.pressed.use && this.equipment ) {
