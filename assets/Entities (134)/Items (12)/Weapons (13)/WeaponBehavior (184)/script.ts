@@ -67,44 +67,53 @@ class WeaponBehavior extends Sup.Behavior {
     
   if (this.isAttacking && this.timer > 0) {
       // Animate weapon movement
-      /*let flip = this.actor.getChild("Sprite").spriteRenderer.getHorizontalFlip() ? -1 : 1;
+      let flip = this.actor.getChild("Sprite").spriteRenderer.getHorizontalFlip() ? -1 : 1;
       let fliprot = this.actor.getChild("Sprite").spriteRenderer.getHorizontalFlip() ? 180 : 0;
       switch(this.timer) {
         case 1:
         default:
-          this.actor.getChild("Sprite").moveLocalX( -this.deltaX );
-          this.actor.getChild("Sprite").moveLocalY( -this.deltaY );
-          this.deltaX = 0; this.deltaY = 0;
+          //this.actor.getChild("Sprite").moveLocalX( -this.deltaX );
+          //this.actor.getChild("Sprite").moveLocalY( -this.deltaY );
+          //this.deltaX = 0; this.deltaY = 0;
           this.actor.getChild("Sprite").setLocalEulerZ(Sup.Math.toRadians(45 * flip));
           break;
           
         case 2:
+          this.actor.getChild("Sprite").moveLocalX( 1 * flip );
+          this.actor.getChild("Sprite").moveLocalY( -0.5 );
+          //this.deltaX += 1 * flip; this.deltaY += -0.5;
+          this.actor.getChild("Sprite").setLocalEulerZ(Sup.Math.toRadians(-30 * flip));
           break;
           
         case 3:
-          this.actor.getChild("Sprite").moveLocalX( -0.5 * flip );
+          this.actor.getChild("Sprite").moveLocalX( 1 * flip );
           this.actor.getChild("Sprite").moveLocalY( -0.5 );
-          this.deltaX += -0.5 * flip; this.deltaY += -0.5;
+          //this.deltaX += 1 * flip; this.deltaY += -0.5;
           this.actor.getChild("Sprite").setLocalEulerZ(Sup.Math.toRadians(-30 * flip));
           break;
         
         case 4:
-          this.actor.getChild("Sprite").moveLocalX( 0.5 * flip );
-          this.actor.getChild("Sprite").moveLocalY( -0.5 );
-          this.deltaX += 0.5 * flip; this.deltaY += -0.5;
+          this.actor.getChild("Sprite").moveLocalX( 1 * flip );
+          this.actor.getChild("Sprite").moveLocalY( 0 );
+          //this.deltaX += 1 * flip; this.deltaY += 0;
           this.actor.getChild("Sprite").setLocalEulerZ(Sup.Math.toRadians(0 * flip));
+          break;
+          
+        case 6:
+          this.actor.getChild("Sprite").moveLocalX( 1 * flip );
+          this.actor.getChild("Sprite").moveLocalY( 0.5 );
+          //this.deltaX += 1 * flip; this.deltaY += 0.5;
+          this.actor.getChild("Sprite").setLocalEulerZ(Sup.Math.toRadians(30 * flip));
           break;
           
         case 5:
           this.actor.getChild("Sprite").moveLocalX( 1 * flip );
           this.actor.getChild("Sprite").moveLocalY( 0.5 );
-          this.deltaX += 1 * flip; this.deltaY += 0.5;
+          //this.deltaX += 1 * flip; this.deltaY += 0.5;
           this.actor.getChild("Sprite").setLocalEulerZ(Sup.Math.toRadians(30 * flip));
           break;
           
-        case 6:
-          break;
-      }*/
+      }
       this.timer--;
       if (this.timer <= 0) {
         this.isAttacking = false;
