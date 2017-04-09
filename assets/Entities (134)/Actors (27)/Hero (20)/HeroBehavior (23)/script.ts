@@ -181,8 +181,8 @@ class HeroBehavior extends Sup.Behavior {
       let distance = actor.getPosition().distanceTo(item.getPosition());
       // Make sure it is closest AND in front (not too far behind)
       let inFront = item.getX() - actor.getX();
-      if (actor.spriteRenderer.getHorizontalFlip()) inFront * -1;
-      if (distance < acc.d && inFront > -1) return { a:item, d:distance }
+      if (actor.spriteRenderer.getHorizontalFlip()) inFront = actor.getX() - item.getX();
+      if (distance < acc.d && inFront > -0.5) return { a:item, d:distance }
       return acc;
     }, {a:this.actor,d:Infinity} );
   }
