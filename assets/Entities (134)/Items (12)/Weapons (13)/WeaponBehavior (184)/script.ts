@@ -4,6 +4,7 @@ class WeaponBehavior extends Sup.Behavior {
   
   private timer = 0;
   private isAttacking = false;
+  private hitProcessed = false;
   
   private localPos;
   private initialRot;
@@ -17,7 +18,7 @@ class WeaponBehavior extends Sup.Behavior {
   }
 
   update() {
-    if (this.isAttacking && this.timer > -1) {
+    if (this.isAttacking && this.timer > -1 && !this.hitProcessed) {
       
       // Process collisions with actors
       
@@ -25,10 +26,12 @@ class WeaponBehavior extends Sup.Behavior {
       
       // Hero Hits
       if ( this.actor.getBehavior(ItemBehavior).owner.getName() == "Player" ) { 
-          for ( let actor of Sup.getActor("Heroes").getChildren() ) {
+          for ( let hero of Sup.getActor("Heroes").getChildren() ) {
             //maybeHitActors.push(actor);
-            if ( Sup.ArcadePhysics2D.intersects(actor.arcadeBody2D, this.actor.getChild("Sprite").arcadeBody2D) ) {
-              let isDead = actor.getBehavior(HitBehavior).processHit(this.power);
+            if ( Sup.ArcadePhysics2D.intersects(hero.arcadeBody2D, this.actor.getChild("Sprite").arcadeBody2D) ) {
+              this.hitProcessed = true;
+              Sup.log("Hit Hero");
+              let isDead = hero.getBehavior(HitBehavior).processHit(this.power);
               if (isDead) {
                 // TODO: Death sequence                
               } else {
@@ -40,6 +43,8 @@ class WeaponBehavior extends Sup.Behavior {
       } else { 
           //maybeHitActors.push(Sup.getActor("Player"));
           if ( Sup.ArcadePhysics2D.intersects(Sup.getActor("Player").arcadeBody2D, this.actor.getChild("Sprite").arcadeBody2D) ) {
+            this.hitProcessed = true;
+            Sup.log("Hit Player");
             let isDead = Sup.getActor("Player").getBehavior(HitBehavior).processHit(this.power);
             Game.data.heart -= this.power;
             Game.updateHUD();
@@ -50,15 +55,13 @@ class WeaponBehavior extends Sup.Behavior {
       }
       // Dragon Hits
       for ( let dragon of Sup.getActor("Dragons").getChildren() ) {
-        for (let actor of dragon.getChild("Hitbox").getChildren()) {
+        for (let hitbox of dragon.getChild("Hitbox").getChildren()) {
           //maybeHitActors.push(actor);
-          if ( Sup.ArcadePhysics2D.intersects(actor.arcadeBody2D, this.actor.getChild("Sprite").arcadeBody2D) ) {
-            let isDead = actor.getBehavior(HitBehavior).processHit(this.power);
-            if (isDead) {
-              // TODO: Death Sequence
-            } else {
-              // TODO: Retaliate
-            }
+          if ( !this.hitProcessed && Sup.ArcadePhysics2D.intersects(hitbox.arcadeBody2D, this.actor.getChild("Sprite").arcadeBody2D) ) {
+            let isDead = hitbox.getBehavior(HitBehavior).processHit(this.power);
+            dragon.getBehavior(DragonBehavior).checkDeathOnHit();
+            Sup.log("Hit Dragon");
+            this.hitProcessed = true;
           }
         }
       }
@@ -104,12 +107,17 @@ class WeaponBehavior extends Sup.Behavior {
           break;
       }
       this.timer--;
+      if (this.timer < 0) {
+        this.isAttacking = false;
+        this.hitProcessed = false;
+      }
     }
   }
   
   attack() {
     this.isAttacking = true;
     this.timer = 5;
+    this.hitProcessed = false;
   }
 }
 Sup.registerBehavior(WeaponBehavior);

@@ -41,14 +41,13 @@ class DragonBehavior extends Sup.Behavior {
       let destroyItem = false;
       for ( let hit of this.hitboxes2 ) {
         // Check intersection with food
-        if ( Sup.ArcadePhysics2D.intersects( foodBox.arcadeBody2D, hit ) ) {
+        if ( !destroyItem && Sup.ArcadePhysics2D.intersects( foodBox.arcadeBody2D, hit ) ) {
           this.counter++;
           
-          let text = "";
-          for ( let i = 0; i < this.counter; i++ ) text += "<3";
+          let text = this.getReactionText();
           Game.data.dragon = text;
           Game.updateHUD();
-          this.actor.getChild("Dialogue").textRenderer.setText("Yum!" + text);
+          this.actor.getChild("Dialogue").textRenderer.setText("Mm! " + text);
           this.dialogue.timer = 60;
           
           destroyItem = true;
@@ -65,24 +64,35 @@ class DragonBehavior extends Sup.Behavior {
   
   // Determine if dead; Only call when hit
   checkDeathOnHit() {
+    this.counter--;
+    
+    // React to hit
+    let text = this.getReactionText();
+    this.actor.getChild("Dialogue").textRenderer.setText("Ow! " + text);
+    this.dialogue.timer = 60;
+    Game.data.dragon = text;
+    Game.updateHUD();
+    
     if ( this.belly.defense == 0 || this.head.defense == 0 ) {
       // TODO: Play dead
-      this.actor.getChild("Dialogue").textRenderer.setText(":X");
+      this.actor.getChild("Dialogue").textRenderer.setText("X(");
       this.dialogue.timer = 60;
       Game.data.dragon = "Slayed!";
       Game.updateHUD();
-    } else {
-      let text = "";
-      for ( let i = 0; i < this.counter; i++ ) text += "<3 ";
-      if (this.counter < 0) {
-        text = "";
-        for ( let i = this.counter; i <= 0; i++ ) text += ">:(";
-      }
-      this.actor.getChild("Dialogue").textRenderer.setText(text);
-      this.dialogue.timer = 60;
-      Game.data.dragon = text;
-      Game.updateHUD();
     }
   }
+  
+  // Get reaction text
+  getReactionText() {
+    if (this.counter == 0) return "";
+    let text = "";
+    if (this.counter > 0) {
+      for ( let i = 0; i < this.counter; i++ ) text += "<3 ";
+    } else {
+      for ( let i = this.counter; i < 0; i++ ) text += "x";
+    }
+    return text;
+  }
+  
 }
 Sup.registerBehavior(DragonBehavior);
