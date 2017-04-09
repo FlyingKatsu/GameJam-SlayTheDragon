@@ -81,7 +81,7 @@ class DragonBehavior extends Sup.Behavior {
     let text = this.getReactionText();
     this.actor.getChild("Dialogue").textRenderer.setText("Ow! " + text);
     this.dialogue.timer = 60;
-    Game.data.dragon = text || "Upset";
+    Game.data.dragon = text || "Hungry";
     Game.updateHUD();
     
     if ( this.belly.defense == 0 || this.head.defense == 0 ) {
