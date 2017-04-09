@@ -19,7 +19,7 @@
                   "config": {
                     "formatVersion": 2,
                     "fontAssetId": "185",
-                    "text": "Health: 3",
+                    "text": "Health: 5",
                     "alignment": "center",
                     "verticalAlignment": "top",
                     "size": null,
@@ -142,7 +142,7 @@
                   "config": {
                     "formatVersion": 2,
                     "fontAssetId": "185",
-                    "text": "Hero Count: 0 / 0",
+                    "text": "Hero Count: 1 / 1",
                     "alignment": "right",
                     "verticalAlignment": "center",
                     "size": null,

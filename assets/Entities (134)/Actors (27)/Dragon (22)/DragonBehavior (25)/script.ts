@@ -33,6 +33,13 @@ class DragonBehavior extends Sup.Behavior {
     // Update dialogue obj
     if ( this.dialogue.timer == 0 ) {
       this.actor.getChild("Dialogue").setVisible(false);
+      
+      if (this.isDead) {
+        Game.endGame(true);
+      } else if (this.counter == 5) {
+        Game.endGame(true);
+      }
+      
     } else {
       this.actor.getChild("Dialogue").setVisible(true);
       this.dialogue.timer--;
@@ -78,10 +85,9 @@ class DragonBehavior extends Sup.Behavior {
     Game.updateHUD();
     
     if ( this.belly.defense == 0 || this.head.defense == 0 ) {
-      // TODO: Play dead
       this.actor.getChild("Dialogue").textRenderer.setText("X(");
       this.dialogue.timer = 60;
-      Game.data.dragon = "Slayed!";
+      Game.data.dragon = "Dead";
       Game.updateHUD();
       this.isDead = true;
     }

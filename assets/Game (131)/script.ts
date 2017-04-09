@@ -24,12 +24,12 @@ module Game {
   export enum Weapon { Sword, Axe, Spade, SquirtGun };
         
   export let data = {
-    heart: 3,
+    heart: 5,
     gold: 0,
     kill: 0,
-    hero: 0,
+    hero: 1,
     herostatus: ["> You fell into a cave!"],
-    dragon: "Zzz"
+    dragon: "Asleep"
   };
   
   export function init() {
@@ -37,12 +37,12 @@ module Game {
     
     // Reset data
     data = {
-      heart: 3,
+      heart: 5,
       gold: 0,
       kill: 0,
-      hero: 0,
+      hero: 1,
       herostatus: ["> You fell into a cave!"],
-      dragon: "Zzz"
+      dragon: "Asleep"
     };
     
     // Reset Music
@@ -115,10 +115,10 @@ module Game {
         Sup.getActor("Restart").textRenderer.setText("Press SPACEBAR to try again");
       }
       if (Game.data.kill > Game.data.hero / 5) text += "\nYou really love slaying, don't you?";
-      if (Game.data.gold > 500) text += "\nWhat will you do with all that gold?";
+      if (Game.data.gold > 100) text += "\nWhat will you do with all that gold?";
     } else {
       if (Game.data.kill > Game.data.hero / 5) text += "\nDo you prefer dragons over people?";
-      if (Game.data.gold > 500) text += "\nWhat will you do with all that gold?";
+      if (Game.data.gold > 100) text += "\nWhat will you do with all that gold?";
     }
     Sup.getActor("Status").textRenderer.setText(text);
     Game.state = Game.State.Done;

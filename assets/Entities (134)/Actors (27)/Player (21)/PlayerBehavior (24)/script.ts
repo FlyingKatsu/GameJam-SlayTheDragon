@@ -57,9 +57,9 @@ class PlayerBehavior extends Sup.Behavior {
   
   update() {
     // Debug endings
-    if ( Sup.Input.wasKeyJustPressed("P") ) Game.data.dragon = "Dead";
-    if ( Sup.Input.wasKeyJustPressed("R") ) Game.endGame(false);
-    if ( Sup.Input.wasKeyJustPressed("T") ) Game.endGame(true);
+    //if ( Sup.Input.wasKeyJustPressed("P") ) Game.data.dragon = "Dead";
+    //if ( Sup.Input.wasKeyJustPressed("R") ) Game.endGame(false);
+    //if ( Sup.Input.wasKeyJustPressed("T") ) Game.endGame(true);
     
     // End game if dead
     if ( Game.data.heart <= 0 ) Game.endGame(false);
