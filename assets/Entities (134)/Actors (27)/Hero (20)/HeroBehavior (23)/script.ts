@@ -9,7 +9,7 @@ class HeroBehavior extends Sup.Behavior {
   private alertedToGold: boolean = false;
   private underAttack: boolean = false;
   private itemTimer: number = 0;
-  
+  private attackedTimer: number = 0;
   private deathTimer: number = 0;
   
   private nearbyItems: Sup.Actor[] = [];
@@ -53,10 +53,21 @@ class HeroBehavior extends Sup.Behavior {
         if ( this.deathTimer <= 0 ) {
           // Update HUD and counter
           Game.data.kill++;
+          Game.data.herodeath++;
           Game.updateHUD();
           
           // Kill this hero
           this.actor.destroy();
+          
+          // Summon new Hero
+          Sup.getActor("HeroSpawner").getBehavior(HeroSpawnBehavior).spawn();
+        }
+        
+      } else if ( this.attackedTimer > 0 ) {
+        
+        this.attackedTimer--;
+        if (this.attackedTimer <= 0) {
+          this.underAttack = false;
         }
         
       } else {
@@ -87,20 +98,34 @@ class HeroBehavior extends Sup.Behavior {
     
   }
   
-  killed() {
+  killed(flipped: boolean) {
     // TODO: Death stuff
-    this.deathTimer = 20;
+    this.deathTimer = 120;
     this.actor.arcadeBody2D.setVelocity(0,0);
+    
+    if (flipped) {
+      this.actor.arcadeBody2D.warpPosition( this.actor.getX() - 1.5, this.actor.getY() + 1.0 );
+    } else {
+      this.actor.arcadeBody2D.warpPosition( this.actor.getX() + 1.5, this.actor.getY() + 1.0 );
+    }
     
     // Drop weapon
     this.drop();
     
-    // Summon new Hero
-    Sup.getActor("HeroSpawner").getBehavior(HeroSpawnBehavior).spawn();
+    this.updateMonitor( this.heroname + " was killed", "*dead*" );
+    
+    
   }
   
-  attacked() {
+  attacked( flipped: boolean ) {
     this.underAttack = true;
+    
+    if (flipped) {
+      this.actor.arcadeBody2D.warpPosition( this.actor.getX() - 1.5, this.actor.getY() + 1.0 );
+    } else {
+      this.actor.arcadeBody2D.warpPosition( this.actor.getX() + 1.5, this.actor.getY() + 1.0 );
+    }
+    
   }
   
   alertToGold() {
@@ -128,7 +153,9 @@ class HeroBehavior extends Sup.Behavior {
     }
     // Else if under attack, fight back
     else if ( this.underAttack ) {
-      this.updateMonitor( this.heroname + " got hurt!", "Ouch!" );
+      this.updateMonitor( this.heroname + " got hurt!", "Ouch!");
+      velocity.x = 0;
+      this.attackedTimer = 60;
     }
     // Else if falling, do nothing
     else if ( velocity.y < 0 ) {

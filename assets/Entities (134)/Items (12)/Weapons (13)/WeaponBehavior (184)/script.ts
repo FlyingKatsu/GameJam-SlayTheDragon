@@ -33,10 +33,10 @@ class WeaponBehavior extends Sup.Behavior {
               //Sup.log("Hit Hero");
               let isDead = hero.getBehavior(HitBehavior).processHit(this.power);
               if (isDead) {
-                hero.getBehavior(HeroBehavior).killed();
+                hero.getBehavior(HeroBehavior).killed(this.actor.getChild("Sprite").spriteRenderer.getHorizontalFlip());
               } else {
                 // TODO: Retaliate
-                hero.getBehavior(HeroBehavior).attacked();
+                hero.getBehavior(HeroBehavior).attacked( this.actor.getChild("Sprite").spriteRenderer.getHorizontalFlip() );
               }
             }
           }
