@@ -2,9 +2,9 @@ class WeaponBehavior extends Sup.Behavior {
   itemtype: number;
   power:number =  1;
   
-  timer = 0;
-  isAttacking = false;
-  hitProcessed = false;
+  private timer = 0;
+  private isAttacking = false;
+  private hitProcessed = false;
   
   private localPos;
   private initialRot;
@@ -22,6 +22,8 @@ class WeaponBehavior extends Sup.Behavior {
     if (this.isAttacking && !this.hitProcessed) {
       
       // Process collisions with actors
+      //Sup.log("Owner: " + this.actor.getBehavior(ItemBehavior).owner.getName());
+      //Sup.log("Sword Pos: " + this.actor.getChild("Sprite").getPosition());
       
       // Hero Hits
       if ( this.actor.getBehavior(ItemBehavior).owner.getName() == "Player" ) { 
@@ -65,7 +67,7 @@ class WeaponBehavior extends Sup.Behavior {
     
   if (this.isAttacking && this.timer > 0) {
       // Animate weapon movement
-      let flip = this.actor.getChild("Sprite").spriteRenderer.getHorizontalFlip() ? -1 : 1;
+      /*let flip = this.actor.getChild("Sprite").spriteRenderer.getHorizontalFlip() ? -1 : 1;
       let fliprot = this.actor.getChild("Sprite").spriteRenderer.getHorizontalFlip() ? 180 : 0;
       switch(this.timer) {
         case 1:
@@ -102,7 +104,7 @@ class WeaponBehavior extends Sup.Behavior {
           
         case 6:
           break;
-      }
+      }*/
       this.timer--;
       if (this.timer <= 0) {
         this.isAttacking = false;

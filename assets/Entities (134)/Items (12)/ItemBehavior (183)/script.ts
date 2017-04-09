@@ -56,6 +56,9 @@ class ItemBehavior extends Sup.Behavior {
         this.label.setVisible(false); 
         
       }
+    } else {
+      // The sprite should move with the owner
+      this.sprite.arcadeBody2D.warpPosition( this.owner.getPosition() );
     }
     
   }

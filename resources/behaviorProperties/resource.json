@@ -164,18 +164,6 @@
         {
           "name": "power",
           "type": "number"
-        },
-        {
-          "name": "timer",
-          "type": "number"
-        },
-        {
-          "name": "isAttacking",
-          "type": "boolean"
-        },
-        {
-          "name": "hitProcessed",
-          "type": "boolean"
         }
       ]
     },
