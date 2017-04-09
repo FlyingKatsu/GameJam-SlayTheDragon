@@ -165,6 +165,14 @@
                     "layersIndex": null
                   },
                   "id": "0"
+                },
+                {
+                  "type": "Behavior",
+                  "config": {
+                    "behaviorName": "HitBehavior",
+                    "propertyValues": {}
+                  },
+                  "id": "1"
                 }
               ],
               "position": {
@@ -213,6 +221,14 @@
                     "layersIndex": null
                   },
                   "id": "0"
+                },
+                {
+                  "type": "Behavior",
+                  "config": {
+                    "behaviorName": "HitBehavior",
+                    "propertyValues": {}
+                  },
+                  "id": "1"
                 }
               ],
               "position": {
@@ -261,6 +277,14 @@
                     "layersIndex": null
                   },
                   "id": "0"
+                },
+                {
+                  "type": "Behavior",
+                  "config": {
+                    "behaviorName": "HitBehavior",
+                    "propertyValues": {}
+                  },
+                  "id": "1"
                 }
               ],
               "position": {
@@ -309,6 +333,14 @@
                     "layersIndex": null
                   },
                   "id": "0"
+                },
+                {
+                  "type": "Behavior",
+                  "config": {
+                    "behaviorName": "HitBehavior",
+                    "propertyValues": {}
+                  },
+                  "id": "1"
                 }
               ],
               "position": {

@@ -1,5 +1,6 @@
 class WeaponBehavior extends Sup.Behavior {
   itemtype: number;
+  power:number =  1;
   
   private timer = 0;
   private isAttacking = false;
@@ -19,22 +20,47 @@ class WeaponBehavior extends Sup.Behavior {
     if (this.isAttacking && this.timer > -1) {
       
       // Process collisions with actors
-      let maybeHitActors = [];
-      if ( this.actor.getBehavior(ItemBehavior).owner.getName() == "Player" ) {
+      
+      //let maybeHitActors: Sup.Actor[] = [];
+      
+      // Hero Hits
+      if ( this.actor.getBehavior(ItemBehavior).owner.getName() == "Player" ) { 
           for ( let actor of Sup.getActor("Heroes").getChildren() ) {
-            maybeHitActors.push(actor);
+            //maybeHitActors.push(actor);
+            if ( Sup.ArcadePhysics2D.intersects(actor.arcadeBody2D, this.actor.getChild("Sprite").arcadeBody2D) ) {
+              let isDead = actor.getBehavior(HitBehavior).processHit(this.power);
+              if (isDead) {
+                // TODO: Death sequence                
+              } else {
+                // TODO: Retaliate
+              }
+            }
           }
-      } else {
-          maybeHitActors.push(Sup.getActor("Player"));
+      // Player Hits
+      } else { 
+          //maybeHitActors.push(Sup.getActor("Player"));
+          if ( Sup.ArcadePhysics2D.intersects(Sup.getActor("Player").arcadeBody2D, this.actor.getChild("Sprite").arcadeBody2D) ) {
+            let isDead = Sup.getActor("Player").getBehavior(HitBehavior).processHit(this.power);
+            Game.data.heart -= this.power;
+            Game.updateHUD();
+            if (Game.data.heart <= 0) {
+              // TODO: Game over sequence
+            }
+          }
       }
+      // Dragon Hits
       for ( let dragon of Sup.getActor("Dragons").getChildren() ) {
         for (let actor of dragon.getChild("Hitbox").getChildren()) {
-          maybeHitActors.push(actor);
+          //maybeHitActors.push(actor);
+          if ( Sup.ArcadePhysics2D.intersects(actor.arcadeBody2D, this.actor.getChild("Sprite").arcadeBody2D) ) {
+            let isDead = actor.getBehavior(HitBehavior).processHit(this.power);
+            if (isDead) {
+              // TODO: Death Sequence
+            } else {
+              // TODO: Retaliate
+            }
+          }
         }
-      }
-      
-      for ( let actor in maybeHitActors ) {
-        
       }
       
       

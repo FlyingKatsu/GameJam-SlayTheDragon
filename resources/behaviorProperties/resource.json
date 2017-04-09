@@ -160,6 +160,10 @@
         {
           "name": "itemtype",
           "type": "number"
+        },
+        {
+          "name": "power",
+          "type": "number"
         }
       ]
     },
