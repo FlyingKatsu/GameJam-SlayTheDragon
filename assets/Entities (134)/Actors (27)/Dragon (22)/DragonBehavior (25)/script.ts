@@ -11,6 +11,8 @@ class DragonBehavior extends Sup.Behavior {
   private feet;
   private tail;
   
+  private isDead = false;
+  
   awake() {
     
     this.head = this.actor.getChild("Hitbox").getChild("Head").getBehavior(HitBehavior);
@@ -45,7 +47,7 @@ class DragonBehavior extends Sup.Behavior {
           this.counter++;
           
           let text = this.getReactionText();
-          Game.data.dragon = text;
+          Game.data.dragon = text || "Alert";
           Game.updateHUD();
           this.actor.getChild("Dialogue").textRenderer.setText("Mm! " + text);
           this.dialogue.timer = 60;
@@ -55,22 +57,24 @@ class DragonBehavior extends Sup.Behavior {
       }
       if (destroyItem) foodBox.destroy();
     }
-    // Collide with tilemap
-    //Sup.ArcadePhysics2D.collides( this.actor.arcadeBody2D, Sup.getActor("Map").arcadeBody2D );
     
-    // Check intersection with sword
+    // Cap counter
+    this.counter = Sup.Math.clamp(this.counter, -5, 5);
     
   }
   
   // Determine if dead; Only call when hit
   checkDeathOnHit() {
+    
+    if (this.isDead) return;
+    
     this.counter--;
     
     // React to hit
     let text = this.getReactionText();
     this.actor.getChild("Dialogue").textRenderer.setText("Ow! " + text);
     this.dialogue.timer = 60;
-    Game.data.dragon = text;
+    Game.data.dragon = text || "Upset";
     Game.updateHUD();
     
     if ( this.belly.defense == 0 || this.head.defense == 0 ) {
@@ -79,6 +83,7 @@ class DragonBehavior extends Sup.Behavior {
       this.dialogue.timer = 60;
       Game.data.dragon = "Slayed!";
       Game.updateHUD();
+      this.isDead = true;
     }
   }
   

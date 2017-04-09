@@ -170,7 +170,12 @@
                   "type": "Behavior",
                   "config": {
                     "behaviorName": "HitBehavior",
-                    "propertyValues": {}
+                    "propertyValues": {
+                      "defense": {
+                        "type": "number",
+                        "value": 3
+                      }
+                    }
                   },
                   "id": "1"
                 }
@@ -226,7 +231,12 @@
                   "type": "Behavior",
                   "config": {
                     "behaviorName": "HitBehavior",
-                    "propertyValues": {}
+                    "propertyValues": {
+                      "defense": {
+                        "type": "number",
+                        "value": 5
+                      }
+                    }
                   },
                   "id": "1"
                 }

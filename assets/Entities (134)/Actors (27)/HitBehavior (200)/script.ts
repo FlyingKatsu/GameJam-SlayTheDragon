@@ -21,8 +21,6 @@ class HitBehavior extends Sup.Behavior {
         return true;
       }
     }
-    
-    this.defense -= power;
     return false;
   }
   
