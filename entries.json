@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 200,
+  "nextEntryId": 201,
   "nodes": [
     {
       "id": "178",
@@ -340,6 +340,11 @@
                   "type": "sprite"
                 }
               ]
+            },
+            {
+              "id": "200",
+              "name": "HitBehavior",
+              "type": "script"
             }
           ]
         },

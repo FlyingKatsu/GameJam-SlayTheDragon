@@ -290,7 +290,7 @@ class PlayerBehavior extends Sup.Behavior {
   }
   
   private processUseItem() {
-    if ( this.controls.pressed.use ) Sup.log("Used item!");
+    //if ( this.controls.pressed.use ) Sup.log("Used item!");
     
     // Check item actions
     

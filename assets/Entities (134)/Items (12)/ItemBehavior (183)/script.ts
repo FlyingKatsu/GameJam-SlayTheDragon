@@ -18,7 +18,7 @@ class ItemBehavior extends Sup.Behavior {
   private isEquipped: boolean;
   private isFlipped: boolean;
   
-  private owner: Sup.Actor;
+  owner: Sup.Actor;
   
   awake() {
     this.label = this.actor.getChild("Label");

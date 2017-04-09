@@ -19,22 +19,24 @@ class WeaponBehavior extends Sup.Behavior {
     if (this.isAttacking && this.timer > -1) {
       
       // Process collisions with actors
-      let maybeHitActors = [];
+      let maybeHitActors: Sup.Actor[] = [];
       if ( this.actor.getBehavior(ItemBehavior).owner.getName() == "Player" ) {
-          for ( let actor of Sup.getActor("Heroes").getChildren() ) {
+          for ( let actor:Sup.Actor of Sup.getActor("Heroes").getChildren() ) {
             maybeHitActors.push(actor);
           }
       } else {
           maybeHitActors.push(Sup.getActor("Player"));
       }
-      for ( let dragon of Sup.getActor("Dragons").getChildren() ) {
-        for (let actor of dragon.getChild("Hitbox").getChildren()) {
+      for ( let dragon:Sup.Actor of Sup.getActor("Dragons").getChildren() ) {
+        for (let actor:Sup.Actor of dragon.getChild("Hitbox").getChildren()) {
           maybeHitActors.push(actor);
         }
       }
       
-      for ( let actor in maybeHitActors ) {
-        
+      for ( let actor:Sup.Actor in maybeHitActors ) {
+        if ( Sup.ArcadePhysics2D.intersects(actor.arcadeBody2D, this.actor.getChild("Sprite").arcadeBody2D) ) {
+          actor.getBehavior(HitBehavior).processHit();
+        }
       }
       
       
